@@ -10,7 +10,9 @@ namespace MIOSimulation
     class FileReader
     {
 
-        private readonly string filePath = @"stops.csv";
+        private String filePath;
+
+        public FileReader(String filePath) { this.filePath = filePath; }
 
         public List<String> readFile()
         {
