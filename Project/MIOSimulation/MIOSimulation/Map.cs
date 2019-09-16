@@ -28,6 +28,9 @@ namespace MIOSimulation
             gmap.ShowCenter = false;
             gmap.Overlays.Add(markers);
             gmap.Overlays.Add(routes);
+            StationStop_CB.Items.Add("Estaciones y paradas");
+            StationStop_CB.Items.Add("Estaciones");
+            StationStop_CB.Items.Add("Paradas");
         }
     }
 }

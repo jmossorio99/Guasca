@@ -11,3 +11,16 @@ F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.C
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe.config
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.pdb
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.Core.dll
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csprojAssemblyReference.cache
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Properties.Resources.resources
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.GenerateResource.cache
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CoreCompileInputs.cache
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
+C:\Users\1192761507\Desktop\Guasca\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb

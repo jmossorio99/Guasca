@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
+            this.StationStop_CB = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gmap
@@ -57,21 +59,44 @@
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 14D;
             // 
+            // StationStop_CB
+            // 
+            this.StationStop_CB.FormattingEnabled = true;
+            this.StationStop_CB.Location = new System.Drawing.Point(989, 69);
+            this.StationStop_CB.Name = "StationStop_CB";
+            this.StationStop_CB.Size = new System.Drawing.Size(129, 21);
+            this.StationStop_CB.TabIndex = 1;
+            this.StationStop_CB.Text = "Estaciones y paradas";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1035, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Filtro";
+            // 
             // Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 587);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.StationStop_CB);
             this.Controls.Add(this.gmap);
             this.Name = "Map";
             this.Text = "Map";
             this.Load += new System.EventHandler(this.Map_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private GMap.NET.WindowsForms.GMapControl gmap;
+        private System.Windows.Forms.ComboBox StationStop_CB;
+        private System.Windows.Forms.Label label1;
     }
 }
