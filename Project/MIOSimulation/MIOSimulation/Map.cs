@@ -12,7 +12,7 @@ namespace MIOSimulation
     {
 
         //Overlays to store markers and routes
-        private GMapOverlay markers = new GMapOverlay();
+        private GMapOverlay markers = new GMapOverlay("markers");
         private GMapOverlay routes = new GMapOverlay();
 
         public Map()
@@ -42,7 +42,9 @@ namespace MIOSimulation
             foreach (var item in stopData)
             {
                 String[] tempSplit = item.Split(',');
-                markers.Markers.Add(new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), GMarkerGoogleType.blue_small));
+                GMapMarker marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), GMarkerGoogleType.blue_small);
+                marker.ToolTipText = tempSplit[3];
+                markers.Markers.Add(marker);
             }
         }
     }
