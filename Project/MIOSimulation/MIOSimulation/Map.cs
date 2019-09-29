@@ -6,6 +6,7 @@ using GMap.NET.MapProviders;
 using GMap.NET;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
 
 namespace MIOSimulation
 {
@@ -17,7 +18,7 @@ namespace MIOSimulation
         private GMapOverlay stations = new GMapOverlay("stops");
         private GMapOverlay routes = new GMapOverlay();
         private readonly string stationNamesFilePath = "./stationNames.txt";
-        private List<String> stationNames;
+        //private List<String> stationNames;
 
         public Map()
         {
@@ -27,8 +28,8 @@ namespace MIOSimulation
         private void Map_Load(object sender, EventArgs e)
         {
             //setting up the map
-            stationNames = readStationNames();
-            stationNames.Sort();
+            //stationNames = readStationNames();
+            //stationNames.Sort();
             addAllStopsAndStations();
 
             gmap.MapProvider = GoogleMapProvider.Instance;
@@ -63,7 +64,7 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), GMarkerGoogleType.green_dot);
+                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
                 stations.Markers.Add(marker);
             }
@@ -77,30 +78,30 @@ namespace MIOSimulation
 
         }
 
-        private Boolean isStation(String name)
-        {
+        //private Boolean isStation(String name)
+        //{
 
-            foreach (var item in stationNames)
-            {
-                String[] temp = name.Split(' ');
-                String last = temp[temp.Length - 1];
-                if (name.Contains(item) && last.Length == 2)
-                {
-                    try
-                    {
-                        int peti = Convert.ToInt32(last[1]);
-                        return true;
-                    }
-                    catch (Exception)
-                    {
-                        return false;
-                    }
+        //    foreach (var item in stationNames)
+        //    {
+        //        String[] temp = name.Split(' ');
+        //        String last = temp[temp.Length - 1];
+        //        if (name.Contains(item) && last.Length == 2)
+        //        {
+        //            try
+        //            {
+        //                int peti = Convert.ToInt32(last[1]);
+        //                return true;
+        //            }
+        //            catch (Exception)
+        //            {
+        //                return false;
+        //            }
                     
-                }
-            }
-            return false;
+        //        }
+        //    }
+        //    return false;
 
-        }
+        //}
 
 
     }
