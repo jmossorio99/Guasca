@@ -18,7 +18,6 @@ namespace MIOSimulation
         {
             var reader = new StreamReader(File.OpenRead(filePath));
             List<String> output = new List<string>();
-            reader.ReadLine();
             while (!reader.EndOfStream)
             {
                 output.Add(reader.ReadLine());
