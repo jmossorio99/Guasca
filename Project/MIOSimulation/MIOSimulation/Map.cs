@@ -22,7 +22,6 @@ namespace MIOSimulation
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
-        private GMapOverlay centerOfStationMark = new GMapOverlay();
         private GMapOverlay polygons = new GMapOverlay();
         private int number=0;
         private Double zoom1 = 15;
@@ -49,12 +48,6 @@ namespace MIOSimulation
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
-
-            //gmap.Overlays.Add(stops);
-           // gmap.Overlays.Add(stations);
-            //gmap.Overlays.Add(routes);
-            //gmap.Overlays.Add(polygons);
-           // gmap.Overlays.Add(centerOfStationMark);
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
@@ -190,6 +183,7 @@ namespace MIOSimulation
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
                 gmap.Overlays.Add(stations);
+                gmap.Overlays.Add(polygons);
                 gmap.Zoom = 12.5;
             }
             else if(StationStop_CB.SelectedIndex == 2)
@@ -202,6 +196,7 @@ namespace MIOSimulation
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stations);
+                gmap.Overlays.Add(polygons);
                 gmap.Zoom = 12.5;
             }
         }
@@ -318,32 +313,5 @@ namespace MIOSimulation
             }
 
         }
-
-        //private Boolean isStation(String name)
-        //{
-
-        //    foreach (var item in stationNames)
-        //    {
-        //        String[] temp = name.Split(' ');
-        //        String last = temp[temp.Length - 1];
-        //        if (name.Contains(item) && last.Length == 2)
-        //        {
-        //            try
-        //            {
-        //                int peti = Convert.ToInt32(last[1]);
-        //                return true;
-        //            }
-        //            catch (Exception)
-        //            {
-        //                return false;
-        //            }
-
-        //        }
-        //    }
-        //    return false;
-
-        //}
-
-
     }
 }
