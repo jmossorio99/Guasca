@@ -34,15 +34,15 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.startSimulation = new System.Windows.Forms.Button();
-            this.prueba = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.goSimulation = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.faster = new System.Windows.Forms.Button();
-            this.slower = new System.Windows.Forms.Button();
-            this.zoomplus = new System.Windows.Forms.Button();
             this.zoom = new System.Windows.Forms.Button();
+            this.zoomplus = new System.Windows.Forms.Button();
+            this.slower = new System.Windows.Forms.Button();
+            this.faster = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.goSimulation = new System.Windows.Forms.Button();
+            this.prueba = new System.Windows.Forms.Label();
+            this.startSimulation = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,63 +116,27 @@
             this.panel1.Size = new System.Drawing.Size(294, 619);
             this.panel1.TabIndex = 3;
             // 
-            // startSimulation
+            // zoom
             // 
-            this.startSimulation.ForeColor = System.Drawing.Color.Black;
-            this.startSimulation.Location = new System.Drawing.Point(110, 148);
-            this.startSimulation.Name = "startSimulation";
-            this.startSimulation.Size = new System.Drawing.Size(80, 30);
-            this.startSimulation.TabIndex = 3;
-            this.startSimulation.Text = "Simular movimiento";
-            this.startSimulation.UseVisualStyleBackColor = true;
-            this.startSimulation.Click += new System.EventHandler(this.StartSimulation_Click);
+            this.zoom.ForeColor = System.Drawing.Color.Black;
+            this.zoom.Location = new System.Drawing.Point(146, 285);
+            this.zoom.Name = "zoom";
+            this.zoom.Size = new System.Drawing.Size(79, 31);
+            this.zoom.TabIndex = 10;
+            this.zoom.Text = "- Zoom";
+            this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.Zoom_Click);
             // 
-            // prueba
+            // zoomplus
             // 
-            this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(71, 201);
-            this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(163, 20);
-            this.prueba.TabIndex = 4;
-            this.prueba.Text = "Informacion de la ruta";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 300;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // goSimulation
-            // 
-            this.goSimulation.ForeColor = System.Drawing.Color.Black;
-            this.goSimulation.Location = new System.Drawing.Point(51, 247);
-            this.goSimulation.Name = "goSimulation";
-            this.goSimulation.Size = new System.Drawing.Size(93, 30);
-            this.goSimulation.TabIndex = 5;
-            this.goSimulation.Text = "Reanudar";
-            this.goSimulation.UseVisualStyleBackColor = true;
-            this.goSimulation.Click += new System.EventHandler(this.GoSimulation_Click);
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(51, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Pausar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // faster
-            // 
-            this.faster.ForeColor = System.Drawing.Color.Black;
-            this.faster.Location = new System.Drawing.Point(231, 242);
-            this.faster.Name = "faster";
-            this.faster.Size = new System.Drawing.Size(29, 35);
-            this.faster.TabIndex = 7;
-            this.faster.Text = "+";
-            this.faster.UseVisualStyleBackColor = true;
-            this.faster.Click += new System.EventHandler(this.Faster_Click);
+            this.zoomplus.ForeColor = System.Drawing.Color.Black;
+            this.zoomplus.Location = new System.Drawing.Point(145, 246);
+            this.zoomplus.Name = "zoomplus";
+            this.zoomplus.Size = new System.Drawing.Size(80, 31);
+            this.zoomplus.TabIndex = 9;
+            this.zoomplus.Text = "+ Zoom";
+            this.zoomplus.UseVisualStyleBackColor = true;
+            this.zoomplus.Click += new System.EventHandler(this.Zoomplus_Click);
             // 
             // slower
             // 
@@ -185,27 +149,63 @@
             this.slower.UseVisualStyleBackColor = true;
             this.slower.Click += new System.EventHandler(this.Slower_Click);
             // 
-            // zoomplus
+            // faster
             // 
-            this.zoomplus.ForeColor = System.Drawing.Color.Black;
-            this.zoomplus.Location = new System.Drawing.Point(151, 246);
-            this.zoomplus.Name = "zoomplus";
-            this.zoomplus.Size = new System.Drawing.Size(74, 31);
-            this.zoomplus.TabIndex = 9;
-            this.zoomplus.Text = "+ Zoom";
-            this.zoomplus.UseVisualStyleBackColor = true;
-            this.zoomplus.Click += new System.EventHandler(this.Zoomplus_Click);
+            this.faster.ForeColor = System.Drawing.Color.Black;
+            this.faster.Location = new System.Drawing.Point(231, 242);
+            this.faster.Name = "faster";
+            this.faster.Size = new System.Drawing.Size(29, 35);
+            this.faster.TabIndex = 7;
+            this.faster.Text = "+";
+            this.faster.UseVisualStyleBackColor = true;
+            this.faster.Click += new System.EventHandler(this.Faster_Click);
             // 
-            // zoom
+            // button2
             // 
-            this.zoom.ForeColor = System.Drawing.Color.Black;
-            this.zoom.Location = new System.Drawing.Point(151, 285);
-            this.zoom.Name = "zoom";
-            this.zoom.Size = new System.Drawing.Size(74, 31);
-            this.zoom.TabIndex = 10;
-            this.zoom.Text = "- Zoom";
-            this.zoom.UseVisualStyleBackColor = true;
-            this.zoom.Click += new System.EventHandler(this.Zoom_Click);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(46, 285);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 30);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Pausar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // goSimulation
+            // 
+            this.goSimulation.ForeColor = System.Drawing.Color.Black;
+            this.goSimulation.Location = new System.Drawing.Point(46, 247);
+            this.goSimulation.Name = "goSimulation";
+            this.goSimulation.Size = new System.Drawing.Size(93, 30);
+            this.goSimulation.TabIndex = 5;
+            this.goSimulation.Text = "Reanudar";
+            this.goSimulation.UseVisualStyleBackColor = true;
+            this.goSimulation.Click += new System.EventHandler(this.GoSimulation_Click);
+            // 
+            // prueba
+            // 
+            this.prueba.AutoSize = true;
+            this.prueba.Location = new System.Drawing.Point(71, 201);
+            this.prueba.Name = "prueba";
+            this.prueba.Size = new System.Drawing.Size(163, 20);
+            this.prueba.TabIndex = 4;
+            this.prueba.Text = "Informacion de la ruta";
+            // 
+            // startSimulation
+            // 
+            this.startSimulation.ForeColor = System.Drawing.Color.Black;
+            this.startSimulation.Location = new System.Drawing.Point(110, 148);
+            this.startSimulation.Name = "startSimulation";
+            this.startSimulation.Size = new System.Drawing.Size(80, 30);
+            this.startSimulation.TabIndex = 3;
+            this.startSimulation.Text = "Simular movimiento";
+            this.startSimulation.UseVisualStyleBackColor = true;
+            this.startSimulation.Click += new System.EventHandler(this.StartSimulation_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // Map
             // 

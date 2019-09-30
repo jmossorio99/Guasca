@@ -133,7 +133,7 @@ namespace MIOSimulation
                 GMapMarker marker;
                 Double lat1 = Double.Parse(tempSplit[4]);
                 Double lng1 = Double.Parse(tempSplit[3]);
-                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/station.png"));
+                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
                 points.Add(new PointLatLng(lat1, lng1));
                 if (Double.Parse(tempSplit[2]) != -1)
                 {
