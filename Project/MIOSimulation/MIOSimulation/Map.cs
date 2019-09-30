@@ -17,8 +17,10 @@ namespace MIOSimulation
         private GMapOverlay stops = new GMapOverlay("stops");
         private GMapOverlay stations = new GMapOverlay("stops");
         private GMapOverlay routes = new GMapOverlay();
+        private GMapOverlay centerOfStationMark = new GMapOverlay();
+        private GMapOverlay polygons = new GMapOverlay();
         private readonly string stationNamesFilePath = "./stationNames.txt";
-        //private List<String> stationNames;
+        private List<String> stationNames;
 
         public Map()
         {
@@ -28,7 +30,7 @@ namespace MIOSimulation
         private void Map_Load(object sender, EventArgs e)
         {
             //setting up the map
-            //stationNames = readStationNames();
+            stationNames = readStationNames();
             //stationNames.Sort();
             addAllStopsAndStations();
 
@@ -40,11 +42,12 @@ namespace MIOSimulation
             gmap.Overlays.Add(stops);
             gmap.Overlays.Add(stations);
             gmap.Overlays.Add(routes);
+            gmap.Overlays.Add(polygons);
+            gmap.Overlays.Add(centerOfStationMark);
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
-            numberOfStations = 0;
         }
 
         private void addAllStopsAndStations()
@@ -83,24 +86,16 @@ namespace MIOSimulation
 
         private void paintPolygon(List<PointLatLng> points, String stationName) {
 
-            GMapPolygon polygon = new GMapPolygon(points, stationName + " " + numberOfStations);
-
-            GMapOverlay polygons = new GMapOverlay("station " + numberOfStations);
+            GMapPolygon polygon = new GMapPolygon(points, stationName + " ");
 
             polygons.Polygons.Add(polygon);
-
-            //update gmap
-
-            gmap.Overlays.Add(polygons);
 
             PointLatLng center = getCenterPoint(points);
             GMarkerGoogle marker1 = new GMarkerGoogle(center,GMarkerGoogleType.blue);
             marker1.ToolTipText = ""+stationName;
 
-            markers.Markers.Add(marker1);
-            gmap.Overlays.Add(markers);
+            centerOfStationMark.Markers.Add(marker1);
 
-            numberOfStations++;
         }
 
         private PointLatLng getCenterPoint(List<PointLatLng> vertexes) {
@@ -133,30 +128,30 @@ namespace MIOSimulation
 
         }
 
-        //private Boolean isStation(String name)
-        //{
+        private Boolean isStation(String name)
+        {
 
-        //    foreach (var item in stationNames)
-        //    {
-        //        String[] temp = name.Split(' ');
-        //        String last = temp[temp.Length - 1];
-        //        if (name.Contains(item) && last.Length == 2)
-        //        {
-        //            try
-        //            {
-        //                int peti = Convert.ToInt32(last[1]);
-        //                return true;
-        //            }
-        //            catch (Exception)
-        //            {
-        //                return false;
-        //            }
+            foreach (var item in stationNames)
+            {
+                String[] temp = name.Split(' ');
+                String last = temp[temp.Length - 1];
+                if (name.Contains(item) && last.Length == 2)
+                {
+                    try
+                    {
+                        int peti = Convert.ToInt32(last[1]);
+                       return true;
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
 
-        //        }
-        //    }
-        //    return false;
+                }
+            }
+            return false;
 
-        //}
+        }
 
 
     }
