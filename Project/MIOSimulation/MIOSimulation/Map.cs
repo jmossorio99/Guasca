@@ -17,8 +17,11 @@ namespace MIOSimulation
         private GMapOverlay stops = new GMapOverlay("stops");
         private GMapOverlay stations = new GMapOverlay("stops");
         private GMapOverlay routes = new GMapOverlay("routes");
+        private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
+        private List<PointLatLng> points = new List<PointLatLng>();
         private int number=0;
+        private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
         //private List<String> stationNames;
 
@@ -36,7 +39,7 @@ namespace MIOSimulation
 
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
-            gmap.Position = new PointLatLng(3.428356, -76.510187);
+            gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
 
@@ -124,12 +127,14 @@ namespace MIOSimulation
             if(number< dataSimulation.Count)
             {
                 gmap.Overlays.Clear();
-                routes.Markers.Clear();
+                routes.Routes.Clear();
+                simulation.Markers.Clear();
                 String[] tempSplit = dataSimulation[number].Split(';');
                 GMapMarker marker;
                 Double lat1 = Double.Parse(tempSplit[4]);
                 Double lng1 = Double.Parse(tempSplit[3]);
                 marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/station.png"));
+                points.Add(new PointLatLng(lat1, lng1));
                 if (Double.Parse(tempSplit[2]) != -1)
                 {
                     marker.ToolTipText = "En ruta a las " + tempSplit[0];
@@ -140,10 +145,13 @@ namespace MIOSimulation
                     marker.ToolTipText = "Tiempo muerto a las " + tempSplit[0];
                     prueba.Text= "Tiempo muerto a las " + tempSplit[0];
                 }
-                routes.Markers.Add(marker);
-                gmap.Overlays.Add(routes);
+                simulation.Markers.Add(marker);
+                gmap.Overlays.Add(simulation);
                 gmap.Position = new PointLatLng(lat1, lng1);
-                gmap.Zoom = 15;
+                gmap.Zoom = zoom1;
+                GMapRoute pointsRoutes = new GMapRoute(points, "Ruta");
+                routes.Routes.Add(pointsRoutes);
+                gmap.Overlays.Add(routes);
                 number++;
             }
             else
@@ -175,6 +183,22 @@ namespace MIOSimulation
             if (timer1.Interval < 1000)
             {
                 timer1.Interval = timer1.Interval+50;
+            }
+        }
+
+        private void Zoomplus_Click(object sender, EventArgs e)
+        {
+            if (zoom1 < 16)
+            {
+                zoom1 = zoom1 + 0.5;
+            }
+        }
+
+        private void Zoom_Click(object sender, EventArgs e)
+        {
+            if (zoom1 > 6)
+            {
+                zoom1 = zoom1 - 0.5;
             }
         }
 
