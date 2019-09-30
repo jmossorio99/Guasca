@@ -7,6 +7,7 @@ using GMap.NET;
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
+using System.Collections;
 using System.Globalization;
 
 namespace MIOSimulation
@@ -21,10 +22,14 @@ namespace MIOSimulation
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
+        private GMapOverlay centerOfStationMark = new GMapOverlay();
+        private GMapOverlay polygons = new GMapOverlay();
         private int number=0;
         private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
-        //private List<String> stationNames;
+        private List<String> stationNames;
+        Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
+        
 
         public Map()
         {
@@ -34,10 +39,11 @@ namespace MIOSimulation
         private void Map_Load(object sender, EventArgs e)
         {
             //setting up the map
-            //stationNames = readStationNames();
+            stationNames = readStationNames();
             //stationNames.Sort();
+            addListsToHashset();
             addAllStopsAndStations();
-
+            
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
             gmap.Position = new PointLatLng(3.436440, -76.515270);
@@ -47,7 +53,8 @@ namespace MIOSimulation
             //gmap.Overlays.Add(stops);
            // gmap.Overlays.Add(stations);
             //gmap.Overlays.Add(routes);
-            
+            //gmap.Overlays.Add(polygons);
+           // gmap.Overlays.Add(centerOfStationMark);
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
@@ -64,7 +71,7 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), GMarkerGoogleType.blue_small);
+                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), GMarkerGoogleType.blue_small);
                 marker.ToolTipText = tempSplit[3];
                 stops.Markers.Add(marker);
             }
@@ -72,10 +79,41 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), new Bitmap("./img/station.png"));
+                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
                 stations.Markers.Add(marker);
+
+                String name = isStation(tempSplit[3]);
+                List<String> temp = stationsTable[name];
+                temp.Add(item);
+                
             }
+            setStationsPolygons();
+
+        }
+
+        private void setStationsPolygons() {
+
+            foreach (var item in stationNames)
+            {
+                String key = item;
+                List<String> lines = stationsTable[key];
+                List<PointLatLng> points = new List<PointLatLng>();
+                foreach (var line in lines)
+                {
+                    String[] temp = line.Split(',');
+                    points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
+                }
+                paintPolygon(points, key);
+            }
+
+        }
+
+        private void paintPolygon(List<PointLatLng> points, String stationName) {
+
+            GMapPolygon polygon = new GMapPolygon(points, stationName + " ");
+            polygons.Polygons.Add(polygon);
+
         }
 
         private List<String> readStationNames()
@@ -201,6 +239,31 @@ namespace MIOSimulation
             {
                 zoom1 = zoom1 - 0.5;
             }
+        }
+        private String isStation(String name)
+        {
+            String ret = "";
+
+            foreach (var item in stationNames)
+            {
+                if (name.Contains(item))
+                {
+                    ret = item;
+                    break;
+                }
+            }
+            return ret;
+
+        }
+
+        private void addListsToHashset()
+        {
+
+            foreach (var item in stationNames)
+            {
+                stationsTable.Add(item, new List<string>());
+            }
+
         }
 
         //private Boolean isStation(String name)
