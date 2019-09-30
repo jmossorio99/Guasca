@@ -7,6 +7,7 @@ using GMap.NET;
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
+using System.Collections;
 
 namespace MIOSimulation
 {
@@ -21,6 +22,8 @@ namespace MIOSimulation
         private GMapOverlay polygons = new GMapOverlay();
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
+        Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
+        
 
         public Map()
         {
@@ -32,8 +35,9 @@ namespace MIOSimulation
             //setting up the map
             stationNames = readStationNames();
             //stationNames.Sort();
+            addListsToHashset();
             addAllStopsAndStations();
-
+            
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
             gmap.Position = new PointLatLng(3.442275, -76.515539);
@@ -71,53 +75,38 @@ namespace MIOSimulation
                 marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
                 stations.Markers.Add(marker);
-            }
 
-            List<PointLatLng> points = new List<PointLatLng>();
-            PointLatLng p1 = new PointLatLng(3.41454278, -76.54957278);
-            PointLatLng p2 = new PointLatLng(3.41476833, -76.54962139);
-           // PointLatLng p3 = new PointLatLng(-76.89785083,3.487897899107);
-            points.Add(p1);
-            points.Add(p2);
-           // points.Add(p3);
-            paintPolygon(points,"Terminal cañaveralejo");
+                String name = isStation(tempSplit[3]);
+                List<String> temp = stationsTable[name];
+                temp.Add(item);
+                
+            }
+            setStationsPolygons();
+
+        }
+
+        private void setStationsPolygons() {
+
+            foreach (var item in stationNames)
+            {
+                String key = item;
+                List<String> lines = stationsTable[key];
+                List<PointLatLng> points = new List<PointLatLng>();
+                foreach (var line in lines)
+                {
+                    String[] temp = line.Split(',');
+                    points.Add(new PointLatLng(Double.Parse(temp[7]), Double.Parse(temp[6])));
+                }
+                paintPolygon(points, key);
+            }
 
         }
 
         private void paintPolygon(List<PointLatLng> points, String stationName) {
 
             GMapPolygon polygon = new GMapPolygon(points, stationName + " ");
-
             polygons.Polygons.Add(polygon);
 
-            PointLatLng center = getCenterPoint(points);
-            GMarkerGoogle marker1 = new GMarkerGoogle(center,GMarkerGoogleType.blue);
-            marker1.ToolTipText = ""+stationName;
-
-            centerOfStationMark.Markers.Add(marker1);
-
-        }
-
-        private PointLatLng getCenterPoint(List<PointLatLng> vertexes) {
-
-            PointLatLng centerPoint = new PointLatLng();
-
-            int sum = 0;
-            double lat = 0;
-            double lng = 0;
-
-            foreach (var point in vertexes) {
-                sum++;
-                lat += point.Lat;
-                lng += point.Lng;
-            }
-
-            lat = lat / sum;
-            lng = lng / sum;
-            centerPoint.Lat = lat;
-            centerPoint.Lng = lng;
-
-            return centerPoint;
         }
 
         private List<String> readStationNames()
@@ -128,28 +117,29 @@ namespace MIOSimulation
 
         }
 
-        private Boolean isStation(String name)
+        private String isStation(String name)
+        {
+            String ret = "";
+
+            foreach (var item in stationNames)
+            {
+                if (name.Contains(item))
+                {
+                    ret = item;
+                    break;
+                }
+            }
+            return ret;
+
+        }
+
+        private void addListsToHashset()
         {
 
             foreach (var item in stationNames)
             {
-                String[] temp = name.Split(' ');
-                String last = temp[temp.Length - 1];
-                if (name.Contains(item) && last.Length == 2)
-                {
-                    try
-                    {
-                        int peti = Convert.ToInt32(last[1]);
-                       return true;
-                    }
-                    catch (Exception)
-                    {
-                        return false;
-                    }
-
-                }
+                stationsTable.Add(item, new List<string>());
             }
-            return false;
 
         }
 
