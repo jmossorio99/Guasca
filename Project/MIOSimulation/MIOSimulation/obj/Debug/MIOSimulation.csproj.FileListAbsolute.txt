@@ -37,3 +37,16 @@ C:\Users\User\git\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimula
 C:\Users\User\git\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
 C:\Users\User\git\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
 C:\Users\User\git\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe.config
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.pdb
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.Core.dll
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csprojAssemblyReference.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Properties.Resources.resources
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.GenerateResource.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CoreCompileInputs.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb

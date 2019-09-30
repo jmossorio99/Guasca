@@ -7,6 +7,7 @@ using GMap.NET;
 using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
+using System.Globalization;
 
 namespace MIOSimulation
 {
@@ -131,8 +132,8 @@ namespace MIOSimulation
                 simulation.Markers.Clear();
                 String[] tempSplit = dataSimulation[number].Split(';');
                 GMapMarker marker;
-                Double lat1 = Double.Parse(tempSplit[4]);
-                Double lng1 = Double.Parse(tempSplit[3]);
+                Double lat1 = Double.Parse(tempSplit[4], CultureInfo.InvariantCulture.NumberFormat);
+                Double lng1 = Double.Parse(tempSplit[3], CultureInfo.InvariantCulture.NumberFormat);
                 marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
                 points.Add(new PointLatLng(lat1, lng1));
                 if (Double.Parse(tempSplit[2]) != -1)
