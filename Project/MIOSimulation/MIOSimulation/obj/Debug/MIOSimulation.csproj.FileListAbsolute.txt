@@ -24,3 +24,16 @@ C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\o
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe.config
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.pdb
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.Core.dll
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csprojAssemblyReference.cache
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Properties.Resources.resources
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.GenerateResource.cache
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CoreCompileInputs.cache
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
+C:\Users\juand\Desktop\Integrador\proyect MIO\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
