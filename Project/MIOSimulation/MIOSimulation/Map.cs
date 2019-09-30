@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
 using System.Collections;
+using System.Globalization;
 
 namespace MIOSimulation
 {
@@ -64,7 +65,7 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), GMarkerGoogleType.blue_small);
+                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), GMarkerGoogleType.blue_small);
                 marker.ToolTipText = tempSplit[3];
                 stops.Markers.Add(marker);
             }
@@ -72,7 +73,7 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7]), Double.Parse(tempSplit[6])), new Bitmap("./img/station.png"));
+                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
                 stations.Markers.Add(marker);
 
@@ -95,7 +96,7 @@ namespace MIOSimulation
                 foreach (var line in lines)
                 {
                     String[] temp = line.Split(',');
-                    points.Add(new PointLatLng(Double.Parse(temp[7]), Double.Parse(temp[6])));
+                    points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
                 }
                 paintPolygon(points, key);
             }
