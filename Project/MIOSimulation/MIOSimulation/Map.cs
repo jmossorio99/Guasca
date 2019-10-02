@@ -12,12 +12,13 @@ using System.Globalization;
 
 namespace MIOSimulation
 {
-    public partial class Map : Form
+    public partial class SimulacionMetroCali : Form
     {
 
         //Overlays to store markers and routes
         private GMapOverlay stops = new GMapOverlay("stops");
-        private GMapOverlay stations = new GMapOverlay("stops");
+        private GMapOverlay fullStations = new GMapOverlay();
+        private GMapOverlay stationsZoomedOut = new GMapOverlay();
         private GMapOverlay routes = new GMapOverlay("routes");
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
@@ -28,9 +29,10 @@ namespace MIOSimulation
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
         Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
+        private Boolean filterSelected = false;
         
 
-        public Map()
+        public SimulacionMetroCali()
         {
             InitializeComponent();
         }
@@ -39,7 +41,6 @@ namespace MIOSimulation
         {
             //setting up the map
             stationNames = readStationNames();
-            //stationNames.Sort();
             addListsToHashset();
             addAllStopsAndStations();
             
@@ -74,7 +75,7 @@ namespace MIOSimulation
                 GMapMarker marker;
                 marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
-                stations.Markers.Add(marker);
+                fullStations.Markers.Add(marker);
 
                 String name = isStation(tempSplit[3]);
                 List<String> temp = stationsTable[name];
@@ -89,13 +90,21 @@ namespace MIOSimulation
 
             foreach (var item in stationNames)
             {
+                // each station name is the key for the dictionary to access that station's list of full stops
                 String key = item;
                 List<String> lines = stationsTable[key];
                 List<PointLatLng> points = new List<PointLatLng>();
+
+                Boolean addedFirst = false;
                 foreach (var line in lines)
                 {
                     String[] temp = line.Split(',');
                     points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
+                    if (!addedFirst)
+                    {
+                        stationsZoomedOut.Markers.Add(new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png")));
+                        addedFirst = true;
+                    }
                 }
                 paintPolygon(points, key);
             }
@@ -177,14 +186,16 @@ namespace MIOSimulation
 
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            filterSelected = true;
             
             if(StationStop_CB.SelectedIndex == 0)
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
-                gmap.Overlays.Add(stations);
                 gmap.Overlays.Add(polygons);
                 gmap.Zoom = 12.5;
+                addStationsOverlay();
             }
             else if(StationStop_CB.SelectedIndex == 2)
             {
@@ -195,9 +206,9 @@ namespace MIOSimulation
             else
             {
                 gmap.Overlays.Clear();
-                gmap.Overlays.Add(stations);
                 gmap.Overlays.Add(polygons);
                 gmap.Zoom = 12.5;
+                addStationsOverlay();
             }
         }
 
@@ -310,6 +321,50 @@ namespace MIOSimulation
             foreach (var item in stationNames)
             {
                 stationsTable.Add(item, new List<string>());
+            }
+
+        }
+
+        private void addStationsOverlay() {
+
+            if (filterSelected)
+            {
+
+                Double zoom = gmap.Zoom;
+                zoomLbl.Text = zoom + "";
+                if (StationStop_CB.SelectedIndex == 0)
+                {
+                    if (Math.Floor(zoom) > 16)
+                    {
+                        gmap.Overlays.Clear();
+                        gmap.Overlays.Add(fullStations);
+                        gmap.Overlays.Add(stops);
+                        gmap.Overlays.Add(polygons);
+                    }
+                    else
+                    {
+                        gmap.Overlays.Clear();
+                        gmap.Overlays.Add(stationsZoomedOut);
+                        gmap.Overlays.Add(stops);
+                        gmap.Overlays.Add(polygons);
+                    }
+                }
+                else if(StationStop_CB.SelectedIndex == 1)
+                {
+                    if (Math.Floor(zoom) > 16)
+                    {
+                        gmap.Overlays.Clear();
+                        gmap.Overlays.Add(fullStations);
+                        gmap.Overlays.Add(polygons);
+                    }
+                    else
+                    {
+                        gmap.Overlays.Clear();
+                        gmap.Overlays.Add(stationsZoomedOut);
+                        gmap.Overlays.Add(polygons);
+                    }
+                }
+                
             }
 
         }

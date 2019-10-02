@@ -9,7 +9,6 @@ F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulat
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.Core.dll
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
-F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
 F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe.config
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\MIOSimulation.exe
@@ -50,3 +49,4 @@ C:\Users\1144110009\Documents\killMe\Guasca\Project\MIOSimulation\MIOSimulation\
 C:\Users\1144110009\Documents\killMe\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
 C:\Users\1144110009\Documents\killMe\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
 C:\Users\1144110009\Documents\killMe\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
+F:\Jose\reposGit\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.SimulacionMetroCali.resources

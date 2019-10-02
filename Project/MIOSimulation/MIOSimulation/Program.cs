@@ -16,7 +16,7 @@ namespace MIOSimulation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Map());
+            Application.Run(new SimulacionMetroCali());
         }
     }
 }
