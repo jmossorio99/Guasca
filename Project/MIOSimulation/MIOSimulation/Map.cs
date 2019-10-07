@@ -42,8 +42,8 @@ namespace MIOSimulation
         {
             //setting up the map
             stationNames = readStationNames();
-            //addListsToHashset();
-            //addAllStopsAndStations();
+            addListsToHashset();
+            addAllStopsAndStations();
             
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
@@ -56,7 +56,8 @@ namespace MIOSimulation
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
-            StationStop_CB.Items.Add("Paradas");        
+            StationStop_CB.Items.Add("Paradas");
+            StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void addZones()
@@ -69,6 +70,7 @@ namespace MIOSimulation
                 String elem = zonesData[i];
                 Polygon example = new Polygon(elem);
                 Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
+                polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
             }
             
         }

@@ -16,7 +16,6 @@ C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\b
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.Core.dll
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csprojAssemblyReference.cache
-C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Map.resources
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.Properties.Resources.resources
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.GenerateResource.cache
 C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CoreCompileInputs.cache
@@ -63,3 +62,4 @@ C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulati
 C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.csproj.CopyComplete
 C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.exe
 C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.pdb
+C:\Users\joseo\Documents\Jose\repos\Guasca\Project\MIOSimulation\MIOSimulation\obj\Debug\MIOSimulation.SimulacionMetroCali.resources
