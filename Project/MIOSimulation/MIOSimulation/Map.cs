@@ -58,6 +58,8 @@ namespace MIOSimulation
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
         private void addZones()
@@ -306,18 +308,14 @@ namespace MIOSimulation
 
         private void Zoomplus_Click(object sender, EventArgs e)
         {
-            if (zoom1 < 16)
-            {
-                zoom1 = zoom1 + 0.5;
-            }
+            gmap.Zoom = gmap.Zoom + 1;
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
         private void Zoom_Click(object sender, EventArgs e)
         {
-            if (zoom1 > 6)
-            {
-                zoom1 = zoom1 - 0.5;
-            }
+            gmap.Zoom = gmap.Zoom - 1;
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
         private String isStation(String name)
         {
@@ -347,11 +345,11 @@ namespace MIOSimulation
 
         private void addStationsOverlay() {
 
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
             if (filterSelected)
             {
 
                 Double zoom = gmap.Zoom;
-                zoomLbl.Text = zoom + "";
                 if (StationStop_CB.SelectedIndex == 0)
                 {
                     if (Math.Floor(zoom) > 16)
@@ -392,6 +390,16 @@ namespace MIOSimulation
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            gmap.Zoom = trackBar1.Value;
         }
     }
 }
