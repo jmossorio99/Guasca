@@ -18,12 +18,18 @@ namespace MIOSimulation
     class Polygon
     {
         private List<PointLatLng> polygon;
+        private String name;
 
         public List<PointLatLng> getPolygon() {
             return polygon;
         }
 
-        public Polygon(String data) {
+        public String getName() {
+            return name;
+        }
+
+        public Polygon(String data,String name) {
+            this.name = name;
             polygon = new List<PointLatLng>();
             String[] sData = data.Split('#');
 
@@ -88,7 +94,7 @@ namespace MIOSimulation
 
             if (n < 3) return false;
 
-            PointLatLng extreme = new PointLatLng(double.PositiveInfinity,p.Lat);
+            PointLatLng extreme = new PointLatLng(10000000,p.Lat);
 
             int count = 0, i = 0;
 
@@ -98,7 +104,9 @@ namespace MIOSimulation
 
                 if (doIntersect(polygon[i], polygon[next], p, extreme)) {
                     if (orientation(polygon[i], p, polygon[next]) == 0)
+                    {
                         return onSegment(polygon[i], p, polygon[next]);
+                    }
 
                     count++;
                 }

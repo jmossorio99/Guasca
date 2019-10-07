@@ -25,6 +25,7 @@ namespace MIOSimulation
         private List<PointLatLng> points = new List<PointLatLng>();
         private GMapOverlay polygons = new GMapOverlay();
         private GMapOverlay Zones = new GMapOverlay();
+        private List<Polygon> pZones = new List<Polygon>();
         private int number=0;
         private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
@@ -41,6 +42,7 @@ namespace MIOSimulation
         private void Map_Load(object sender, EventArgs e)
         {
             //setting up the map
+            addZones();
             stationNames = readStationNames();
             addListsToHashset();
             addAllStopsAndStations();
@@ -50,8 +52,6 @@ namespace MIOSimulation
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
-
-            addZones();
             gmap.Overlays.Add(Zones);
 
             StationStop_CB.Items.Add("Estaciones y paradas");
@@ -68,9 +68,10 @@ namespace MIOSimulation
             List<int> toSee = new List<int>{0,1,2,3,4,5,6,7,8};
             foreach (var i in toSee) {
                 String elem = zonesData[i];
-                Polygon example = new Polygon(elem);
-                Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
-                polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
+                Polygon example = new Polygon(elem, "Zone "+i);
+                Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"+ i));
+                polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone" + i));
+                pZones.Add(example);
             }
             
         }
@@ -85,22 +86,46 @@ namespace MIOSimulation
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), GMarkerGoogleType.blue_small);
+                PointLatLng location = new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)); 
+                marker = new GMarkerGoogle(location , GMarkerGoogleType.blue_small);
                 marker.ToolTipText = tempSplit[3];
+                String zone = "";
+                foreach (var pol in pZones) {
+                    if (pol.isInside(location)) {
+                        zone = pol.getName();
+                        break;
+                    }
+                }
+                marker.ToolTipText += " En " + zone;
+
                 stops.Markers.Add(marker);
             }
             foreach (var item in stationData)
             {
                 String[] tempSplit = item.Split(',');
                 GMapMarker marker;
-                marker = new GMarkerGoogle(new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
+                PointLatLng location = new PointLatLng(Double.Parse(tempSplit[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempSplit[6], CultureInfo.InvariantCulture.NumberFormat));
+                marker = new GMarkerGoogle(location, new Bitmap("./img/station.png"));
                 marker.ToolTipText = tempSplit[3];
-                fullStations.Markers.Add(marker);
+
+                String zone = "";
 
                 String name = isStation(tempSplit[3]);
                 List<String> temp = stationsTable[name];
+
+                foreach (var pol in pZones)
+                {
+                    if (pol.isInside(location))
+                    {
+                        zone = pol.getName();
+                        break;
+                    }
+                }
+                marker.ToolTipText += " En " + zone;
+
                 temp.Add(item);
-                
+                fullStations.Markers.Add(marker);
+
             }
             setStationsPolygons();
 
