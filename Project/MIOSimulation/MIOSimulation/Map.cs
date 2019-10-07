@@ -52,12 +52,20 @@ namespace MIOSimulation
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
+
             gmap.Overlays.Add(Zones);
+
+
+            addZones();
+
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            gmap.Overlays.Add(Zones);
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
         private void addZones()
@@ -68,6 +76,7 @@ namespace MIOSimulation
             List<int> toSee = new List<int>{0,1,2,3,4,5,6,7,8};
             foreach (var i in toSee) {
                 String elem = zonesData[i];
+
                 Polygon example = new Polygon(elem, "Zone "+i);
                 Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"+ i));
                 polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone" + i));
@@ -147,7 +156,9 @@ namespace MIOSimulation
                     points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
                     if (!addedFirst)
                     {
-                        stationsZoomedOut.Markers.Add(new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png")));
+                        GMapMarker markerStation = new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
+                        markerStation.ToolTipText = temp[3];
+                        stationsZoomedOut.Markers.Add(markerStation);
                         addedFirst = true;
                     }
                 }
@@ -231,7 +242,6 @@ namespace MIOSimulation
 
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             filterSelected = true;
             
             if(StationStop_CB.SelectedIndex == 0)
@@ -239,22 +249,26 @@ namespace MIOSimulation
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
                 gmap.Overlays.Add(polygons);
-                gmap.Zoom = 12.5;
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
+                gmap.Zoom = 12.5;
             }
             else if(StationStop_CB.SelectedIndex == 2)
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
+                gmap.Overlays.Add(Zones);
                 gmap.Zoom = 12.5;
             }
             else
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(polygons);
-                gmap.Zoom = 12.5;
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
+                gmap.Zoom = 12.5;
             }
+
         }
 
         private void StartSimulation_Click(object sender, EventArgs e)
@@ -331,18 +345,14 @@ namespace MIOSimulation
 
         private void Zoomplus_Click(object sender, EventArgs e)
         {
-            if (zoom1 < 16)
-            {
-                zoom1 = zoom1 + 0.5;
-            }
+            gmap.Zoom = gmap.Zoom + 1;
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
         private void Zoom_Click(object sender, EventArgs e)
         {
-            if (zoom1 > 6)
-            {
-                zoom1 = zoom1 - 0.5;
-            }
+            gmap.Zoom = gmap.Zoom - 1;
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
         private String isStation(String name)
         {
@@ -372,11 +382,11 @@ namespace MIOSimulation
 
         private void addStationsOverlay() {
 
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
             if (filterSelected)
             {
 
                 Double zoom = gmap.Zoom;
-                zoomLbl.Text = zoom + "";
                 if (StationStop_CB.SelectedIndex == 0)
                 {
                     if (Math.Floor(zoom) > 16)
@@ -385,6 +395,7 @@ namespace MIOSimulation
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(stops);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                     else
                     {
@@ -392,6 +403,7 @@ namespace MIOSimulation
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(stops);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                 }
                 else if(StationStop_CB.SelectedIndex == 1)
@@ -401,12 +413,14 @@ namespace MIOSimulation
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                     else
                     {
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                 }
                 
@@ -417,6 +431,16 @@ namespace MIOSimulation
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            gmap.Zoom = trackBar1.Value;
         }
     }
 }
