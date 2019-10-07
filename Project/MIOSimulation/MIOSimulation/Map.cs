@@ -56,7 +56,8 @@ namespace MIOSimulation
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
-            StationStop_CB.Items.Add("Paradas");        
+            StationStop_CB.Items.Add("Paradas");
+            StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void addZones()
