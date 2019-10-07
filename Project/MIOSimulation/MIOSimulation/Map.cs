@@ -52,13 +52,13 @@ namespace MIOSimulation
             gmap.Zoom = 13;
 
             addZones();
-            gmap.Overlays.Add(Zones);
 
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            gmap.Overlays.Add(Zones);
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
@@ -72,7 +72,6 @@ namespace MIOSimulation
                 String elem = zonesData[i];
                 Polygon example = new Polygon(elem);
                 Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
-                polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
             }
             
         }
@@ -124,7 +123,9 @@ namespace MIOSimulation
                     points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
                     if (!addedFirst)
                     {
-                        stationsZoomedOut.Markers.Add(new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png")));
+                        GMapMarker markerStation = new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
+                        markerStation.ToolTipText = temp[3];
+                        stationsZoomedOut.Markers.Add(markerStation);
                         addedFirst = true;
                     }
                 }
@@ -208,7 +209,6 @@ namespace MIOSimulation
 
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             filterSelected = true;
             
             if(StationStop_CB.SelectedIndex == 0)
@@ -216,22 +216,26 @@ namespace MIOSimulation
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
                 gmap.Overlays.Add(polygons);
-                gmap.Zoom = 12.5;
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
+                gmap.Zoom = 12.5;
             }
             else if(StationStop_CB.SelectedIndex == 2)
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
+                gmap.Overlays.Add(Zones);
                 gmap.Zoom = 12.5;
             }
             else
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(polygons);
-                gmap.Zoom = 12.5;
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
+                gmap.Zoom = 12.5;
             }
+
         }
 
         private void StartSimulation_Click(object sender, EventArgs e)
@@ -358,6 +362,7 @@ namespace MIOSimulation
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(stops);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                     else
                     {
@@ -365,6 +370,7 @@ namespace MIOSimulation
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(stops);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                 }
                 else if(StationStop_CB.SelectedIndex == 1)
@@ -374,12 +380,14 @@ namespace MIOSimulation
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                     else
                     {
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);
                     }
                 }
                 
