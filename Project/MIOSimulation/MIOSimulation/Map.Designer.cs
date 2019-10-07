@@ -34,6 +34,7 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.zoomLbl = new System.Windows.Forms.Label();
             this.zoom = new System.Windows.Forms.Button();
             this.zoomplus = new System.Windows.Forms.Button();
             this.slower = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.prueba = new System.Windows.Forms.Label();
             this.startSimulation = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.zoomLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,8 +58,8 @@
             this.gmap.GrayScaleMode = false;
             this.gmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gmap.LevelsKeepInMemmory = 5;
-            this.gmap.Location = new System.Drawing.Point(1, -1);
-            this.gmap.Margin = new System.Windows.Forms.Padding(1);
+            this.gmap.Location = new System.Drawing.Point(2, -2);
+            this.gmap.Margin = new System.Windows.Forms.Padding(2);
             this.gmap.MarkersEnabled = true;
             this.gmap.MaxZoom = 18;
             this.gmap.MinZoom = 10;
@@ -73,7 +73,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(917, 561);
+            this.gmap.Size = new System.Drawing.Size(1376, 863);
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 14D;
             this.gmap.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.addStationsOverlay);
@@ -81,10 +81,10 @@
             // StationStop_CB
             // 
             this.StationStop_CB.FormattingEnabled = true;
-            this.StationStop_CB.Location = new System.Drawing.Point(61, 63);
-            this.StationStop_CB.Margin = new System.Windows.Forms.Padding(1);
+            this.StationStop_CB.Location = new System.Drawing.Point(92, 97);
+            this.StationStop_CB.Margin = new System.Windows.Forms.Padding(2);
             this.StationStop_CB.Name = "StationStop_CB";
-            this.StationStop_CB.Size = new System.Drawing.Size(67, 21);
+            this.StationStop_CB.Size = new System.Drawing.Size(98, 28);
             this.StationStop_CB.TabIndex = 1;
             this.StationStop_CB.Text = "Estaciones y paradas";
             this.StationStop_CB.SelectedIndexChanged += new System.EventHandler(this.StationStop_CB_SelectedIndexChanged);
@@ -94,10 +94,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(69, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Location = new System.Drawing.Point(86, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(69, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtro";
             // 
@@ -118,19 +118,28 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.StationStop_CB);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Location = new System.Drawing.Point(921, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel1.Location = new System.Drawing.Point(1382, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 561);
+            this.panel1.Size = new System.Drawing.Size(294, 863);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // zoomLbl
+            // 
+            this.zoomLbl.AutoSize = true;
+            this.zoomLbl.Location = new System.Drawing.Point(116, 395);
+            this.zoomLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.zoomLbl.Name = "zoomLbl";
+            this.zoomLbl.Size = new System.Drawing.Size(0, 20);
+            this.zoomLbl.TabIndex = 11;
             // 
             // zoom
             // 
             this.zoom.ForeColor = System.Drawing.Color.Black;
-            this.zoom.Location = new System.Drawing.Point(97, 185);
-            this.zoom.Margin = new System.Windows.Forms.Padding(2);
+            this.zoom.Location = new System.Drawing.Point(146, 285);
             this.zoom.Name = "zoom";
-            this.zoom.Size = new System.Drawing.Size(53, 20);
+            this.zoom.Size = new System.Drawing.Size(80, 31);
             this.zoom.TabIndex = 10;
             this.zoom.Text = "- Zoom";
             this.zoom.UseVisualStyleBackColor = true;
@@ -139,10 +148,9 @@
             // zoomplus
             // 
             this.zoomplus.ForeColor = System.Drawing.Color.Black;
-            this.zoomplus.Location = new System.Drawing.Point(97, 160);
-            this.zoomplus.Margin = new System.Windows.Forms.Padding(2);
+            this.zoomplus.Location = new System.Drawing.Point(146, 246);
             this.zoomplus.Name = "zoomplus";
-            this.zoomplus.Size = new System.Drawing.Size(53, 20);
+            this.zoomplus.Size = new System.Drawing.Size(80, 31);
             this.zoomplus.TabIndex = 9;
             this.zoomplus.Text = "+ Zoom";
             this.zoomplus.UseVisualStyleBackColor = true;
@@ -151,10 +159,9 @@
             // slower
             // 
             this.slower.ForeColor = System.Drawing.Color.Black;
-            this.slower.Location = new System.Drawing.Point(154, 184);
-            this.slower.Margin = new System.Windows.Forms.Padding(2);
+            this.slower.Location = new System.Drawing.Point(231, 283);
             this.slower.Name = "slower";
-            this.slower.Size = new System.Drawing.Size(19, 23);
+            this.slower.Size = new System.Drawing.Size(28, 35);
             this.slower.TabIndex = 8;
             this.slower.Text = "-";
             this.slower.UseVisualStyleBackColor = true;
@@ -163,10 +170,9 @@
             // faster
             // 
             this.faster.ForeColor = System.Drawing.Color.Black;
-            this.faster.Location = new System.Drawing.Point(154, 157);
-            this.faster.Margin = new System.Windows.Forms.Padding(2);
+            this.faster.Location = new System.Drawing.Point(231, 242);
             this.faster.Name = "faster";
-            this.faster.Size = new System.Drawing.Size(19, 23);
+            this.faster.Size = new System.Drawing.Size(28, 35);
             this.faster.TabIndex = 7;
             this.faster.Text = "+";
             this.faster.UseVisualStyleBackColor = true;
@@ -175,10 +181,9 @@
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(31, 185);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(46, 285);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 19);
+            this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 6;
             this.button2.Text = "Pausar";
             this.button2.UseVisualStyleBackColor = true;
@@ -187,10 +192,9 @@
             // goSimulation
             // 
             this.goSimulation.ForeColor = System.Drawing.Color.Black;
-            this.goSimulation.Location = new System.Drawing.Point(31, 161);
-            this.goSimulation.Margin = new System.Windows.Forms.Padding(2);
+            this.goSimulation.Location = new System.Drawing.Point(46, 248);
             this.goSimulation.Name = "goSimulation";
-            this.goSimulation.Size = new System.Drawing.Size(62, 19);
+            this.goSimulation.Size = new System.Drawing.Size(93, 29);
             this.goSimulation.TabIndex = 5;
             this.goSimulation.Text = "Reanudar";
             this.goSimulation.UseVisualStyleBackColor = true;
@@ -199,20 +203,18 @@
             // prueba
             // 
             this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(47, 131);
-            this.prueba.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.prueba.Location = new System.Drawing.Point(70, 202);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(109, 13);
+            this.prueba.Size = new System.Drawing.Size(163, 20);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "Informacion de la ruta";
             // 
             // startSimulation
             // 
             this.startSimulation.ForeColor = System.Drawing.Color.Black;
-            this.startSimulation.Location = new System.Drawing.Point(73, 96);
-            this.startSimulation.Margin = new System.Windows.Forms.Padding(2);
+            this.startSimulation.Location = new System.Drawing.Point(110, 148);
             this.startSimulation.Name = "startSimulation";
-            this.startSimulation.Size = new System.Drawing.Size(53, 19);
+            this.startSimulation.Size = new System.Drawing.Size(80, 29);
             this.startSimulation.TabIndex = 3;
             this.startSimulation.Text = "Simular movimiento";
             this.startSimulation.UseVisualStyleBackColor = true;
@@ -223,25 +225,17 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // zoomLbl
-            // 
-            this.zoomLbl.AutoSize = true;
-            this.zoomLbl.Location = new System.Drawing.Point(77, 257);
-            this.zoomLbl.Name = "zoomLbl";
-            this.zoomLbl.Size = new System.Drawing.Size(0, 13);
-            this.zoomLbl.TabIndex = 11;
-            // 
             // SimulacionMetroCali
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1116, 559);
+            this.ClientSize = new System.Drawing.Size(1674, 860);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gmap);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "SimulacionMetroCali";
             this.Text = "SimulacionMetroCali";
             this.Load += new System.EventHandler(this.Map_Load);

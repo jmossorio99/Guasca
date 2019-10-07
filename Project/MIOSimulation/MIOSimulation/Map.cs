@@ -24,6 +24,7 @@ namespace MIOSimulation
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
         private GMapOverlay polygons = new GMapOverlay();
+        private GMapOverlay Zones = new GMapOverlay();
         private int number=0;
         private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
@@ -41,8 +42,8 @@ namespace MIOSimulation
         {
             //setting up the map
             stationNames = readStationNames();
-            addListsToHashset();
-            addAllStopsAndStations();
+            //addListsToHashset();
+            //addAllStopsAndStations();
             
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
@@ -50,9 +51,26 @@ namespace MIOSimulation
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
 
+            addZones();
+            gmap.Overlays.Add(Zones);
+
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
-            StationStop_CB.Items.Add("Paradas");
+            StationStop_CB.Items.Add("Paradas");        
+        }
+
+        private void addZones()
+        {
+            FileReader frZones = new FileReader("CoordenatesPolygons.txt");
+            List<String> zonesData = frZones.readFile();
+            int size = zonesData.Count;
+            List<int> toSee = new List<int>{0,1,2,3,4,5,6,7,8};
+            foreach (var i in toSee) {
+                String elem = zonesData[i];
+                Polygon example = new Polygon(elem);
+                Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"));
+            }
+            
         }
 
         private void addAllStopsAndStations()
@@ -366,6 +384,11 @@ namespace MIOSimulation
                 }
                 
             }
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
