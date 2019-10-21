@@ -1,0 +1,13 @@
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Release\MIOSimulation.exe.config
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Release\MIOSimulation.exe
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Release\MIOSimulation.pdb
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Release\GMap.NET.Core.dll
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\bin\Release\GMap.NET.WindowsForms.dll
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.csprojAssemblyReference.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.SimulacionMetroCali.resources
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.Properties.Resources.resources
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.csproj.GenerateResource.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.csproj.CoreCompileInputs.cache
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.csproj.CopyComplete
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.exe
+C:\Users\nelso\Desktop\Current Proyects\Guasca\Project\MIOSimulation\MIOSimulation\obj\Release\MIOSimulation.pdb

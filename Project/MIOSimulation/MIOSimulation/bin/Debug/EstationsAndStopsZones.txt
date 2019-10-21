@@ -1,0 +1,2121 @@
+Stops
+Kr 27 con Cl 9 Oe En Zone 7
+Cl 5 Oe entre Kr 24E y 24F En Zone 7
+Kr 27 entre Cl 3 y 2 Oe En Zone 7
+Kr 27 entre Cl 3 y 4 En Zone 7
+Cl 1 entre Kr 13A y 13 En Zone 7
+Av 1 entre Kr 2 y Cl 2 OE En Zone 0
+Kr 24C entre Cl 4 OE y 5 OE En Zone 7
+Cl 11 Oe con Kr 24D En Zone 7
+Cl 5 entre Kr  22 y 23 En Zone 7
+Kr 10 con Cl 11 En Zone 0
+Kr 10 con Cl 13 En Zone 0
+Cl 21 entre Kr 9 y 10 En Zone 4
+Av 2 Oeste En Zone 7
+Av 2 Oeste con Cl 20 En Zone 7
+Av 2 Oeste Sector Atenas En Zone 7
+Av 2 Oeste con Cl 20 En Zone 7
+Av 2 Oeste a Bellavista En Zone 7
+Kr 2 Oeste entre Cl 14 y Kr 2A1 En Zone 7
+Kr 4 entre Cl 12A y 13 Oeste En Zone 7
+Cl 14 Oeste entre Kr 16 y 15 En Zone 7
+Cl 14 oeste entre Kr 23C y 24D En Zone 7
+Cl 14 Oeste entre Kr 24C y 24B En Zone 7
+Cl 14 Oeste entre Kr 15 y 16 En Zone 7
+Kr 4 entre Cl 13 y 12A Oeste En Zone 7
+Cl 5 entre Kr 6 y 9 Clinica Comfenalco En Zone 0
+Cl 5 entre Kr 13 y 14 En Zone 7
+Cl 5 entre Kr 14 y 13 Puente Peatonal En Zone 7
+Kr 10 entre Cl 15 y 16 En Zone 8
+Kr 10 entre Cl 19 En Zone 4
+Kr 10 entre Cl 23 En Zone 4
+Cl 13 entre Kr 23 y 23A En Zone 6
+Cl 14 Oe entre Kr 24C y 24B En Zone 7
+Kr 23 entre Cl 13A y 14 En Zone 8
+Cl 15 entre Kr 23C y 23 En Zone 8
+Cl 15 entre Kr 23 y 23A En Zone 8
+Kr 25 entre Cl 18B y 18C En Zone 8
+Kr 25 entre Cl 19A y 19B En Zone 8
+Cl 23 entre Kr 25B y 26 Santa Elena En Zone 8
+Kr 29 entre Cl 25 y 26B En Zone 8
+Kr 29 entre Cl 27 y 29 En Zone 8
+Kr 14 entre Cl 2 y 2A En Zone 7
+Av 4N entre Cl 3 y 4 OE En Zone 0
+Kr 1 entre Cl 7 y 5 Oe En Zone 0
+Cl 8 entre Av 3 y 4 En Zone 0
+Av 4N entre Cl 18 y 19 En Zone 2
+Av 4N entre Cl 21 y 22 En Zone 2
+Av 4N entre Cl 23 y 24 En Zone 2
+Cl 21 entre Kr 7 y 7A En Zone 4
+Cl 21 entre Kr 4 y 5 En Zone 4
+Cl 8 entre Kr 6 y 8 En Zone 0
+Av 4 Oeste con  Cl 5 En Zone 0
+Av 15 Oeste con Cl 7 En Zone 0
+Av 15 Oeste Cl 9A En Zone 0
+Av 15 Oeste Cl 9A 2 En Zone 0
+Puente del Rio Aguacatal Urbanizacion Se En Zone 0
+Cl 11 Oeste con Kr 15A En Zone 0
+Av 9 Oeste En Zone 0
+Av 9 Oeste 2 En Zone 0
+Av 22 Oeste entre  Cl 22A y 23 Bis En Zone 0
+Av 9A Oeste con Cl 24 En Zone 0
+Av 9A Oeste entre Cl 23 Bis y 22A En Zone 0
+Av 9 Oeste - 1 En Zone 0
+Av 9 Oeste - 3 En Zone 0
+Cl 14 Oeste con Kr 12A Oeste En Zone 0
+Puente del Rio Aguacatal Urbanizacion Se En Zone 0
+Av 15 Oeste con Cl 9A - 1 En Zone 0
+Av 15 Oeste con Cl 9A En Zone 0
+Av 4 Oeste con Cl 5 - 1 En Zone 0
+Cl 11 Oe AV 15A En Zone 0
+Cl 15 entre Kr 18A y 19 En Zone 8
+Cl 11 Oe AV 15B En Zone 0
+Kr 27 entre Cl 4 y 5 Oe En Zone 7
+Kr 27 entre  Cl 5  y 4 Oe En Zone 7
+Cl 5 con Kr 6 En Zone 0
+Kr 10 entre Cl 8 y 7 En Zone 0
+Cl 9 entre Kr 14A y 14 En Zone 7
+Cl 5 entre Kr 27 y 34 En Zone 7
+Cl 21 entre Kr 11B y 11D En Zone 4
+Kr 15 entre Cl 7 y 5 En Zone 7
+Cl 5A Oe con Kr 1C En Zone 0
+Kr 23 entre Cl 11A y 12 En Zone 7
+Cl 14 Oe con Cl 12 Oe En Zone 7
+Cl 62 entre Kr 1D y 1C En Zone 3
+Cl 62 entre Kr 1A5A y 1 Bis En Zone 3
+Kr 2 entre Cl 70 y 69 En Zone 3
+Cl 44 entre Kr 6N y 5N En Zone 3
+Cl 44 entre Kr 1D1 y 1D En Zone 3
+Cl 44 entre Kr 1D1 y 1H En Zone 3
+Cl 44 entre Kr 2 y 2B En Zone 3
+Cl 44 entre Kr 7 y 6A En Zone 3
+Cl 44 entre Kr 2 y 1E En Zone 3
+Cl 34 entre Kr 7 y 5A En Zone 4
+Cl 34 entre Kr 3 y 2C En Zone 3
+Cl 34 entre Kr 3N y 2AN En Zone 3
+Cl 34 entre Kr 1A y 1B En Zone 3
+Cl 34 entre Kr 4 y 4B En Zone 3
+Cl 70 entre Kr 1B y 1B1 En Zone 3
+Cl 44 entre Kr 4E y 4B En Zone 3
+Cl 44 entre Kr 6B y 6C En Zone 3
+Cl 44 entre Kr 4B y 4E En Zone 3
+Cl 44 entre Kr 2N y 3AN En Zone 3
+Cl 44 entre Kr 6N y 7N En Zone 2
+Cl 73A entre Kr 1A y 1A1 En Zone 3
+Cl 76 entre Kr 1A4A Y 1A4A BIS En Zone 3
+Cl 76 entre Kr 1A5A BIS y 1A5B En Zone 3
+Cl 76 entre Kr 1A7 y 1A7 BIS En Zone 3
+Kr 1A12 entre Cl 76 y 73A En Zone 3
+Cl 73A entre Kr 1A8 y 1A7 BIS En Zone 3
+Cl 73A entre Kr 1A5D y 1A5C BIS En Zone 3
+Cl 73A entre Kr 1A4B1 y 1A4B En Zone 3
+Cl 73A entre Kr 1A1 y 1A En Zone 3
+Cl 52 entre Av 2AN y Kr 8N En Zone 2
+Cl 52 entre Kr 5N y 4N En Zone 3
+Cl 34 entre Kr 1H y 1 En Zone 3
+Cl 70 entre Kr 4CN y 5N En Zone 2
+Cl 70 entre Kr 6N y 5N En Zone 2
+Cl 70 entre Av 2N y 2Bis PP1 En Zone 2
+Cl 70 entre Av 2Bis y 2N En Zone 2
+Cl 70 entre Av 2N y 2Bis Hiper Mercado L En Zone 2
+Cl 70 entre Av 3N y 3BN En Zone 2
+Cl 70 entre Av 3CN y 3N En Zone 2
+Cl 70 entre Av 3CN y 4N En Zone 2
+Cl 70 entre Av 4N y 3CN En Zone 2
+Cl 70 entre Av 4N y 6N En Zone 2
+Cl 70 entre Av 6N y 4N 2 En Zone 2
+Av 6N con Cl 67 PP1 En Zone 2
+Av 6N entre Cl 52 Y 67 PP1 En Zone 2
+Av 6N entre Cl 49 y 48 En Zone 2
+Av 6N entre Cl 47 y 44B En Zone 2
+Av 6N entre Cl 45 y 47N / PP1 En Zone 2
+Av 6N entre Cl 41 y 40 PP1 En Zone 2
+Av 6N entre Cl 40 Y 42 PP1 En Zone 2
+Av 6AN entre Cl 35 y 29 PP1 En Zone 2
+Av 6AN entre Cl 25 y 24A PP1 En Zone 2
+Av 6AN entre Cl 22A y 22 En Zone 2
+Cl 73 entre Kr 1 y 1FN En Zone 3
+Kr 1FN entre Cl 81 y 80 En Zone 3
+Cl 80 entre Kr 1FN y 1EN En Zone 3
+Av 6N entre Cl 23 y 24 PP1 En Zone 2
+Av 6N entre Cl 25 y 26N En Zone 2
+Cl 52 entre Kr 4N y 5N En Zone 3
+Cl 70 entre Kr 3 y 4C PP1 En Zone 3
+Kr 5 entre Cl 44 y 44B En Zone 3
+Kr 2AN entre Cl 73 y 81 En Zone 3
+Cl 84 entre Kr 2NBis y 2AN En Zone 3
+Cl 70 entre Kr 3D y 3C PP2 En Zone 3
+Kr 5 entre Cl 36 y 35 En Zone 3
+Kr 1A6 entre 71 y 70B En Zone 3
+Cl 66 entre Kr 1A6 y 1A10 En Zone 3
+Cl 70 entre Kr 1G En Zone 3
+Cl 66 entre Kr 1A10 y 1A6 En Zone 3
+Kr 1A6 entre Cl 62A y 62 En Zone 3
+Reserva Paso del Comercio 1 En Zone 3
+Reserva Paso del Comercio 3 En Zone 3
+Kr 5N entre Cl 67 y 65 En Zone 2
+Cl 62 entre Kr 4A y 4N En Zone 3
+Cl 70 entre Kr 1GBis y 1F En Zone 3
+Cl 44 entre Kr 3 y 4 En Zone 3
+Cl 44 entre Kr 3 y 2C En Zone 3
+Cl 16 entre Kr 100 y 98 En Zone 1
+Cl 70 entre Kr 11A y 11E En Zone 4
+Cl 70 entre Kr 7LBis y 7L En Zone 4
+Cl 70 entre Kr 7L y 7LBis En Zone 3
+Cl 70 entre Kr 7G y 7EBis En Zone 3
+Cl 70 entre Kr 7C y 7BBis En Zone 3
+Cl 70 entre Kr 7BBis y 7C En Zone 3
+Kr 15 entre Cl 73 y 74 En Zone 4
+Kr 25 entre Cl 73A y 74 En Zone 4
+Kr 25 entre Cl 77 y 78 En Zone 4
+Cl 80 entre Kr 25 y 23 En Zone 4
+Kr 23 entre Cl 83B y 84 En Zone 4
+Kr 23 entre Cl 85A y 85 En Zone 4
+Kr 23 con Cl 96 En Zone 4
+Kr 23 entre Cl 102B y 102C En Zone 4
+Cl 123 entre Kr 23 y 23A En Zone 4
+Cl 123 entre Kr 26ABis y 26CBis En Zone 4
+Cl 123 entre Kr 26I y 26I2 En Zone 4
+Cl 123 entre Kr 27C y 27D En Zone 4
+Cl 123 entre Kr 28B y 28B1 En Zone 4
+Cl 123 entre Kr 26P y 26Q En Zone 4
+Cl 121 entre Kr 27F y 27D1 En Zone 4
+Cl 123 entre Kr 26J2 y 26J En Zone 4
+Cl 123 entre Kr 26B y 26ABis En Zone 4
+Kr 23 entre Cl 120Q y 120R En Zone 4
+Kr 23 entre Cl 114 y 112 En Zone 4
+Kr 23 entre Cl 102B y 102 En Zone 4
+Cl 18 entre Kr 122 y 121 En Zone 1
+Via a la Buitrera La Y En Zone 1
+Via a la Buitrera Rapitienda La Buitrera En Zone 1
+Via a la Buitrera Colegio Diana Oese En Zone 1
+Via a la Buitrera Ferreteria el Portento En Zone 1
+Via a la Buitrera Girasoles Web Cafe En Zone 1
+Via a la Buitrera Sector Las Piedras Km  En Zone 1
+Via a la Buitrera Las Piedras En Zone 1
+Via La Buitrera Callejon Los Pinos En Zone 1
+Via a la Buitrera Tienda Inicio de ruta En Zone 1
+Via a la Buitrera Finca santa Ana En Zone 1
+Via a la Buitrera Golden Net En Zone 1
+Via a la Buitrera Sector Girasoles En Zone 1
+Via a la Buitrera Ferreteria La Buitrera En Zone 1
+Via a la Buitrera Colegio En Zone 1
+Via a la Buitrera Y En Zone 1
+Cl 13 entre Kr 101A y 102 En Zone 1
+Via a la Buitrera Los Pinos En Zone 1
+Via a la Buitrera Los Pinos En Zone 1
+Cl 4 Oe con Kr 94 En Zone 1
+Via a la  Buitrera SENA-1 En Zone 1
+Via a la  Buitrera SENA En Zone 1
+Via a la Buitrera Colacteos En Zone 1
+Via a la Buitrera Colacteos En Zone 1
+Via a la Buitrera Duquelandia En Zone 1
+Via a la Buitrera Panaderia Nueva Vida En Zone 1
+Via a la Buitrera Colegio Las Lajas En Zone 1
+Via a la Buitrera Capricho Km 6 En Zone 1
+Via a la Buitrera Km 7 En Zone 1
+Via a la Buitrera Colegio Las Lajas Baja En Zone 1
+Via a la Buitrera Fatima En Zone 1
+Via a la Buitrera Sector El Portento En Zone 1
+Via Principal Cascajal En Zone 1
+Cl 18 con Kr 141 En Zone 1
+Cl 18 con Kr 141 En Zone 1
+Cl 42 entre Kr 81A y 81 Lote En Zone 1
+Cl 42 entre Kr 85E y 85D En Zone 1
+Cl 42 entre Kr 84 y 83E En Zone 1
+Kr 99 entre Cl 45 y 42 En Zone 1
+Cl 14 entre Kr 85B y 85A En Zone 1
+Cl 14 entre Kr 83C y 83 En Zone 1
+Cl 14 entre Kr 83 y 84 En Zone 1
+Cl 14 entre Kr 85A y 85B En Zone 1
+Kr 80 entre Cl 45 y 48 En Zone 1
+Kr 99 entre Cl 42 y 45 En Zone 1
+Cl 16 entre Kr 75A y 73 En Zone 6
+Hormigero2 En Zone 1
+Hormiguero1 En Zone 1
+Via_puerto_tejada En Zone 1
+Cali_puerto-col-fray damian En Zone 1
+Puerto_cascajal En Zone 1
+Via principal_hormiguero3 En Zone 1
+Via_principal hormi4 089 En Zone 1
+Via_hormi5_col asuncion En Zone 1
+V_hormi C216 En Zone 1
+V-hormi7 C122 En Zone 1
+V_hormi8 C087 En Zone 1
+Via cali_puerto En Zone 1
+via_cascajal2 En Zone 1
+Via_cascajal3 urb flamenco En Zone 1
+Via_cascajal5 En Zone 1
+Via_cascajal6 equilar C099 En Zone 1
+Via_cascajal7 col-santa maria pance En Zone 1
+Via_cascajal8 Conchita En Zone 1
+Urb Mara?on En Zone 1
+Cl 36 entre Kr 128 y 129 En Zone 1
+Cl 36 entre Kr 146 y 148 En Zone 1
+Cl 36 entre Kr 134 y 128 En Zone 1
+Av los Cerros Melendez En Zone 1
+Av los Cerros con Cl 2 Acceso Vial En Zone 1
+Via La Voragine Ecoparque 1 entrada En Zone 1
+Via La Voragine Ecoparque 3 entrada En Zone 1
+Via La Voragine Ecoparque 4 entrada En Zone 1
+La Voragine Fin En Zone 1
+La Voragine Ini En Zone 1
+Via La Voragine Ecoparque 3 entrada En Zone 1
+Via La Voragine Ecoparque 2 entrada En Zone 1
+Via La Voragine Ecoparque 1 entrada En Zone 1
+Av los Cerros con Cl 2 Acceso Vial En Zone 1
+Kr 109 con Cl 50 Reformatorio Valle del  En Zone 1
+Kr 109 con Cl 57 Colegio Philadelphia En Zone 1
+Kr 118 Callejon Jagua Comfenalco Valle d En Zone 1
+Kr 118 Callejon Jagua Club Ca?asgordas En Zone 1
+Kr 118 Callejon Jagua Colegio Juvenilia En Zone 1
+Kr 118 Callejon Jagua Comfenalco Valle d En Zone 1
+Kr 109 con Cl 57 PVL En Zone 1
+Kr 109 con Cl 50 Reformatorio Valle del  En Zone 1
+Kr 95 entre Cl 4 y 3D En Zone 1
+Kr 95 entre Cl 3 y Kr 95A En Zone 1
+Kr 94B entre Cl 2B y 2 En Zone 1
+Kr 95C con Cl 1A Oeste En Zone 1
+Kr 96 entre Cl 1 Oe y 2 Oe En Zone 1
+Cl 4 Oe entre Kr 94B y 94A En Zone 1
+Cl 4 Oe entre Kr 94A y 94 En Zone 1
+Kr 96 entre Cl 3 Oe y 1 Oe En Zone 1
+Kr 95 entre Cl 1a Oe y 1A En Zone 1
+Kr 94C entre Cl 1 Oe y 1B En Zone 1
+Cl 2B entre Kr 95A y 94D En Zone 1
+Kr 95 entre Cl 3 y 3C En Zone 1
+Cl 16 entre Kr 100 y 102 En Zone 1
+Cl 18 entre Kr 105 y 106 En Zone 1
+Cl 42 entre Kr 91 y 92 En Zone 1
+Kr 168 Centro Recreativo Comfandi Pance En Zone 1
+Kr 180 Hacienda Castillo En Zone 1
+Cl 18 con Kr 170 1 En Zone 1
+Cl 18 entre Kr 129 y 127C 1 En Zone 1
+Via a la Buitrera 1 En Zone 1
+Via a la Buitrera 2 En Zone 1
+Via La Voragine Hacienda La Rivera EMCAL En Zone 1
+Via Principal del Hormiguero En Zone 1
+Cl 2C entre Kr 94A y 95 En Zone 1
+Cl 42 con Kr 100A En Zone 1
+Kr 109 con Cl 42 En Zone 1
+Cl 42 entre Kr 109 y 112 En Zone 1
+Cl 48 entre Kr 94 y 95 En Zone 1
+Cl 16 entre Cr 85B y 85A En Zone 1
+Cl 16 entre Kr 83C y 83B En Zone 1
+Reserva Sur 2 En Zone 1
+Reserva Sur 3 En Zone 1
+C4 entre K95 y 96 En Zone 1
+C4 entre K96 y 98 En Zone 1
+Kr 98A con Cl 2D En Zone 1
+Kr 98A con Cl 2A Altos del Madrigal En Zone 1
+Kr 98 entre Cl 2 y 2A En Zone 1
+Kr 98 entre Cl 2D y 3 En Zone 1
+Altos de Santa Elena P2 En Zone 1
+Altos de Santa Elena P3 En Zone 1
+Altos de Santa Elena P7 En Zone 1
+Altos de Santa Elena P8 En Zone 1
+Altos de Santa Elena P9 En Zone 1
+Altos de Santa Elena P5 En Zone 1
+Altos de Santa Elena P6 En Zone 1
+Altos de Santa Elena P13 En Zone 1
+Altos de Santa Elena P14 En Zone 1
+Kr 98 entre Cl 3C y 4 En Zone 1
+Cl 4 entre  Kr 96 y 95 En Zone 1
+Kr 83 entre Cl 1A1 y 1 En Zone 1
+Kr 78 entre Cl 3 y 2C En Zone 1
+Kr 78 con Cl 3D y 3A En Zone 1
+Kr 99 entre Cl 45 y 48 En Zone 1
+Cl 50 entre Kr 100 y 102 En Zone 1
+Cl 25 entre Kr 102 y 101 En Zone 1
+LA VORAGINE Fin En Zone 1
+Via La Buitrera Callejon Pacheco Subiend En Zone 1
+Via La Buitrera Tienda Nancy En Zone 1
+Via La Buitrera Callejon Pacheco - Bajan En Zone 1
+Kr 83C entre Cl 50 y 48 En Zone 1
+Kr 83C entre Cl 50 y 48 P1 En Zone 1
+Kr 83C entre Cl 48Bis y 50 En Zone 1
+Cl 42 entre Kr 83C y 83B En Zone 1
+Cl 48 entre Kr 80 y 81 En Zone 1
+Cl 53 entre Kr 83C y 83E Vegas de Comfan En Zone 1
+Cl 54 entre Kr 85Cy 84 Unidad Residencia En Zone 1
+Kr 85C entre Cl 54 y 55 Panaderia En Zone 1
+Kr 85D entre Cl 55 y 54 Caseta En Zone 1
+Cl 54 entre Kr 84 y 85C Unidad Residenci En Zone 1
+Cl 53 entre Kr 83E y 83C Vegas de Comfan En Zone 1
+Kr 86 entre Cl 45 y 48 PoliClinica Caney En Zone 1
+Cl 48 entre Kr 98B y 98A En Zone 1
+Cl 48 entre Kr 94A y 94 En Zone 1
+Kr 99 entre Cl 53 y 50 / Ciudad Melendez En Zone 1
+Cl 48 entre Kr 98A y 98B En Zone 1
+Via La Buitrera Mi Capricho Km 6 En Zone 1
+Unidad R Mirador Campestre P1 En Zone 1
+Unidad R Mirador Campestre P15 En Zone 1
+Cl 48 entre Kr 82 y 83Bis En Zone 1
+Cl 48 entre Kr 85 y 86 En Zone 1
+Cl 55 entre Kr 85C y 85D En Zone 1
+Universidad San Martin En Zone 1
+Kr 99 entre Cl 53 y 54 En Zone 1
+Kr 125 con Cl 19 En Zone 1
+Altos de Santa Elena P4 En Zone 1
+Altos de Santa Elena P10 En Zone 1
+Altos de Santa Elena P12 En Zone 1
+Calle 48 entre Carrera 100 y 102 En Zone 1
+Kr 99 entre Cl 50 y 53 En Zone 1
+Cl 18 entre Kr 125 y 122 En Zone 1
+Cl 70 entre Av 3BN y 3CN En Zone 2
+Cl 70 entre Av 4N y 3CN En Zone 2
+Av 6N entre Cl 34 y 35 En Zone 2
+Av 6AN entre Cl 27 y 26 PP2 En Zone 2
+Av 6N entre Cl 21 y 22 En Zone 2
+Av 1N entre Cl 12 y 10 PP2 En Zone 0
+Cl 44 entre Av 3DN y 3EN En Zone 2
+Cl 70 entre Av 4N y 6N 2 En Zone 2
+Cl 70 entre Av 6N y 4N En Zone 2
+Cl 70 con Av 2N En Zone 2
+Av 3N entre Cl 32A y 33 En Zone 2
+Av 3N entre Cl 31 y 30 En Zone 2
+Av 3N entre Cl 24 y 23D En Zone 2
+Cl 21 entre Av 4N y 3N En Zone 2
+Cl 75CN entre Av 2 ABis y 2B En Zone 2
+Av 2AN entre Cl 71N y 70N En Zone 2
+Av 3N entre Cl 59 y 61AN En Zone 2
+Av 2N entre Cl 57AN y 57N En Zone 2
+Cl 44 entre Av 3HN y 4N En Zone 2
+Cl 44 entre Av 4BN y 6N En Zone 2
+Av 6N entre Cl 45 y 47 PP2 En Zone 2
+Av 6N entre Cl 48 y 49 / PP1 En Zone 2
+Cl 52N entre Av 4A y 4 En Zone 2
+Cl 52 entre Av 3H y 3F En Zone 2
+Cl 25 entre Av 2DN y 2CN En Zone 3
+Cl 34 entre Av 3CN y 4N En Zone 2
+Av 2BN entre Cl 34 y 35 En Zone 2
+Resesrva Sur 1 En Zone 1
+Cl 52 entre Kr 3 y 2 SENA Entrada 1 En Zone 3
+Cl 56 con Kr 1 Comfandi IPS En Zone 3
+Kr 28D Con Cl 79 En Zone 4
+Calipso Reserva 1 En Zone 4
+Cl 14 Oeste con Kr 12A En Zone 0
+Av 9A Oeste con Cl 24 - 1 En Zone 0
+Cl 11 Oeste con Kr 15A En Zone 0
+Av 15 Oeste con Cl 7 - 1 En Zone 0
+Kr 25 entre Cl 19B y 19A En Zone 8
+Cl 5 entre Kr 15 y Cl 6 En Zone 7
+Cl 15 entre Kr 16 y 17 En Zone 8
+Cl 13 entre Kr 23A y 23 En Zone 6
+V_hormi9 rosy En Zone 1
+Via_cascajal4 Centro educativo En Zone 1
+Via_cascajal9 Presentacion En Zone 1
+Cl 36 entre Kr 170 y 168 En Zone 1
+Via La Voragine Ecoparque 2 entrada En Zone 1
+Via La Voragine Ecoparque 4 entrada En Zone 1
+Kr 122 entre Cl 4 y 5 En Zone 1
+Kr 118 Callejon Jagua Colegio Juvenilia En Zone 1
+Kr 109 entre Cl 26 y 25 En Zone 1
+Kr 94C entre Cl 2 y 1A Oeste En Zone 1
+Cl 4 Oe entre Kr 94 Bis y 94A En Zone 1
+Kr 94B entre Cl 2 y 2B En Zone 1
+Cl 48 entre Kr 86 y 85 En Zone 1
+Kr 80 entre Cl 45 y 46 En Zone 1
+Cl 25 entre Kr 83C y 83 En Zone 1
+Cl 25 entre Kr 98 y 100 En Zone 1
+Kr 94 Entre Cl 4D y 4C En Zone 1
+Cl 25 entre Kr 83C y 85 En Zone 1
+Kr 56 entre Cl 13E y 14 En Zone 6
+Kr 56 entre Cl 11A y 11 En Zone 6
+Cl 42 entre Kr 94A y 95 En Zone 1
+Cl 42 entre Kr 98 y 98B En Zone 1
+Cl 18 entre Kr 114 y 114B En Zone 1
+Cl 4 Oe con Kr 91 En Zone 1
+Kr 23 entre Cl 98A y 98 En Zone 4
+Kr 23 entre Cl 87 y 86 En Zone 4
+Kr 23 entre Cl 84 y 83B En Zone 4
+Kr 23 entre Cl 83 y 81B En Zone 4
+Cl 80 entre Kr 23 y 25 En Zone 4
+Kr 25 entre Cl 80 y 79 En Zone 4
+Kr 25 entre Cl 77 y 78 En Zone 4
+Kr 25 entre Cl 74 y 75 En Zone 4
+Kr 15 entre Cl 74A y 74 En Zone 4
+Dg 26F1 entre Tr 73A y Cl 73 En Zone 4
+Tr 103 entre Cl 74 y Kr 26B2 En Zone 4
+Tr 103 entre Cl 76 y 77 En Zone 4
+Tr 103 entre Cl 79 y 79A En Zone 4
+Tr 103 entre Dg 26I y 26I1 En Zone 4
+Tr 103 entre Dg 26P3 y 26P4 En Zone 4
+Tr 103 entre Dg 26P8 y 26P9 En Zone 4
+Tr 103 entre Dg 26P14 y 26P15 En Zone 4
+Tr 103 entre Kr 27C y 27D En Zone 4
+Kr 28 entre Cl 101 y 100 En Zone 4
+Cl 73 entre Kr 27B y 27D En Zone 4
+Kr 28 entre Cl 88 y 83 En Zone 4
+Kr 28 entre Cl 79 y 73 En Zone 4
+Cl 73 con Kr 8 En Zone 4
+Kr 27 entre Cl 77 y 78 En Zone 4
+Cl 73 entre Kr 7RBis y 7S En Zone 4
+Kr 27 entre Cl 85 y 86 En Zone 4
+Kr 27 entre Cl 91 y 96 En Zone 4
+Tr 103 entre Dg 26P17 y 26P16 En Zone 4
+Tr 103 entre Dg 26P9 y 26P8 En Zone 4
+Tr 103 entre Cl 95 y 92 En Zone 4
+Tr 103 entre Cl 84 y 80F En Zone 4
+Tr 103 entre Cl 80A y 80 En Zone 4
+Tr 103 entre Cl 79 y 78 En Zone 4
+Tr 103 entre Cl 77 y 76 En Zone 4
+Tr 103 entre Cl 75 y 74 En Zone 4
+Cl 73 entre Kr 7M y 7LBis En Zone 4
+Cl 73 entre Kr 7JBis y 7J En Zone 4
+Cl 73 entre Kr 7B y 7BBis En Zone 3
+Cl 73 entre Kr 7G y 7FBis En Zone 4
+Cl 73 entre Kr 7D y 7C En Zone 3
+Kr 7C entre Cl 70 y 72A En Zone 3
+Cl 112 entre Kr 24 y 23 En Zone 4
+Kr 7C entre Cl 72A y 73 En Zone 3
+Cl 73 entre Kr 7C y 7ABis En Zone 3
+Cl 34 entre Kr 7 y 8 En Zone 4
+Kr 8 entre Cl 34 y 26 En Zone 4
+Kr 8 entre Cl 27 y 26 En Zone 4
+Kr 8 entre Cl 44 y 36 En Zone 4
+Kr 8 entre Cl 39 y 41 En Zone 4
+Kr 8 con Cl 44 En Zone 4
+Cl 112 entre Kr 25 y 26 Parqueadero En Zone 4
+Cl 112 entre Kr 26A y 26A1 En Zone 4
+Cl 112 entre Kr 26B3 y 26C En Zone 4
+Kr 8 con Cl 51 En Zone 4
+Kr 8 entre Cl 49 y 50 En Zone 4
+Kr 8 con Cl 56 En Zone 4
+Kr 8 entre Cl 54 y 56 En Zone 4
+Kr 8 con Cl 59 En Zone 4
+Kr 8 entre Cl 62 y 61 En Zone 4
+Kr 8 entre Cl 59 y 70 En Zone 4
+Cl 70 entre Kr 26 y 25B En Zone 4
+Kr 25 entre Cl 114 y 113 En Zone 4
+Cl 70 entre Kr 7Rbis y 7Mbis En Zone 4
+Cl 73 entre Kr 7F y 7G En Zone 3
+Cl 73 entre Kr 7RBis y 7SBis En Zone 4
+Cl 73 con Kr 8 En Zone 4
+Cl 73 entre Kr 11 y Dg 14 En Zone 4
+Cl 73 entre Kr 11 y 10 En Zone 4
+Cl 95 entre Kr 26H y 26G4 En Zone 4
+Cl 97 entre Kr 26F1 y 26F En Zone 4
+Kr 27 entre Cl 120 y 116 En Zone 4
+Cl 112 entre Kr 27 y 26Q En Zone 4
+Cl 112 entre Kr 26J5 y 26J En Zone 4
+Cl 112 entre Kr 26J y 26J5 En Zone 4
+Cl 94 entre Kr 26H y 26I En Zone 4
+Cl 112 entre Kr 26D y 26E En Zone 4
+Cl 112 entre Kr 26H2 y 26H3 En Zone 4
+Cl 112 entre Kr 26Q y 27 En Zone 4
+Kr 27 entre Cl 106 y Tr 103 En Zone 4
+Kr 27 entre Cl 91 y 88 En Zone 4
+Kr 27 entre Cl 81 y 80 En Zone 4
+Kr 25 entre Cl 84 y 85 En Zone 4
+Kr 25 entre Cl 89 y 94 En Zone 4
+Kr 25 entre Cl 94D y 112 En Zone 4
+Kr 25 entre Cl 112 y 113 En Zone 4
+Cl 121 entre Kr 26F y 26F Bis En Zone 4
+Cl 121 entre Kr 26K y 26K1 En Zone 4
+Cl 121 entre Kr 26R y 26R1 En Zone 4
+Cl 121 entre Cl 122A2 y 122A3 En Zone 4
+Cl 121 entre Cl 122A3 y 122A2 En Zone 4
+Cl 121 entre Cl 121D y Kr 28D En Zone 4
+Cl 121 con Kr 26P En Zone 4
+Cl 121 entre Kr 26E y 26F En Zone 4
+Cl 121 entre Kr 25A y 25B En Zone 4
+Kr 25 entre Cl 104 y 105 En Zone 4
+Kr 25 entre Cl 86 y 85 En Zone 4
+Kr 25 entre Cl 80A y 80B En Zone 4
+Cl 73 entre Kr 7C Bis y 7D En Zone 3
+Tr 103 entre Kr 26A2 y 26A3 En Zone 4
+Cl 121 entre Kr 27I y 27J En Zone 4
+Cl 121 con Kr 28D En Zone 4
+Cl 123 entre Kr 28B y 28A En Zone 4
+Cl 67 entre Kr 7EBis y 7F En Zone 3
+Cl 63 entre Kr 7F y 7F Bis En Zone 3
+Cl 61 entre Kr 7V Bis y 8 En Zone 4
+Cl 18 entre Kr 130 y 137 En Zone 1
+Cl 18 entre Kr 137 y 130 En Zone 1
+Kr 94C con Cl 1C Antes de la Y En Zone 1
+Kr 102 entre Cl 12 y 11B En Zone 1
+Kr 100 entre Cl 11 y 12 En Zone 1
+Cl 18 entre Kr 106 y 108 En Zone 1
+Cl 18 entre Kr 106 y 114 En Zone 1
+Cl 18 entre Kr 114B y 115 En Zone 1
+Cl 18 entre Kr 121 y 122 En Zone 1
+Cl 18 entre Kr 122 y 125 En Zone 1
+Cl 18 entre Kr 125 y 125A En Zone 1
+Cl 18 entre Kr 126 y 127 En Zone 1
+Cl 18 entre Kr 127 y 129 En Zone 1
+Cl 18 entre Kr 137 y 141 En Zone 1
+Cl 18 entre Kr 141 y 142 En Zone 1
+Cl 18 entre Kr 146 y 152 En Zone 1
+Cl 18 con Kr 170 En Zone 1
+Cl 18 con Kr 168 2 En Zone 1
+Cl 18 entre Kr 150 y 146 En Zone 1
+Cl 18 entre Kr 142 y 141 En Zone 1
+Cl 18 entre Kr 141 y 137 En Zone 1
+Cl 18 entre Kr 129 y 127C En Zone 1
+Cl 18 entre Kr 127C y 127 En Zone 1
+Cl 18 entre Cl 127 y 125 En Zone 1
+Kr 125 con Cl 23A En Zone 1
+Kr 168 con Cl 36 En Zone 1
+Cl 25 entre Kr 98B y 98 En Zone 1
+Cl 42 entre Kr 99 y 98A En Zone 1
+Cl 45 entre Kr 103 y 102 En Zone 1
+Cl 45 entre Kr 100 y 99 En Zone 1
+Kr 99 con Cl 34 En Zone 1
+Cl 48 entre Kr 92 y 90 En Zone 1
+Cl 48 entre Kr 90 y 92 En Zone 1
+Cl 25 entre Kr 125 y 127 En Zone 1
+Cl 13 con Kr 100 En Zone 1
+Kr 80 entre Cl 5 y 6A En Zone 1
+Cl 16 entre Kr 93 y 92 En Zone 1
+Kr 85C entre Cl 16 y 15 En Zone 1
+Kr 86 entre Cl 14A y 14 En Zone 1
+Kr 122 entre Cl 24 y 22A En Zone 1
+Kr 86 entre Cl 17 y 18 En Zone 1
+Kr 80 entre Cl 13A1 y 13B En Zone 1
+Autopista Cali - Jamundi - Sede Club Ame En Zone 1
+Cl 18 entre Kr 114B y 114A En Zone 1
+Cl 18 entre Kr 111 y 109 En Zone 1
+Cl 25 entre Kr 104 y 111 En Zone 1
+Cl 25 entre Kr 105 y 104 En Zone 1
+Kr 111 entre Cl 25 y 24 En Zone 1
+Kr 127 entre Cl 36 y 25 En Zone 1
+Kr 127 entre Cl 21A y 21 En Zone 1
+Cl 25 entre Kr 121 y 122 En Zone 1
+Cl 25 entre Kr 122 y 121 En Zone 1
+Kr 111 entre Cl 25 y 24 En Zone 1
+Cl 18 entre Kr 121 y 118 En Zone 1
+Cl 18 entre Kr 108 y 106A En Zone 1
+Cl 16 entre Kr 105 y 103 En Zone 1
+Kr 109 entre Cl 24 y 22 En Zone 1
+Cl 48 entre Kr 83E y 84 En Zone 1
+Cl 48 entre Kr 83A y 82A En Zone 1
+Cl 48 entre Kr 80 y 81 En Zone 1
+Cl 42 entre Kr 80 y 81 En Zone 1
+Cl 42 entre Kr 81 y 84 En Zone 1
+Kr 83C entre Cl 36 y 34 En Zone 1
+Cl 25 entre Kr 83A y 83B En Zone 1
+Cl 25 entre Kr 90 y 86 En Zone 1
+Cl 25 entre Kr 85C y 86 En Zone 1
+Cl 25 entre Kr 89 y 94 En Zone 1
+Kr 98 entre Cl 16 y 18 En Zone 1
+Cl 25 entre Kr 96 y 94 En Zone 1
+Cl 25 entre Kr 95 y 98 En Zone 1
+Cl 4 entre Kr 92 y 94 En Zone 1
+Kr 92 entre Cl 3A y 2C En Zone 1
+Kr 94 entre Cl 4 y 4A En Zone 1
+Cl 2 entre Kr 93 y 94 En Zone 1
+Kr 109 entre Cl 24 y 22 En Zone 1
+Cl 16 entre Kr 90 y 89 Urb. San Joaquin En Zone 1
+Cl 19 entre Kr 109 y 111 En Zone 1
+Kr 86 entre Cl 14 y 16 Univalle En Zone 1
+Kr 56 entre Cl 13G y 13F En Zone 6
+Kr 56 entre Cl 13F y 13 En Zone 6
+Kr 56 entre Cl 13 y 13C En Zone 6
+Kr 56 entre Cl 13 y 12A En Zone 6
+Kr 56 entre Cl 10A y 11A En Zone 6
+Cl 42 entre Kr 96 y 98 En Zone 1
+Cl 42 entre Kr 97A y 97 En Zone 1
+Cl 42 entre Kr 95 y 94A 2 En Zone 1
+Cl 42 entre Kr 92 y 91 En Zone 1
+Cl 42 entre Kr 85C y 85E En Zone 1
+Cl 25 entre Kr 127 y 128 En Zone 1
+Aut Cali Jamun-Kr 134 2 En Zone 1
+Cementerio Metropolitano En Zone 1
+Univ Antonio Nari?o En Zone 1
+Aut Cali Jamun-Kr 134 1 En Zone 1
+E Servicio Petrobras En Zone 1
+Cl 18 entre Kr 112 y 111 / Unidad Reside En Zone 1
+Cl 13 entre Kr 83 y 81 En Zone 1
+Cl 16 entre Kr 98 y 94 En Zone 1
+Cl 4 Oe con Kr 94 En Zone 1
+Cl 4 Oe con Kr 89 En Zone 1
+Cl 4 Oe con Kr 90 En Zone 1
+Cl 4 Oe con Kr 92 En Zone 1
+Av 2BN entre Cl 35 y 34 En Zone 2
+Av 2BN entre Cl 25 y 24 En Zone 2
+Cl 73 entre Av 3N y 2CN En Zone 2
+Cl 73 entre Av 2B3 y 2B2N En Zone 2
+Cl 74N entre Av 2BN y 2CN En Zone 2
+Cl 73 Bis N con Av 2B1 En Zone 2
+Cl 18 entre Av 5AN y 6N En Zone 2
+Cl 18N entre Av 3N y 4N En Zone 2
+Av 6N entre Cl 16 y 18 En Zone 2
+Cl 70 entre Av 2BS y 2N En Zone 2
+Av 3N entre Cl 52 y 55 En Zone 2
+Av. 2CN entre Cl 60 y 59A En Zone 2
+Av. 2DN entre Cl 57D y 57A En Zone 2
+Av. 2E netre Cl 55B y 55A En Zone 2
+Cl 75 entre Av 2B y 2A En Zone 2
+Av 2N entre Cl 75A y 75BN En Zone 2
+Av 2N entre Cl 75CN y 75DN En Zone 2
+Av 2N entre Cl 75HN En Zone 2
+Av 2CN entre Cl 75C y 75 En Zone 2
+Cl 44 entre Av 2D y 2E En Zone 2
+Av 2N entre Av 1 y Cl 4 En Zone 0
+Av 4N entre Cl 10 y 12 Los Turcos En Zone 0
+Av 6N entre Cl 13 y 15 Sisben En Zone 2
+Cl 34 entre Av 2E y 2BN En Zone 2
+Cl 23D entre Av 3Bis y 3AN En Zone 2
+Av 2F con Cl 25 Terminal de Transportes En Zone 2
+Cl 34 entre Av 2B y 2F En Zone 2
+Av 6N entre Cl 67 y 49 En Zone 2
+Av 2CN entre Cl 74 y 75 En Zone 2
+Av 2BN entre Cl 75C y 75 En Zone 2
+Cl 74 entre Av 2B2 y 2B1 En Zone 2
+Av 6N entre Cl 52 y 58 En Zone 2
+Cl 62A entre Av 2N y 2B En Zone 2
+Cl 44 entre Av 5N y 4N En Zone 2
+Cl 44 entre Av 2G y 2E En Zone 2
+Av 1N entre Cl 17 y 15 En Zone 0
+Cl 52 entre Av 2G y 2H En Zone 2
+Cl 55N entre Av 2F y 2H En Zone 2
+Av 6AN entre Cl 22 y 23 En Zone 2
+Av 6N entre Cl 26A y 27 En Zone 2
+Av 6N entre Cl 28 y 29A PP1 En Zone 2
+Av 6N entre Cl 44B y 44A En Zone 2
+Av 6AN entre Cl 22 y 21 En Zone 2
+Av 2GN entre Cl 57 y 57A En Zone 2
+Av 6N entre Cl 30 y 34 En Zone 2
+Av 9N Con Cl 56 En Zone 2
+Cl 53AN con Av 7A Bis En Zone 2
+Av 7N con Cl 53N En Zone 2
+Av 8N entre Cl 50 y 49N En Zone 2
+Cl 47 entre Cl 46N y Av 7N En Zone 2
+Cl 47N entre Av 6 y 5CN En Zone 2
+Cl 47N entre Av 5 y 4BN En Zone 2
+Av 4N entre Cl 47 y 45N En Zone 2
+Cl 44N entre Av 3G y 3EN En Zone 2
+Cl 38N entre Av 3 y 3CN En Zone 2
+Cl 38N entre Av 3G y 3HN En Zone 2
+Av 4N entre Cl 40 y 42N En Zone 2
+Cl 47N entre Av 4 y 4AN En Zone 2
+Cl 47N entre Av 5A y 5BN En Zone 2
+Cl 47N entre Av 6 y 6AN En Zone 2
+Av 8N entre Cl 50 y 51N En Zone 2
+Av 7N con Cl 53AN En Zone 2
+Cl 53AN con AV 7ABis En Zone 2
+Cl 21 entre Av 5BN y 5AN En Zone 2
+Av 2N entre Cl 62AN y 62N En Zone 2
+Cl 55 entre Av 2B y 2E En Zone 2
+Cl 61 entre Av 2GN y 2BN Unid Resid Sant En Zone 2
+Av 3N entre Cl 61A y 70 En Zone 2
+Cl 74 entre Av. 2B1 y 2B En Zone 2
+Cl 34 entre Av 4 y 6N En Zone 2
+Cl 70 con Av 3CN y 3N En Zone 2
+Av 6N entre Cl 41 y 40 PP2 En Zone 2
+Av 6N entre Cl 38 y 36 PP2 En Zone 2
+Av 6AN entre Cl 35 y 29 PP2 En Zone 2
+Av 6AN entre Cl 25 y 24A PP2 En Zone 2
+Av 3N con Cl 23D PP2 En Zone 2
+Av 6N con Cl 49 PP2 En Zone 2
+Cl 44 entre Av 3AN y 3DN En Zone 2
+Av 6N con Cl 67 PP2 En Zone 2
+Av 6N entre Cl 23 y 24 PP2 En Zone 2
+Av 6N entre Cl 28 y 29A PP2 En Zone 2
+Av 6N entre Cl 40 Y 42 PP2 En Zone 2
+Cl 73 entre Av 2C y 2B6 En Zone 2
+Kr 1 entre Cl 62 y 62A En Zone 3
+Av4 con Cl 2 Oeste En Zone 0
+Cl 73 entre Kr 1A3 y 1A4 En Zone 3
+Cl 73 entre Kr 1A45 y 1A5 En Zone 3
+Cl 73 entre Kr 1A7 y 1A8 En Zone 3
+Cl 70A entre Kr 1A5 y 1A4 En Zone 3
+Cl 70A entre Kr 1A4 y 1A3 En Zone 3
+Cl 70 entre Kr 1C1 y 1C En Zone 3
+Av 6N entre Cl 38 y 36 PP1 En Zone 2
+Av 6N entre Cl 37A y 37B PP2 En Zone 2
+Cl 70A entre Kr 1A2 y 1A1 En Zone 3
+Kr 4N entre Cl 72 y 72Bis En Zone 2
+Kr 4N entre Cl 76 y 77 En Zone 3
+Kr 4N entre Cl 82 y 83 En Zone 3
+Cl 84 entre Kr 2AN y 2NBis En Zone 3
+Kr 5N entre Cl 68 y 69 En Zone 2
+Kr 4AN entre Cl 70 y 71 En Zone 2
+Kr 4N entre Cl 71F y 71H En Zone 2
+Cl 70 entre Kr 1I y 2 En Zone 3
+Cl 52 entre Kr 1B1 y 1B En Zone 3
+Cl 62 entre Kr 4AN y 5N En Zone 2
+Kr 4N entre Cl 84 y 83 En Zone 3
+Kr 83C entre Cl 30 y 33 / Salsamentaria  En Zone 1
+Cl 48 entre Kr 83C y 83E En Zone 1
+Av 1N entre Cl 12 y 10 PP1 En Zone 0
+Av 6AN entre Cl 35 y 29 PP1 En Zone 2
+Av 6AN entre Cl 35 y 29 PP2 En Zone 2
+Av 6N entre Cl 52 Y 67 PP2 En Zone 2
+Kr 1 entre Cl 73B y 73 En Zone 3
+Kr 3 entre Cl 59D y 60 En Zone 3
+Kr 5 entre Cl 65A y 64B En Zone 3
+Kr 1 entre Cl 55 y 56 En Zone 3
+Kr 3 entre Cl 52 y 53 En Zone 3
+Kr 3 entre Cl 54 y 53 En Zone 3
+Cl 70 entre Kr 7 y 5 En Zone 3
+Cl 70 entre Kr 2 y 1J En Zone 3
+Cl 70 con Kr 1 En Zone 3
+Kr 5 entre Cl 38 y 36A En Zone 3
+Kr 2 entre Cl 57 y 56 En Zone 3
+Kr 2 entre Cl 62 y 60 En Zone 3
+Kr 2 entre Cl 67 y 66 En Zone 3
+Cl 73 entre Kr 4 y 3 En Zone 3
+Kr 5 entre Cl 52 y 47 En Zone 3
+Cl 73 entre Kr 1A8 y 1A7 En Zone 3
+Cl 62 entre Kr 1HBis y 1H En Zone 3
+Cl 123 Kr 28D y 28D1 En Zone 4
+Kr 28F entre Cl 122K Pizamos 2 En Zone 4
+Kr 28 entre Cl 94 y 93 En Zone 4
+Kr 28 entre Cl 86 y 87 En Zone 4
+Kr 28 entre Cl 91 y 92 En Zone 4
+Kr 28 entre Cl 99 y 101 En Zone 4
+Kr 12 entre Cl 59 y 58A En Zone 4
+Kr 10 entre Cl 27 y 28 En Zone 4
+Kr 10 entre Cl 32 y 33 En Zone 4
+Kr 10 entre Cl 34 y 35 En Zone 4
+Kr 10 entre Cl 38 y 39 En Zone 4
+Cl 44 entre Kr 8A y 9 En Zone 4
+Kr 12 entre Cl 58 y 59 En Zone 4
+Cl 123 entre Kr 28D7 y 28D5 En Zone 4
+Cl 123 entre Kr 28D3 y 28D En Zone 4
+Cl 123 entre Kr 27B y 27 En Zone 4
+Kr 27 entre Cl 116 y 120 En Zone 4
+Cl 112 entre Kr 26L y 26M En Zone 4
+Cl 112 entre Kr 26L y 26K1 En Zone 4
+Cl 112 entre Kr 26H3 y 26H2 En Zone 4
+Cl 79 entre Kr 28C y 28D En Zone 4
+Kr 27 entre Cl 120 y 121 En Zone 4
+Cl 33A entre Kr 8 y 8A En Zone 4
+Cl 33A entre Kr 10 y 11B En Zone 4
+Cl 33A entre Kr 11F y 11G En Zone 4
+Cl 44 entre Kr 12B y 12C En Zone 4
+Dg 71A entre Kr 22 y 22C En Zone 4
+Dg 70 entre Kr 25Bis y 25A1 En Zone 4
+Dg 70 entre Kr 26 y 26A En Zone 4
+Kr 26I entre Dg 70 y 71 En Zone 4
+Kr 26I entre Dg 72B y 72C En Zone 4
+Cl 72U entre Kr 27G y 27F En Zone 4
+Cl 72U entre Kr 27 y 26R En Zone 4
+Cl 72U entre Kr 26J y 26I3 En Zone 4
+Cl 72U entre Kr 26H3 y 26H2 En Zone 4
+Cl 72U entre Kr 26G8 y 26G7 En Zone 4
+Cl 72U entre Kr 26G7 y 26G8 En Zone 4
+Cl 72U entre Kr 26G11 y 26H3 En Zone 4
+Cl 72U entre Kr 26I2 y 26J En Zone 4
+Cl 72U entre Kr 26S y 27 En Zone 4
+Cl 44 entre Kr 7 y 8 En Zone 4
+Cl 44 entre Kr 8 y 7 En Zone 4
+Kr 8 entre Cl 44A y 44B En Zone 4
+Cl 33 A entre Kr 16 y 15 En Zone 4
+Cl 33A entre Kr 12 y 11H En Zone 4
+Cl 33A entre Kr 11B y 10 En Zone 4
+Cl 33A entre Kr 8A y 8 En Zone 4
+Cl 33A entre Kr 15 y 16 En Zone 4
+Kr 26J entre Cl 123 y 122 En Zone 4
+Cl 123 entre Kr 28D5 y 28D7 En Zone 4
+Kr 28F entre Cl 122B y 122C En Zone 4
+Kr 28 entre Cl 108 y 112 En Zone 4
+Cl 112 entre Kr 27G y 27F En Zone 4
+Cl 112 entre Kr 27D y 27 En Zone 4
+Kr 8 entre Cl  35 y 34A En Zone 4
+Cl 59 entre Kr 10A y 10 En Zone 4
+Cl 73 entre Kr 8A y 8B En Zone 4
+Kr 8 con Cl 70 En Zone 4
+Cl 44 entre Kr 15 y 14 En Zone 4
+Cl 44 entre Kr 12C y 12 En Zone 4
+Dg 26F1 entre Tr 73A y Cl 73B En Zone 4
+Cl 74 entre Kr 24C1 y 24C En Zone 4
+Cl 74 entre Kr 26C1 y 26C2 En Zone 4
+Kr 26 entre Cl 91 y 89 En Zone 4
+Cl 73 entre Dg 15 y 16 En Zone 4
+Cl 73 entre Kr 25S y 25T En Zone 4
+Cl 73 entre Kr 25U y 25T En Zone 4
+Cl 73 entre Kr 26G6 y 26G7 En Zone 4
+Cl 73 entre Kr 26G4 y 26G3 En Zone 4
+Cl 73 entre Kr 26H3 y 26I En Zone 4
+Cl 73 entre Kr 26M y 26N En Zone 4
+Cl 72Y entre Kr 27A y 27B En Zone 4
+Cl 73 entre Kr 27 y 26U En Zone 4
+Cl 79 entre Kr 28D y 28C En Zone 4
+Cl 73 entre Dg 19 y Kr 22 En Zone 4
+Cl 73 entre Dg 26I3 y 26I2 En Zone 4
+Cl 44 entre Kr 9 y 8A En Zone 4
+Kr 12 entre Cl 48 y 47 En Zone 4
+Kr 12 entre Cl 45 y 48 En Zone 4
+Kr 12 entre Cl 52 y 51 En Zone 4
+Kr 12 entre Cl 52 y 53 En Zone 4
+Kr 12 entre Cl 55 y 56 En Zone 4
+Cl 59 entre Kr 8A y 8B En Zone 4
+Cl 59 entre Kr 8A y 8 En Zone 4
+Cl 73 entre Kr 25C y 25C1 En Zone 4
+Cl 73 entre Dg 18 y 17 En Zone 4
+Tr 103 entre Kr 28B y 28A En Zone 4
+Retorno Patio ETM En Zone 4
+Cl 70 con Kr 11 En Zone 4
+Kr 23 entre Cl 70 y 63 En Zone 4
+Cl 70 con Kr 7RBis En Zone 4
+Kr 8 entre Cl 72 y 72B En Zone 4
+Kr 8 entre Cl 72 y 71 En Zone 4
+Cl 70 entre Kr 7E Bis y 7E PP2 En Zone 3
+Cl 76 entre Kr 28A y 28 En Zone 4
+Cl 73 entre Dg 26G11 y Kr 26H En Zone 4
+Kr 28E2 entre Cl 126 y 124B En Zone 4
+Kr 24C Con Dg 71A1 y 70E En Zone 4
+Kr 24C Con Dg 70A1 En Zone 4
+Tr 103 entre Dg 26O En Zone 4
+Cl 121 entre Kr 26I3 y 26I2 En Zone 4
+Cl 73 entre Dg 26G9 y 26G8 En Zone 4
+Kr 28D entre Cl 72W y 72Y En Zone 4
+Kr 109 con Kr 118 En Zone 1
+Kr 118 con Kr 109 En Zone 1
+Cl 18 entre Kr 118 y 120 En Zone 1
+Cl  2C Oe con Kr 96 En Zone 1
+Kr 83 con Cl 2C Oe En Zone 1
+Kr 93 con Cl 1A En Zone 1
+Kr 94A entre Cl 3A y 3B En Zone 1
+Callejon Chaparral En Zone 1
+Via La Voragine Hacienda La Rivera EMCAL En Zone 1
+Via Principal del Hormiguero En Zone 1
+Cl 42 entre Kr 114A y 112 En Zone 1
+Cl 42 entre Kr 112 y 109 En Zone 1
+Cl 42 entre Kr 112 y 109 En Zone 1
+Cl 5 entre Kr 85 y 86 En Zone 1
+Cl 2C entre Kr 94 y 94A En Zone 1
+Kr 94 con Cl 4E En Zone 1
+Cl 2B Oeste entre Kr 93Bis y 93A En Zone 1
+Kr 93A entre Cl 2B y 1B En Zone 1
+Kr 94 entre Cl 2 y 2A En Zone 1
+Kr 104 entre Cl 42 y 45 En Zone 1
+Kr 99 entre Cl 50 y 48 En Zone 1
+Kr 99 con Cl 45 En Zone 1
+Kr 109 con Cl 42 En Zone 1
+Cl 42 entre Kr 112 y 114A En Zone 1
+Kr 114A entre Cl 42 y 25 En Zone 1
+Cl 48 entre Kr 96 y 97 En Zone 1
+Kr 86 entre Cl 35 y 34 En Zone 1
+Kr 85C entre Cl 33 y 28 En Zone 1
+Kr 85C entre Cl 18 y 17 En Zone 1
+Cl 16 entre Kr 73 y 76 En Zone 6
+Cl 16 entre Kr 83B y 83C En Zone 1
+Cl 16 entre Kr 85 y 85A En Zone 1
+Kr 86 entre Cl 25 y 28 En Zone 1
+Kr 86 entre Cl 34 y 42 En Zone 1
+Cl 54 entre Kr 85D y 85C Tienda En Zone 1
+Cl 48 entre Kr 97 y 96A En Zone 1
+Kr 99 entre Cl 60 En Zone 1
+Altos de Santa Elena P11 En Zone 1
+Kr 4N entre Cl 78 y 77 En Zone 3
+Kr 4N entre Cl 72K  y 72J En Zone 3
+Kr 4N entre Cl 72D y 72B En Zone 3
+Kr 4N entre Cl 72A y 72 En Zone 2
+Kr 4N entre Cl 71E y 71D En Zone 2
+Kr 4N entre Cl 71 y 70 En Zone 2
+Cl 70 entre Kr 3BN y 3CN En Zone 3
+Cl 70 entre Kr 4N y 1 En Zone 3
+Kr 1 entre Cl 70 y 66 En Zone 3
+Cl 71I entre Kr 3C y 3B En Zone 3
+Kr 3N entre Cl 71I y 72 En Zone 3
+Kr 3N entre Cl 72C y 72D En Zone 3
+Kr 3N entre Cl 74 y 75 En Zone 3
+Kr 3N entre Cl 83A y 84 En Zone 3
+Cl 52 entre Kr 1D y 1C4 En Zone 3
+Cl 62 entre Kr 4A y 4 En Zone 3
+Kr 1 entre Cl 62A y 66 En Zone 3
+Cl 66 entre Kr 1A y 1A6 En Zone 3
+Cl 52 entre Kr 1B1 y 1B En Zone 3
+Cl 70 entre Kr 1A12 y 1A11 En Zone 3
+Cl 70 entre Kr 1A10 y 1A11 En Zone 3
+Cl 71 entre Kr 1A3 y 1A3A En Zone 3
+Cl 71 entre Kr 1A4B y 1A5 En Zone 3
+Cl 71 entre Kr 1A1A y 1A1 En Zone 3
+Kr 1 entre Cl 73 y 73B En Zone 3
+Kr 1 entre Cl 74B y 73B En Zone 3
+Kr 1 entre Cl 71 y 72 En Zone 3
+Kr 1 entre Cl 72 y 71 En Zone 3
+Kr 1 entre Cl 71 y 70A En Zone 3
+Kr 3 entre Cl 58 y 59 En Zone 3
+Kr 3 entre Cl 63 y 63B En Zone 3
+Kr 3 entre Cl 65B y 69 En Zone 3
+Kr 5 entre Cl 70 y69 En Zone 3
+Kr 5 entre Cl 62B y 62 En Zone 3
+Cl 62 entre Kr 4C y 4B En Zone 3
+Kr 1 con Cl 56 En Zone 3
+Cl 56 entre Kr 1B y 1C En Zone 3
+Kr 2 entre Cl 53 y 52B En Zone 3
+Cl 52 entre Kr 2C y 2E En Zone 3
+Kr 3 entre Cl 56 y 57 En Zone 3
+Kr 3 entre Cl 60 y 59D En Zone 3
+Kr 3 entre Cl 59 y 58 En Zone 3
+Kr 3 entre Cl 57 y 58 En Zone 3
+Cl 52 entre Kr 3 y 2 SENA entrada 2 En Zone 3
+Cl 52 entre Kr 1E y 1D2 En Zone 3
+Cl 70 entre Kr 5 y 7 En Zone 3
+Cl 70 entre Kr 4 y 3D En Zone 3
+Cl 70 entre Kr 3 y 4C PP2 En Zone 3
+Cl 70 entre Kr 1 y 1A6 En Zone 3
+Cl 70 con Kr 1 En Zone 3
+Kr 5 entre Cl 32 y 33 En Zone 3
+Kr 5 entre Cl 34 y 35 En Zone 3
+Kr 5 entre Cl 37 y 38 En Zone 3
+Kr 5 entre Cl 46 y 47 En Zone 3
+Kr 2 entre Cl 52 y 56 SENA entrada estud En Zone 3
+Kr 2 entre Cl 60 y 59B En Zone 3
+Kr 2 entre Cl 59A y 60 En Zone 3
+Kr 2 entre Cl 64 y 62 En Zone 3
+Kr 2 entre Cl 62 y 65 En Zone 3
+Kr 2 entre Cl 65 y 67 En Zone 3
+Cl 73 entre Kr 7 y 2F En Zone 3
+Cl 73 entre Kr 1I y 1J En Zone 3
+Cl 52 entre Kr 3 y 4C En Zone 3
+Cl 34 entre Kr 6A y 7 En Zone 4
+Cl 73 entre Kr 1A14 y 1A13 En Zone 3
+Cl 73 entre Kr 1A4E y 1A4D En Zone 3
+Cl 73 entre Kr 1B2 y 1B3 En Zone 3
+Cl 73 entre Kr 1E y 1F En Zone 3
+Cl 73 entre Kr 2A y 2B En Zone 3
+Cl 73A con Kr 5 En Zone 3
+Cl 73 entre Kr 1A2C y 1A2B En Zone 3
+Cl 62 entre Kr 1Bis y 1A En Zone 3
+Cl 73 entre Kr 1A1 y K1 En Zone 3
+Cl 62A entre Kr 1A8 y 1A7 En Zone 3
+Cl 66 con Kr 1A15 En Zone 3
+Kr 5N entre Cl 67 y 65 En Zone 2
+Cl 62 entre Kr 1B y 1C En Zone 3
+Kr 5 entre Cl55 y 54 En Zone 3
+Kr 5 entre Cl 58 y 56 En Zone 3
+Cl 52 entre Kr 7N y 9N En Zone 2
+Cl 52 entre Kr 1 y 1B En Zone 3
+Cl 52 entre Kr 1B y 1D Centro Comercial  En Zone 3
+Kr 2 entre Cl 49 y 47 En Zone 3
+Cl 47 entre Kr 1D Bis y 1D En Zone 3
+Kr 1D entre Cl 56 y 58 En Zone 3
+Kr 1D entre Cl 59 y 59B En Zone 3
+Cl 62 entre Kr 1D y 1D Bis En Zone 3
+Cl 62 entre Kr 1G y 1G1 En Zone 3
+Cl 62 entre Kr 2 y 2B1 En Zone 3
+Cl 34 entre Kr 2AN y 5N En Zone 3
+Cl 95 entre Kr 26I7 y 26I6 En Zone 4
+Cl 73 entre Kr 26B2 y 26B1 En Zone 4
+Cl 52 entre Kr 14 y 15 En Zone 4
+Kr 7C entre Cl 64 y 65 En Zone 3
+Kr 25 entre Cl 79 y 80 En Zone 4
+Kr 28D9 entre Cl 122J y 122K En Zone 4
+Kr 28D entre Cl 121 y 122 En Zone 4
+Cl 112 entre Kr 26B1 y 26 En Zone 4
+Kr 28D con Cl 114 En Zone 4
+Kr 28 entre  Cl 108 y 107B En Zone 4
+Kr 28D con Cl 112 En Zone 4
+Dg 72F entre Kr 26H y 26I En Zone 4
+Cl 121 con Kr 26M En Zone 4
+Kr 28E2 entre Cl 123A4  y 123B En Zone 4
+Cl 123 entre Kr 122D y 122B En Zone 4
+Cl 94 entre Kr 101B y 101A En Zone 4
+Kr 26G entre Cl 91 y 92 En Zone 4
+Kr 29 entre Cl 72Q y 72O En Zone 5
+Kr 31 entre Cl 43 y 44 En Zone 5
+Kr 28 entre Cl 72U y 72W En Zone 4
+Kr 42B entre Cl 55 y 54C En Zone 5
+Cl 36 entre Kr 47B y 48 En Zone 6
+Cl 36 entre Kr 42 y 41G En Zone 6
+Kr 39 entre Cl 40 y 41 En Zone 5
+Kr 28E3 En Zone 4
+Kr 46 entre Cl 40 y 41 En Zone 5
+Kr 46 entre Cl 56G y 57 En Zone 5
+Cl 48 entre Kr 42A1 y 42ABis En Zone 5
+Kr 28g entre Cl 72V y 72U En Zone 5
+Kr 49D con Cl 55A En Zone 5
+Cl 54 entre Kr 48B y 48A En Zone 6
+Kr 47 con Cl 56I En Zone 5
+Cl 48 entre Kr 42D y 43B En Zone 5
+Cl 13 entre Kr 41A y 42 En Zone 6
+Cl 13 entre Kr 34 y 35 En Zone 6
+Cl 13 con Cl 141 En Zone 6
+Kr 46 entre Cl 46 y 45 En Zone 5
+Cl 51 entre Kr 49D y 49E En Zone 6
+Cl 27 entre Kr 36 y 44A En Zone 6
+Kr 50 entre Cl 50 y 48 En Zone 6
+Cl 13 entre Kr 67 y 68 En Zone 6
+Kr 66 entre Cl 17 y 18 En Zone 6
+Cl 14 entre Kr 65 y 65C En Zone 6
+Kr 42 entre Cl 26D y 27 En Zone 6
+Cl 25 entre Kr 69A y 70 En Zone 6
+Cl 16 entre Kr 66 y 62 En Zone 6
+Cl 16 entre Kr 53 y 56 En Zone 6
+Cl 36 entre Kr 42A y 42B En Zone 6
+Cl 13 entre Kr 69 y 68 En Zone 6
+Cl 16 entre Kr 44 y 43 En Zone 6
+Cl 16 entre Kr 48 y 49 En Zone 6
+Cl 27 con Kr 44 En Zone 6
+Kr 69 entre Cl 46 y 48 En Zone 1
+Cl 73 entre Kr 26M y Dg 26M En Zone 4
+Dg 71A con Cl 72 En Zone 4
+Kr 7C entre Cl 69 y 70 En Zone 3
+Kr 7EBis entre Cl 69 y 67 En Zone 3
+Kr 7LBis entre Cl 67A y 67 En Zone 3
+Kr 7LBis entre Cl 64 y 63 En Zone 3
+Cl 63 entre Kr 7P y 7PBis En Zone 3
+Cl 52 entre Kr 8 y 9 En Zone 4
+Cl 52 entre Kr 10 y 11 En Zone 4
+Cl 52 entre Kr 12 y 12A En Zone 4
+Cl 52 entre Kr 12C y 12E En Zone 4
+Cl 63 entre Kr 8 y 7VBis En Zone 3
+Cl 63 entre Kr 7SBis y 7S En Zone 3
+Cl 63 entre Kr 7E y 7DBis En Zone 3
+Kr 7C entre Cl 68 y 69 En Zone 3
+Kr 26J entre Cl 121 y 122 En Zone 4
+Cl 123 entre Kr 26H1 y 26H Bis En Zone 4
+Kr 27 entre Cl 108 y 109 En Zone 4
+Kr 27 entre Cl 109 y 108 En Zone 4
+Kr 27 entre Cl 112 y 113 En Zone 4
+Dg 71A con Kr 25C En Zone 4
+Dg 71A con Kr 24C En Zone 4
+Cl 123A3 con Kr 28F En Zone 4
+Cl 123A4 Con Kr 28E1 En Zone 4
+Kr 28D entre Cl 122 y 123 En Zone 4
+Kr 28F entre Cl 122E y 122D1 En Zone 4
+Kr 28D con Cl 104 Inicio de Ruta En Zone 4
+Cl 112 entre Kr 26A y 26A1 En Zone 4
+Cl 112 entre Kr 26 y 25 Parqueadero En Zone 4
+Cl 112 entre Kr 24 y 23 En Zone 4
+Kr 28D con Cl 112 En Zone 4
+Kr 28D con Cl 120B FerroElectricos En Zone 4
+Cl 112 entre Kr 27 y 27D En Zone 4
+Cl 112 entre Kr 27F y 27G En Zone 4
+Tr 103 entre Kr 28 y 27F En Zone 4
+Kr 28D con Cl 120B En Zone 4
+Kr 28D con Cl 114 En Zone 4
+Kr 26 Dg 72B y 72A1 En Zone 4
+Dg 72A Cl 26A y 26 En Zone 4
+Dg 72C entre Kr 26H y 26 Cacharreria En Zone 4
+Dg 72F con Kr 26I En Zone 4
+Cl 72K con Kr 26J En Zone 4
+Cl 97 entre Kr 26D y 26C1 En Zone 4
+Cl 121 entre Kr 26M y 26M1 En Zone 4
+Kr 23 entre Cl 101A y 100 En Zone 4
+Cl 73 entre Kr 26J y 26K En Zone 4
+Cl 126 entre Kr 28F y 28G En Zone 4
+Cl 125A con Kr 28F En Zone 4
+Cl 123A4 entre Kr 28E1y 28E3 En Zone 4
+Kr 28D entre Cl 122 y 123 En Zone 4
+Cl 72K con Kr 26J En Zone 4
+Kr 23 entre Cl 101 y 101A En Zone 4
+Kr 26C entre Cl 85 y 84 En Zone 4
+Kr 26G entre Cl 84 y 89 En Zone 4
+Kr 39 entre Cl 40 y 39 En Zone 5
+Cl 46 entre Kr 43B y 43A En Zone 5
+Kr 39 entre Cl 51 y 50 En Zone 5
+Kr 39 entre Cl 54 y 53 En Zone 5
+Cl 54 entre Kr 38B y 38A En Zone 5
+Cl 55 entre Kr 32A y 33 En Zone 5
+Cl 83 entre Kr 28D4 y 28E En Zone 4
+Cl 83 entre Kr 28E3 y 28E En Zone 4
+Cl 55 entre Kr 29 y 30 En Zone 5
+Kr 39 entre Cl 46 y 45A En Zone 5
+Kr 39 entre Cl 45A y 46 En Zone 5
+Cl 55 entre Kr 33 y 34 En Zone 5
+Cl 83 entre Kr 28G y 28E6 En Zone 5
+Cl 83 entre Kr 28D2 y 28D En Zone 4
+Cl 54 entre Kr 39 y 39A En Zone 5
+Kr 46 entre Cl 50 y 51 En Zone 5
+Cl 48 entre Kr 46D y 46C En Zone 5
+Cl 36 entre Kr 46 y 44A En Zone 6
+Cl 36 entre Kr 43 y 42B En Zone 6
+Cl 48 entre Kr 32A y 30D En Zone 5
+Kr 29 entre Cl 83 y 79 En Zone 5
+Cl 54 entre Kr 45 y 43C En Zone 5
+Cl 54 entre Kr 41G y 41E3 En Zone 5
+Cl 54 entre Kr 41D y 41B En Zone 5
+Cl 54 entre Kr 41B y 39E En Zone 5
+Cl 48 entre Kr 34 y 35 En Zone 5
+Cl 48 entre Kr 39E y 39G En Zone 5
+Cl 48 entre Kr39G y 41 En Zone 5
+Cl 48 entre 41B y 41D En Zone 5
+Cl 54 entre Kr 43B y 44 En Zone 5
+Cl 48 entre Kr 40B y 40A En Zone 5
+Kr 29 entre Cl 48 y 72U En Zone 5
+Cl 72U entre Kr 28D5 y D4 En Zone 4
+Cl 83 entre Kr 28D y 28D2 En Zone 4
+Kr 29 con Cl 76 En Zone 5
+Cl 48 entre Kr 32A y 32B En Zone 5
+Av 2N entre Cl 70N y 67N  Portal del Rio En Zone 2
+Av 3N con Cl 23D Terminal de Transporte  En Zone 2
+Av 2AN entre 72BN y 72AN En Zone 2
+Av 6BIS entre Cl 35 y 36 En Zone 2
+Cl 52N entre Av 5A y 5 En Zone 2
+Av 6AN entre Cl 27 y 26 PP1 En Zone 2
+Cl 44N entre Av 3D y 3B En Zone 2
+Av 4N con Cl 45N En Zone 2
+Cl 47N Con Av 7N En Zone 2
+Av 9N Con Cl 56N En Zone 2
+Av 2GN entre Cl 58 y 59 Unid Recreat Rin En Zone 2
+Av 2BN entre Cl 28 y 26 Panaderia En Zone 2
+Kr 5N entre Cl 63N y 65N En Zone 2
+Kr 1D con Cl 67 En Zone 3
+Kr 1D entre Cl 63 y 62 En Zone 3
+Kr 1D con Cl 61A En Zone 3
+Kr 1D entre Cl 59 y 58 En Zone 3
+Cl 56 entre Kr 1D y 1C En Zone 3
+Cl 56 entre Kr 1C y 1B En Zone 3
+Cl 84 entre Kr 3N y 3AN En Zone 3
+Cl 80 entre Kr 1AN y 1N En Zone 3
+Kr 5 entre Cl 45C y 45 En Zone 3
+Cl 62 entre Kr 1A9 y 1A10 En Zone 3
+Reserva Paso del Comercio 2 En Zone 3
+Cl 44 entre Kr 4N y 3AN En Zone 3
+Cl 70 entre Kr 11C y 11B En Zone 4
+Kr 23 entre Cl 81B y 82 En Zone 4
+Dg 65 Cl 33 / 33 En Zone 6
+Villa Nueva B1 En Zone 8
+Villa Nueva A1 En Zone 8
+Santa Monica B1 En Zone 8
+Cl 13 con Kr 100 En Zone 1
+Cl 13 entre Kr 89 y 100 En Zone 1
+Cl 13 con Kr 86 En Zone 1
+Cl 13 con Kr 83 y 85 En Zone 1
+Cl 25 entre Kr 101 y 102 En Zone 1
+Cl 42 entre Kr 84 y 85 En Zone 1
+Cl 25 entre Kr 114A y 118 En Zone 1
+Cl 25 entre Kr 117 y 114A En Zone 1
+Cl 25 entre Kr 99 y 98B En Zone 1
+Kr 99 entre Cl 25 y 30 La 14 del Lili En Zone 1
+Kr 122 entre Cl 16 y 15 En Zone 1
+Kr 122 entre Cl 15 y 16 En Zone 1
+Kr 122 entre Cl 12 y 13 En Zone 1
+Kr 122 entre Cl 12 y 6 En Zone 1
+Kr 122 entre Cl 5 y 9 En Zone 1
+Kr 118 entre Cl 20 y 18 En Zone 1
+Kr 122 entre Cl 17A y 16 En Zone 1
+Kr 46 entre Cl 44 y 43 En Zone 5
+Kr 39 entre Cl 42 y 43 En Zone 5
+Kr 42B entre Cl 54 y 54C En Zone 5
+Kr 42B entre Cl 55C y 56 En Zone 5
+Kr 42B entre Cl 53 y 51 En Zone 5
+Kr 42B entre Cl 50 y 48 En Zone 5
+Kr 42B entre Cl 48 y 50 En Zone 5
+Kr 42B entre Cl 51 y 53 En Zone 5
+Kr 29 entre Cl 72U y 72T En Zone 5
+Kr 29 entre Cl 72J y 72I En Zone 5
+Kr 29 entre Cl 41 y 40 En Zone 5
+Kr 31 entre Cl 36 y 38 En Zone 8
+Kr 31 entre Cl 40 y 41 En Zone 5
+Kr 31 entre C46 y 48 En Zone 5
+Cl 48 entre Cl 30B y 30 En Zone 5
+Cl 72U entre Kr 28A y 28A4 En Zone 4
+Cl 72W entre Kr 28-4 y 28A En Zone 4
+Cl 48 entre Kr 39E y 39C En Zone 5
+Cl 48 entre Kr 49G y 49F En Zone 6
+Cl 48 entre Kr 49A y 49 En Zone 6
+Kr 46 entre Cl 46 y 47 En Zone 5
+Cl 36 entre Kr 46B y 46C En Zone 6
+Cl 36 entre Kr 50 y 48 En Zone 6
+Cl 36 entre Kr 47 y 46B En Zone 6
+Kr 46 entre Cl 44 y 45 En Zone 5
+Cl 36 entre Kr 41E y 41B En Zone 6
+Cl 36 entre Kr 39E y 39C En Zone 6
+Kr 39 entre Cl 42B y 42 En Zone 5
+Kr 39 entre Cl 38 y 37 En Zone 6
+Kr 46 entre Cl 42 y 41A En Zone 5
+Cl 96 con Kr 28J En Zone 5
+Cl 96 con Kr 28E6 En Zone 4
+Cl 96 entre Kr 28E y 28D4 En Zone 4
+Kr 28D entre Cl 91 y 90 En Zone 4
+Cl 96 con Kr 28E3 En Zone 4
+Cl 56C entre Kr 42C2 y 43A En Zone 5
+Cl 56C entre Cl 45A y 46 En Zone 5
+Cl 46 entre Kr 45 y 44A En Zone 5
+T. CALIPSO Comfandi C4 En Zone 5
+Cl 48 entre Kr 43B y 43ABis En Zone 5
+Cl 48 entre Kr 43E3 y 41E2 En Zone 5
+Cl 72W entre Kr 28C y 28D En Zone 4
+Cl 72W entre Kr 28E y 28E2 En Zone 4
+Cl 72W entre Kr 28E7 y 28E8 En Zone 5
+Cl 72U entre Kr 28C y 28B En Zone 4
+Cl 54 entre Kr 41B y 41D En Zone 5
+Kr 49D con Cl 58D En Zone 5
+Kr 48D entre Cl 55A y 54D En Zone 5
+Cl 54 entre Kr 48 y 47D En Zone 6
+Kr 29 entre Cl 38 y 36 En Zone 5
+Kr 31 entre Cl 41 y 42 En Zone 5
+Cl 83 entre Kr 28E3 y 28E6 En Zone 4
+Cl 83 entre Kr 28F y 28J En Zone 5
+Cl 48 entre K48B y K48C En Zone 6
+Cl 48 entre K49 y K50 En Zone 6
+Cl 56F entre  Kr 46A y 46B En Zone 5
+Cl 48 entre Kr 42B y Kr 42C En Zone 5
+Kr 44 entre Cl 13 y 13A En Zone 6
+Kr 44 entre Cl 15 y 15Bis En Zone 6
+Kr 44 entre Cl 18 y 23 En Zone 6
+Cl 25 entre Kr 42C y 42B En Zone 6
+Cl 25 entre Kr 41A y 41 En Zone 6
+Kr 39 entre Cl 17 y 16 En Zone 8
+Cl 25 entre Kr 42 y 41D En Zone 6
+Dg 23 entre Cl 18 y 17 En Zone 8
+Cl 5 entre Kr 77 y 76 En Zone 7
+Cl 10 entre Kr 73 y 72 En Zone 7
+Cl 10 entre Kr 70 y 68 En Zone 7
+Cl 10 entre Kr 63 y 63A En Zone 7
+Cl 10 entre Kr 64A y 61 En Zone 7
+Cl 10 entre Kr 61 y 61A En Zone 7
+Cl 10 entre Kr 57 y 56 En Zone 7
+Cl 10 entre Kr 49 y 50 En Zone 7
+Cl 10 entre Kr 48B y 48A En Zone 7
+Cl 10 entre Kr 44A y 46 En Zone 7
+Cl 10 entre Kr 42 y 44 En Zone 7
+Cl 10 entre Kr 42 y 41A En Zone 7
+Cl 10 entre Kr 39 y 41 En Zone 7
+Cl 10 entre Kr 35 y 34 En Zone 7
+Dg 23 entre Cl 13 y 12A En Zone 6
+Dg 23 entre Tr 11 y Kr 29A1 En Zone 6
+Kr 23 entre Cl 19B y 19A En Zone 8
+Kr 23 entre Cl 19A y 19B En Zone 8
+Cl 13 con Kr 801 En Zone 1
+Cl 13 con Kr 802 En Zone 1
+Cl 13 entre Kr 75 y 76 En Zone 6
+Cl 13 entre Kr 70 y 72 En Zone 6
+Cl 13 entre Kr 75 y 72 En Zone 6
+Cl 13 entre Kr 65A Bis y 65B En Zone 6
+Cl 13 entre Kr 59 y 64 En Zone 6
+Cl 13 entre Kr 65 y 64A En Zone 6
+Cl 13 con Kr 56 En Zone 6
+Cl 13 entre Kr 50 y 53 En Zone 6
+Av 6N entre Cl 37A y 37B PP1 En Zone 2
+Av 1N entre Cl 7 y 6 En Zone 0
+Cl 73 entre Kr 1A12 y 1A13 En Zone 3
+Cl 70 entre Kr 1C1 y 1D En Zone 3
+Kr 4N entre Cl 72G y 72H En Zone 3
+Cl 84 entre Kr 1GN y 1HN En Zone 3
+Cl 52 entre Kr 1D y 1C4 En Zone 3
+Cl 70 entre Kr 1A6 y 1A5 En Zone 3
+Kr 5 entre Cl 28 y 29 En Zone 3
+Kr 5 entre Cl 44 y 43 En Zone 3
+Kr 2 entre Cl 57 y 58 En Zone 3
+Kr 2 entre Cl 61A y 62 En Zone 3
+Cl 70 entre Kr 2 y 2A En Zone 3
+Cl 73 entre Kr 1G y 1F En Zone 3
+Cl 73 entre Kr 1D y 1C1 En Zone 3
+Cl 123 entre Kr 26M3 y 26M1 En Zone 4
+Kr 23 entre Cl 120C y 120B En Zone 4
+Kr 8 entre Cl 52 y 53A En Zone 4
+Kr 8 entre Cl 58 y 59 En Zone 4
+Cl 70 entre Kr 24B y 24A En Zone 4
+Cl 73 con Kr 7LBis En Zone 4
+Kr 27 entre Cl 114 y 113 En Zone 4
+Cl 112 entre Kr 26F y 26E En Zone 4
+Kr 27 entre Tr 103 y Cl 104 En Zone 4
+Kr 25 entre Cl 80B y 80C En Zone 4
+Cl 121 entre Kr 25 y 25B En Zone 4
+Cl 121 entre Kr 28D y C121D En Zone 4
+Cl 121 entre Kr 26J2 y 26J3 En Zone 4
+Kr 25 entre Cl 89 y 94 En Zone 4
+Tr 103 entre Cl 73C En Zone 4
+Cl 13 entre Kr 56 y 53 En Zone 6
+Cl 13 entre Kr 49A y 49B En Zone 6
+Cl 13 entre Kr 50 y 49A En Zone 6
+Cl 13 entre Kr 47A y 47 En Zone 6
+Cl 13 entre Kr 47 y 47A En Zone 6
+Cl 13 entre Kr 45 y 44A En Zone 6
+Cl 13 entre Kr 44 y 44A En Zone 6
+Cl 13 entre Kr 41A y 41 En Zone 6
+Cl 13 entre Kr 37 y 38 En Zone 6
+Cl 13 entre Kr 39 y 38 En Zone 6
+Cl 13 entre Kr 34 y 33A En Zone 6
+Cl 13 entre Kr 32 y 31 En Zone 6
+Cl 13 entre Kr 32 y 33 En Zone 6
+Cl 13 con Cl 14 En Zone 8
+Kr 46 entre Cl 52 y 51A En Zone 5
+Kr 46 entre Cl 48 y 47 En Zone 5
+Cl 51 entre Kr 46D y 47 En Zone 6
+Kr 46 entre Cl 45 y 44 En Zone 5
+Kr 46 entre Cl 42 y 43 En Zone 5
+Cl 51 entre Kr 488 y 48A En Zone 6
+Kr 46 entre Cl 40 y 39 En Zone 5
+Kr 46 entre Cl 37 y 38A En Zone 5
+Kr 46 entre Cl 37 y 36 En Zone 5
+Cl 27 entre Kr 42B y 43 En Zone 6
+Cl 27 entre Kr 42B y 42A En Zone 6
+Cl 27 entre Kr 42 y 41D En Zone 6
+Cl 46 entre Kr 42C y 42B En Zone 5
+Cl 54 entre Kr 41D y 41E En Zone 5
+Cl 54 entre Kr 42B y 42C En Zone 5
+Kr 42 entre Cl 25 y 26B En Zone 6
+Kr 56 entre Cl 18 y 18A En Zone 6
+Cl 25 entre Kr 56 y 61 En Zone 6
+Cl 10 entre Kr 50 y 53 En Zone 7
+Kr 56 entre Cl 18A y 18 En Zone 6
+Kr 56 entre Cl 16 y 15 En Zone 6
+Cl 14 entre Kr 58 y 65 En Zone 6
+Kr 50 entre Cl 9 y 9B En Zone 7
+Kr 50 entre C12A y 13 En Zone 6
+Kr 50 entre Cl 13E y 13G En Zone 6
+Kr 25 entre Cl 18D y 18C En Zone 8
+Kr 44 entre Cl 12 y 12B En Zone 6
+Cl 25 entre Kr 70 y 69 Hacienda En Zone 6
+Kr 69 entre Cl 26 y 29 En Zone 6
+Cl 42 entre Kr 69 y 68 En Zone 5
+Cl 42 entre Kr 63 y 55 En Zone 6
+Cl 16 entre Kr 56 y 53 En Zone 6
+Cl 16 entre Kr 49A y 49 En Zone 6
+Cl 16 entre Kr 56 y 65 En Zone 6
+Cl 36 entre Kr 40 y  40A En Zone 6
+Cl 36 entre Kr 43 y 44 En Zone 6
+Cl 16 entre Kr 60 y 56 En Zone 6
+Cl 16 entre Kr 56 y 65 P2 En Zone 6
+Cl 16 con Kr 69 En Zone 6
+Kr 66 entre Cl 13E y 13D En Zone 6
+Kr 66 entre Cl 13B y 13 En Zone 6
+Cl 25 entre Kr 73 y 70 En Zone 6
+Cl 25 entre Kr 70 y 73 En Zone 6
+Cl 25 entre Kr 68A y 68 En Zone 6
+Cl 25 entre Dg 66 y 65 En Zone 6
+Kr 66 entre Cl 25 y 18 En Zone 6
+Kr 66 entre Cl 16 y 14C En Zone 6
+Cl 14 entre Kr 66 y 65 En Zone 6
+Cl 14 entre Kr 64Bis y 64A En Zone 6
+Cl 14 entre Kr 56 y 54 En Zone 6
+Cl 14 entre Kr 54 y 56 En Zone 6
+Cl 14 entre Kr 50 y 53 En Zone 6
+Cl 14 entre Kr 47 y 50 En Zone 6
+Cl 14 entre Kr 44 y 45 En Zone 6
+Cl 14 entre Kr 42Bs y 43 En Zone 6
+Cl 14 entre Kr 40B y 40A En Zone 6
+Cl 14 entre Kr 40 y 40A En Zone 6
+Cl 14 entre Kr 37 y 39 En Zone 6
+Cl 14 entre Kr 34 y 33A En Zone 6
+Cl 14 entre Kr 33A y 34 En Zone 6
+Cl 14 entre Kr 31 y 32 En Zone 6
+Cl 14 entre Kr 72 y 75 En Zone 6
+Cl 14 entre Kr 76 y 73 En Zone 6
+Cl 14 entre Kr 70 y 69A En Zone 6
+Cl 14 entre Kr 66 y 66A En Zone 6
+Cl 25 entre Kr 56 y 61 En Zone 6
+Kr 56 entre Cl 14 y 14C En Zone 6
+Kr 56 entre Cl 7A y 6A En Zone 7
+Cl 25 entre Cl 41 y 40B En Zone 6
+Cl 13 entre Kr 29B y 31 En Zone 6
+Cl 14 entre Kr 49 y 48 En Zone 6
+Cl 14 entre Kr 46 y 45 En Zone 6
+Kr 39 entre Cl 15 y 14C En Zone 8
+Kr 39 entre Cl 13B y 13A En Zone 6
+Kr 39 entre Cl 11B y 10A En Zone 6
+Cl 27 entre Kr 41 y 41A En Zone 6
+Kr 66 entre Cl 13A y 13B En Zone 6
+Kr 1 entre Cl 70A y 71 En Zone 3
+Cl 73A entre Kr 3 y 4 En Zone 3
+Cl 62A entre Kr 1B4 y 1B5 En Zone 3
+Kr 1 entre Cl 47N y 50N En Zone 3
+Kr 5 entre Cl 60 y 59 En Zone 3
+Cl 52 entre Kr 1D2 y 1E En Zone 3
+Kr 1D entre Cl 60A y 60A1 En Zone 3
+Cl 70 entre Kr 1 y 1A5 CAI En Zone 3
+Cl 123 entre Kr 26T y 26S En Zone 4
+Cl 59 entre Kr 10 y 10A En Zone 4
+Kr 8 entre Cl 70 En Zone 4
+Cl 44 entre Kr 15A y 16 En Zone 4
+Kr 26C entre Cl 94 y 91 En Zone 4
+Cl 73 entre Kr 26H3 y 26H2 En Zone 4
+Cl 73 entre Kr 26F1 y 26F En Zone 4
+Cl 44 entre Kr 11D y 11F En Zone 4
+Cl 70 con Kr 11 En Zone 4
+Cl 70 entre Kr 7lL y 7JBis PP2 En Zone 3
+Kr 27 entre Cl 96 y 95 En Zone 4
+Cl 13 entre Kr 87 y 89 En Zone 1
+Patio Taller Pizamos_Salida En Zone 4
+Puerto Mallarino En Zone 4
+Puerto Mallarino En Zone 4
+Patio Valle Lili En Zone 1
+Patio Valle Lili En Zone 1
+Patio Calima-Sameco Salida En Zone 2
+Patio Calima-Sameco Entrada En Zone 2
+Patio Taller Pizamos_Entrada En Zone 4
+Plaza de Cayzedo A1 En Zone 0
+Trebol B1 En Zone 4
+Villacolombia A1 En Zone 4
+Kr 66 entre Cl 14C y 14 En Zone 6
+Kr 66 entre Cl 15A y 16 En Zone 6
+Kr 50 con Dg 66 En Zone 6
+Cl 16 entre Kr 68 y 66 En Zone 6
+Cl 16 entre Kr 68 En Zone 6
+Cl 16 entre Kr 69 y 70 En Zone 6
+Kr 80 entre Cl 13B y 13A En Zone 1
+Cl 16 entre Kr 41C y 41B En Zone 6
+Cl 16 entre Kr 40A y 40 En Zone 6
+Cl 16 entre Kr 46A y 46B En Zone 6
+Cl 27 entre Kr 40A y 40 En Zone 6
+Cl 27 entre Kr 36 y 37 En Zone 8
+Cl 27 entre Kr 39 y 40 En Zone 6
+Dg 23 entre Cl 15 y Kr 23D En Zone 8
+Kr 69 entre Cl 42 y 42A En Zone 1
+Kr 69 entre Cl 45 y 46 En Zone 1
+Kr 69 entre Cl 46 y 45 En Zone 1
+Kr 80 entre Cl 10A y 9 En Zone 1
+Kr 80 entre Cl 13 y 10A En Zone 1
+Cl 8 entre Kr 10 y 12 En Zone 0
+Kr 56 entre Cl 8 y 9 En Zone 7
+Cl 9 entre Kr 53 y  52A En Zone 7
+Cl 9 entre Kr 50 y 48 / PP2 Centro Comer En Zone 7
+Cl 9 entre Kr 46 y 44 En Zone 7
+Cl 9 entre Kr 50 y 48 PP1 Centro Comerci En Zone 7
+Kr 39 entre Cl 9A y 9 En Zone 7
+Kr 39 entre Cl 6 y 5F En Zone 7
+Kr 39 entre Cl 5B y 5A En Zone 7
+Kr 52 entre Cl 3 y 2 En Zone 7
+Kr 52 entre Cl 2 y 3 En Zone 7
+Cl 1 entre Kr 52 y 53 En Zone 7
+Cl 1 entre Kr 53 y 52 En Zone 7
+Cl 1 entre Kr 55B y 56 En Zone 7
+Cl 1 entre Kr 59 y 60 En Zone 7
+Cl 1 entre Kr 60 y 59 2 En Zone 7
+Cl 1 entre Kr 62 y 60 En Zone 7
+Cl 1 entre Kr 64 y 64A En Zone 7
+Cl 1 entre Kr 65A y 64A En Zone 7
+Cl 1 entre Kr 66B y 67 En Zone 7
+Cl 1 entre Kr 69 y 67 En Zone 7
+Kr 70 entre Cl 1Oe y 1AOe En Zone 7
+Cl 2Oe entre Kr 72 y 73B En Zone 7
+Cl 2AOe entre Kr 74C y 74D En Zone 7
+Cl 2AOe entre Kr 75 y 75A En Zone 7
+Cl 1AOe entre Kr 75 y 74B En Zone 7
+Cl 3O entre Dg 51 y 50 En Zone 7
+Dg 50 entre Cl 6 y 7 En Zone 7
+Kr 52 entre Dg 50 y 51 En Zone 7
+Dg 51 entre Cl 8 y 7 En Zone 7
+Dg 51 entre Cl 5 y 4 En Zone 7
+Cl 2A entre Kr 64 y 64A En Zone 7
+Cl 2A entre Kr 65A y 66 En Zone 7
+Cl 3 entre Kr 65A y 65 En Zone 7
+Cl 3 entre Kr 60 y 58 En Zone 7
+Cl 2 entre Kr 53 y 52 En Zone 7
+Cl 1 entre Kr 52 y 50 En Zone 7
+Cl 1 entre Kr 46 y 45 En Zone 7
+Cl 1 entre Kr 44 y 45 En Zone 7
+Cl 1 entre Kr 44 y 42 En Zone 7
+Cl 1 entre Kr 42 y 40 En Zone 7
+Dg 37 entre Cl 3A y 4 En Zone 7
+Dg 37A entre Cl 4 y 4B En Zone 7
+Cl 4B entre Kr 36B y 36 En Zone 7
+Cl 5 entre Kr 38A y 38C En Zone 7
+Cl 5 entre Kr 70 y 73 En Zone 7
+Cl 1AOe entre Kr 73B y 73A En Zone 7
+Cl 2 entre Kr 79 y 78B En Zone 1
+Cl 1C entre Kr 77A y 78 En Zone 1
+Cl 1C entre Kr 74 y 74A En Zone 7
+Kr 73 entre Cl 2C y 3 En Zone 7
+Cl 9 entre Kr 65A y 65 En Zone 7
+Cl 9 entre Kr 63 y 62C En Zone 7
+Cl 9 entre Kr 56 y 55 En Zone 7
+Cl 9 entre Kr 43 y 42 En Zone 7
+Cl 9 entre Kr 39 y 38 En Zone 7
+Cl 9 entre Kr 37 y 36 En Zone 7
+Cl 6 entre Kr 26 y 27 En Zone 7
+Cl 6 entre Kr 29 y 30 En Zone 7
+Cl 6 entre Kr 34 y 36 En Zone 7
+Cl 6 entre Kr 50 y Cl 5 En Zone 7
+Kr 39 entre Cl 7A y 7 En Zone 7
+Kr 66 entre C 9 y 10 En Zone 7
+Kr 66 entre Cl 13B y 13E En Zone 6
+Cl 10 entre Kr 33 y 39 En Zone 7
+Kr 67 entre Cl 1D y 1C En Zone 7
+Cl 5 entre Kr 70 y 68 En Zone 7
+Cl 1 entre Kr 37A y 37 En Zone 7
+Cl 10 Oe entre Kr 37 y 36C En Zone 7
+Kr 56 entre Cl 1 y 2 Oe En Zone 7
+Kr 56 entre Cl 7 y 8 Oe En Zone 7
+Cl 13OE entre Kr 56 y 55 En Zone 7
+Cl 1 entre Kr 52 y 54 En Zone 7
+Cl 1 entre Kr 38D y 38C En Zone 7
+Kr 57 entre Cl 3 y 2A En Zone 7
+Cl 2A entre Kr 58 y 60 En Zone 7
+Cl 1C entre Kr 70 y 71 Polideportivo En Zone 7
+Cl 3 entre Kr 67 y 66B En Zone 7
+Kr 68 entre Cl 3B y 3C En Zone 7
+Cl 3 entre Kr 69 y 68 En Zone 7
+Kr 55B entre Cl 3 y 1A En Zone 7
+Cl 3 entre Kr 62 y 61A En Zone 7
+Kr 56 entre Cl 3 y 1B En Zone 7
+Cl 70 entre Kr 7EBis y 7J En Zone 3
+Cl 44 entre Kr 12 y 11D En Zone 4
+Kr 23 entre Cl 118 y 119 En Zone 4
+Cl 123 entre Kr 26J1 y 26J2 En Zone 4
+Cl 121 entre Kr 26I2 y 26I3 En Zone 4
+Cl 61 con Kr 7R Bis En Zone 3
+Kr 28D entre Cl 83 y 85 En Zone 4
+Kr 28D entre Cl 92 y 93 En Zone 4
+Cl 96 con Kr 28D4 En Zone 4
+Cl 96 con Kr 28E6 En Zone 4
+Cl 96 con Kr 28I En Zone 5
+Kr 28E2 entre Cl 124 y 124C En Zone 4
+Cl 94 entre Kr 100 y 99 En Zone 4
+Tr 103 entre Dg 26P4 y Kr 26J En Zone 4
+Cl 8 entre Kr 3 y 4 En Zone 0
+Kr 39 entre Cl 48 y 49 En Zone 5
+Cl 55 entre Kr 33 y 32A En Zone 5
+Cl 55 entre Kr 30 y 29 En Zone 5
+Cl 55 entre Kr 34 y 33 En Zone 5
+Cl 54 entre Kr 39H y 40 En Zone 5
+Kr 41B entre Cl 53 y 52 En Zone 5
+Cl 48 entre Kr 37 y 36 En Zone 5
+Cl 54 entre Kr 42C1 y 42C En Zone 5
+Kr 39 entre Cl 5 y 4 En Zone 7
+Kr 39 entre Cl 2A y 2 En Zone 7
+Kr 56 entre Cl 7 Oe y 8 Oe En Zone 7
+Cl 13 Oe entre Kr 55 y 56 En Zone 7
+Kr 56 entre Cl 5 y 7 En Zone 7
+Kr 56 entre Cl 2 Oe y 1A Oe En Zone 7
+Cl 1 entre Kr 56 y 55 En Zone 7
+Kr 56 entre Cl 6A y 5 En Zone 7
+Kr 56 entre Cl 7 Oe y 8 Oe Vivero En Zone 7
+Kr 56 Barrio Ca?averal 1 En Zone 7
+Colegio Ideas Crucerito En Zone 7
+Kr 13 Oe Entrada Ppal Cementerio En Zone 7
+Kr 56 Barrio Ca?averal 2 En Zone 7
+Kr 56 Barrio Ca?averal 3 En Zone 7
+Kr 56 entre Cl 8 Oe y 7 Oe En Zone 7
+Kr 56 entre Cl 8 Oe y 7 Oe En Zone 7
+Kr 56 entre Cl 5 Oe y 3 Oe En Zone 7
+Cl 6 entre Kr 36 y Dg 24 En Zone 7
+Kr 42 entre Cl 5 y 3A En Zone 7
+Kr 42 entre Cl 2A y 2 En Zone 7
+Kr 66 entre C10 y 9A En Zone 7
+Dg 51 entre Cl 13A Oe y 14 Oe En Zone 7
+Dg 51 entre Cl 14 Oe y 13A Oe En Zone 7
+Dg 51 entre Kr 54D y 53 En Zone 7
+Cl 6 entre 37A y 38 En Zone 7
+Cl 6 entre Kr 39 y Tr 5 En Zone 7
+Kr 56 entre Cl 9C y 9B En Zone 7
+Kr 56 entre Cl 9 y 10 En Zone 7
+Kr 56 entre Cl 5 y 3 En Zone 7
+Cl 6 entre Kr 44 y 45A En Zone 7
+Cl 13 Oe Cementerio Jardines del Recuerd En Zone 7
+Colegio Ideas Crucerito 1 En Zone 7
+Via la sirena Quebrada las Pilas En Zone 7
+La Sirena Fin de Ruta En Zone 7
+Via la sirena Quebrada las Pilas 2 En Zone 7
+Cl 7 Oe entre Kr 52 y 51A En Zone 7
+Cl 7 Oe entre Kr 51A y 52 En Zone 7
+Dg 51 con Cl 14 Oe Cementerio Jardines d En Zone 7
+Dg 51 con Cl 14 Oe Escuela de Carabinero En Zone 7
+Kr 70 entre Cl 1C y 2B En Zone 7
+Kr 70 entre Cl 2C y 3 En Zone 7
+Cl 1 entre Kr 55 y 54 En Zone 7
+Via la sirena Puente Rojo En Zone 7
+Via la sirena Puente Rojo 1 En Zone 7
+Cl 1 entre Kr 56 y 59 En Zone 7
+Cl 1 entre Kr 59 y 56 En Zone 7
+Cl 3 entre Kr 73 y 70 En Zone 7
+Kr 52 con Cl 1 En Zone 7
+Kr 73 entre Cl 4 y 3B En Zone 7
+Kr 73 entre Cl 3 y 2C En Zone 7
+Cl 2A entre Kr 73B y 73C En Zone 7
+Cl 1C entre Kr 73 y 72 En Zone 7
+Kr 70 entre Cl 1B y 1A En Zone 7
+Kr 70 entre Cl 1A y 1C En Zone 7
+Cl 5 entre Kr 39 y 40 En Zone 7
+Cl 5 entre Kr 34A y 35 En Zone 7
+Kr 66 entre Cl 5 y 5A En Zone 7
+Cl 1 entre Kr 42A y 43A En Zone 7
+Tr 2A entre Cl 2 Bis y Dg 2A En Zone 7
+Cl 4 entre Kr 80 y 78 En Zone 1
+Cl 2B entre Kr 78 y 80 En Zone 1
+Cl 2A Bis con Kr 81 En Zone 1
+Kr 83 con Cl 1B Oe En Zone 1
+Dg 51 entre Cl 10 O y 9 O En Zone 7
+Cl 2 entre Kr 54 y 53 En Zone 7
+Cl 8 entre Kr 14 y 14A En Zone 7
+Kr 39 entre Dg 30 y Cl 34C En Zone 6
+Kr 39 entre Cl 31 y 29 En Zone 6
+Kr 39 entre Cl 32A y 32 En Zone 6
+Kr 39 entre Cl 26A y 26 En Zone 8
+Kr 39 entre Cl 25 y 26 En Zone 8
+Kr 39 entre Cl 37 y 38 En Zone 6
+Kr 23 entre Cl 26B y T25 En Zone 8
+Kr 23 entre Cl 33C y D23 En Zone 8
+Kr 23 entre Tr 29 y C33B En Zone 8
+Kr 23 entre Cl 33C y 33F En Zone 4
+Kr 23 entre Cl 36 y 34 En Zone 4
+Kr 23 entre Cl 36 y 38 En Zone 4
+Kr 23 entre Cl 39 y 41 En Zone 4
+Kr 23 entre Cl 43 y 44 En Zone 4
+Cl 70 entre Dg 15 y 13 En Zone 4
+Cl 27 entre Kr 36 y 35 En Zone 8
+Cl 27 entre Kr 33 y 33B En Zone 8
+Cl 27 entre Kr 33A y 33 En Zone 8
+Cl 27 entre Kr 31 y 31B En Zone 8
+Kr 29 entre Cl 27 y 26B En Zone 8
+Kr 29 entre Cl 26B y 25 En Zone 8
+Cl 25 entre Kr 27 y 26 En Zone 8
+Cl 28 entre Kr 24B y 25 En Zone 8
+Cl 70 entre Kr 26E y 26D En Zone 4
+Cl 70 entre Kr 26J y 26K En Zone 4
+Cl 70 entre Kr 29 y 29A En Zone 8
+Cl 70 entre Kr 32 y 32B En Zone 8
+Cl 70 entre Kr 32A y32 En Zone 8
+Cl 70 entre Kr 39 y 36 En Zone 6
+Kr 32 entre Cl 32 y 32A En Zone 8
+Kr 32 entre Cl 30 y 31 En Zone 8
+Kr 39 entre Cl 19 y 18 En Zone 8
+Kr 23 entre Cl 49 y 48 En Zone 4
+Kr 23 entre Tr 25 y Cl 25 En Zone 8
+Cl 27 entre Kr 28 y 27 En Zone 8
+Cl 28 entre Kr 23C y 23B En Zone 8
+Cl 32entre Kr 31A y 31 En Zone 8
+Cl 32 entre Kr 29A Bis y 29A En Zone 8
+Tr 30 entre Kr 17F y Dg 19 En Zone 8
+Kr 29 entre Cl 72Y y 48 En Zone 5
+Cl 48 entre 41H y 42A En Zone 5
+Cl 72U entre Kr 28E6 y 28E5 En Zone 5
+Kr 42B entre Cl 56C y 57 En Zone 5
+Kr 42B entre Cl 56 y 55C En Zone 5
+Kr 41B entre Cl 51 y 52 En Zone 5
+T. CALIPSO Pte Sur C2 En Zone 8
+Cl 54 entre Kr 47D  y 47 GYM En Zone 6
+Kr 46 entre Cl 54 y 54C En Zone 6
+Cl 56C con Kr 42D En Zone 5
+Kr 44 entre Cl 14 y 14B En Zone 6
+Kr 39 entre Cl 33 y 34 En Zone 6
+Dg 23 entre Cl 18E y 18F En Zone 8
+Cl 10 entre Kr 53 y 50 En Zone 7
+Cl 10 con Kr 44 En Zone 7
+Cl 10 entre Kr 38A y 38 En Zone 7
+Dg 23 entre Cl 13B y 13 En Zone 8
+Cl 5 entre Kr 36 y 37A En Zone 7
+Tr 2A entre Kr 74Bis y 74 En Zone 7
+Kr 83 en la Y En Zone 1
+Cl 9 entre Kr 41 y 40 En Zone 7
+Cl 33C entre Kr 25 y 26 En Zone 8
+Kr 27 entre Cl 44 y 49 En Zone 4
+Kr 27 entre Dg 28B y Cl 39 En Zone 4
+Dg 30 entre Kr 33 y 33A En Zone 8
+Cl 44 entre Kr 28 y 27A En Zone 4
+Cl 70 entre Kr 25 y 25A En Zone 4
+Cl 52 entre Kr 22 y 20 En Zone 4
+Cl 44 entre Kr 20 y 22 En Zone 4
+Cl 44 entre Kr 28 y 28A En Zone 4
+Cl 70 entre Kr 28C y 28B En Zone 4
+Cl 32 entre Kr 29B y 30 En Zone 8
+T. CALIPSO BAHIA D4 En Zone 8
+Cl 10 entre Kr 32A y 33 En Zone 7
+Dg 23 entre Tr 11 y 10 En Zone 6
+Cl 13 entre Kr 20 y 21 En Zone 6
+Trebol A1 En Zone 4
+Kr 4 entre Cl 11 y 12 Oe En Zone 7
+Dg 19 entre Tr 30 y 31 En Zone 4
+Cl 33A entre Kr 17C y 17A1 En Zone 4
+Tr 30 entre Kr 17D y 17F En Zone 4
+Dg 19 entre Tr 28 y 28A En Zone 8
+Dg 22 entre Tr 25 y 26 En Zone 8
+Cl 33C entre Kr 24B y 24C En Zone 4
+Kr 27 entre Cl 33E y 33H En Zone 8
+Kr 27 entre Cl 34 y 36 En Zone 4
+Kr 27 entre Cl 36A y Dg 28B En Zone 4
+Kr 27 entre 52 y 54 En Zone 4
+Kr 27 entre Cl 70 y 56A En Zone 4
+Kr 27 entre Cl 50 y 49 En Zone 4
+Kr 27 entre Cl 33H y 34 En Zone 4
+Cl 32 entre Kr 33B y 33A En Zone 8
+Cl 44 entre Kr 31 y 29B En Zone 8
+Kr 32 entre Dg 33 y 32 En Zone 8
+Tr 29 con Cl 44 En Zone 8
+Cl 44 entre Tr 29 y Kr 28F En Zone 8
+Cl 44 entre Kr 28E y Tr 28D En Zone 4
+Cl 44 entre Kr 26L y 26K En Zone 4
+Cl 52 entre Kr 26 y 25A En Zone 4
+Cl 44 entre Tr 28D y 33H En Zone 4
+Cl 70 entre Kr 26D y 26F En Zone 4
+Cl 70 entre Kr 34 y 35 En Zone 6
+Cl 33A entre Kr 17 y 17C En Zone 4
+Dg 19 entre Tr 28A y 28 En Zone 8
+Kr 23 entre Cl 25 y Tr 25E En Zone 8
+Cl 52 entre Kr 24B y 24A En Zone 4
+Cl 44 entre Kr 21 y 19 En Zone 4
+Cl 44 entre Kr 24 y 24A En Zone 4
+Cl 44 entre Kr 25 y 25A En Zone 4
+Cl 44 entre Cl 43 y 42A En Zone 4
+Cl 44 entre Tr 33E y 29 En Zone 8
+Cl 70 entre Kr 27 y 27A En Zone 4
+Kr 39 entre Cl 26C y 26B En Zone 8
+Cl 70 entre Kr 26E y 26F En Zone 4
+Kr 29 entre 31A y 30 En Zone 8
+Kr 29 entre Cl 29 y 30A En Zone 8
+Kr 29 entre Cl 31A y 32 En Zone 8
+Kr 27entre Cl 71 y 71A En Zone 4
+Kr 27 entre Cl 72 y 71B En Zone 4
+Cl 70 entre Kr 27 y 26M En Zone 4
+Cl 27 entre Kr 26 y 27 En Zone 8
+Calipso Reserva 2 En Zone 4
+T. CALIPSO Pte Norte D2 En Zone 4
+Kr 25 entre Tr 29 y 25 En Zone 8
+Cl 25 entre Kr 3 y 4 En Zone 3
+Cl 10 entre Kr 33 y 32A En Zone 7
+Cl 10 entre Kr 30 y 32 En Zone 7
+Dg 23 entre Tr 10 y 11 Laboratorios SKY En Zone 6
+Cl 13 entre Kr 23D y D23 En Zone 6
+Cl 13 entre Dg 23 y K23D En Zone 6
+Cl 13 entre Kr 21 y 20 En Zone 6
+Cl 9 entre Kr 32A y 32 En Zone 7
+Cl 9 entre Kr 31 y 30 En Zone 7
+Cl 9 entre Kr 23D y 23C En Zone 7
+Cl 9 entre Kr 19 y 17 En Zone 7
+Kr 5 entre Cl 21 y 22 En Zone 4
+Kr 5 entre Cl 24 y 25 En Zone 3
+Av 4N entre Cl 6 y 7 Oeste En Zone 0
+Kr 1 entre Cl 9 y 10 Oe En Zone 0
+Cl 7 Oe con Av 1 En Zone 0
+Kr 8 entre Cl 25 y 24 En Zone 4
+Kr 8 entre Cl 16 y 15 En Zone 8
+Kr 5 entre Cl 15  y 16 En Zone 8
+Kr 5 entre Cl 19 y 20 En Zone 4
+Cl 10 entre Kr 10 y 12 En Zone 0
+Cl 10 entre Kr 13 y 14 En Zone 7
+Kr 8 entre Cl 20 y 19 En Zone 4
+Cl 15 entre Kr 19A y 18A En Zone 8
+Cl 10 entre Kr 22 y 23 En Zone 7
+Cl 9 entre Kr 15 y 14A En Zone 7
+Cl 9 entre Kr 8 y 6 En Zone 0
+Kr 4 entre Cl 9 y 8 En Zone 0
+Kr 4 entre Cl 5 y 4 En Zone 0
+Kr 2 entre Cl 2 y 3 Oeste En Zone 0
+Kr 1 entre Cl 11 y 12 Oe En Zone 0
+Kr 20E entre Cl 14 y 15 Oe En Zone 7
+Kr 2 entre Cl 13 y 12 Oe En Zone 0
+Kr 2 entre Cl 8 y 7 Oe En Zone 0
+Kr 1 entre Cl 2 y 2A En Zone 0
+Kr 10 entre Cl 7 y 8 En Zone 0
+Cl 5 entre Kr 19 y 22 En Zone 7
+Kr 23 entre Cl 5 y 3A En Zone 7
+Kr 23 entre Cl 2 y 1A En Zone 7
+Kr 24C entre Cl 6 y  9 En Zone 7
+Kr 14 entre Cl 9 y 8 En Zone 7
+Kr 14 entre Cl 6 y 7 En Zone 7
+Kr 15 entre Cl 15 y 13A En Zone 8
+Kr 14 entre Cl 3 y 4 En Zone 7
+Cl 4B entre Kr 27 y 34 En Zone 7
+Cl 3 Oe entre Kr 34 y 27 En Zone 7
+Kr 12 entre Cl 56 y 54 En Zone 4
+Cl 70 con Kr 7RBis En Zone 4
+Tr 103 entre Kr 27B y 27A En Zone 4
+Cl 123 entre Kr 26H2 y 26H3 En Zone 4
+Kr 28D entre Cl 122 y 123 En Zone 4
+Cl 70 entre Kr 11A y 11B En Zone 4
+Dg 23 entre Cl 13 y 17A En Zone 8
+Cl 13 entre Kr 80 y 75 En Zone 6
+Cl 13 entre Kr 68 y 66 En Zone 6
+Cl 13 entre Kr 57 y 56 En Zone 6
+Cl 16 entre Kr 46A y 46 En Zone 6
+Cl 36 entre Kr 41A y 41B En Zone 6
+Cl 25 entre Kr 66 y 68 En Zone 6
+Kr 66 entre Cl 14C y 14 En Zone 6
+Cl 14 entre Kr 32 y 31 En Zone 6
+Cl 14 entre Kr 69A y 70 En Zone 6
+Kr 27 con Cl 5 Oe En Zone 7
+Kr 27 con Cl 9 Oe En Zone 7
+Kr 5 con Cl 8 Oe En Zone 7
+Kr 4 entre Cl 6 y 7 Oe En Zone 0
+Kr 4 entre Cl 8 y 9 Oe En Zone 0
+Kr 4 entre Cl 12 y 11 Oe En Zone 7
+Kr 4 entre Cl 9 y 8 Oe En Zone 0
+Kr 4 entre Cl 7 y 6 Oe En Zone 0
+Kr 5 con Cl 8 Oe En Zone 7
+Cl 56G con Kr 49A En Zone 5
+Kr 56 entre Cl 15 y 16 En Zone 6
+Cl 14 entre Kr 68 y 67 En Zone 6
+Kr 39 entre Cl 26C y 26E En Zone 6
+Cl 27 entre Kr 41C y 41D En Zone 6
+Cl 10 entre Kr 67 y 66A En Zone 7
+Cl 1 entre Kr 39 y 40 En Zone 7
+Cl 9 entre Kr 61A y 61 En Zone 7
+Cl 5 entre Kr 68 y 69 En Zone 7
+Santa Monica A1 En Zone 8
+Kr 127 entre Cl 18A y 18 En Zone 1
+Kr 122 entre Cl 13 y 12 En Zone 1
+Kr 118 entre Cl 25 y 22 En Zone 1
+Kr 1 entre Cl 56 y 57 Comfandi IPS En Zone 3
+Cl 56C entre Kr 45A y 45 En Zone 5
+Kr 50 entre Cl 41 y 40A En Zone 6
+Kr 39 entre Cl 31A y 32 En Zone 6
+Kr 39 entre Cl 29 y 30C En Zone 6
+Kr 23 entre Cl 33F y 33C En Zone 4
+Cl 52 entre Kr 20 y 22 En Zone 4
+Kr 23 entre Cl 28A y 28 En Zone 8
+Calipso Reserva 3 En Zone 4
+Kr 29 entre Cl 32 y 31A En Zone 8
+Cl 9 entre Kr 28 y 27 En Zone 7
+Kr 3 entre Cl 1 y 2 Oeste En Zone 0
+Kr 24C entre Cl 6 y 9 En Zone 7
+Kr 34 entre Cl 4 y 3 En Zone 7
+Kr 125 con Cl 20 En Zone 1
+Cl 48 entre K46 y K46B En Zone 5
+Cl 10 entre Kr 66A y 66 En Zone 7
+Kr 66 entre Cl 13 y 12 En Zone 6
+Cl 14 entre Kr 53 y 50 En Zone 6
+Cl 14 entre Kr 43 y 42 En Zone 6
+Cl 14 entre Kr 38A y 37A En Zone 6
+Cl 2A con Kr 62B En Zone 7
+Cl 3 entre Kr 64 y 63A En Zone 7
+Cl 1 entre Kr 50 y Dg 51 En Zone 7
+Kr 36 entre Cl 4D y 5 En Zone 7
+Cl 1AOe entre Kr 72 y 70 En Zone 7
+Kr 73 entre Cl 2A y 2C En Zone 7
+Cl 6 entre Kr 24A y 25 En Zone 7
+Cl 6 entre Kr 42 y 43 En Zone 7
+Kr 66 entre Cl 11 y 12 En Zone 6
+Cl 2A entre Kr 76A y 76 En Zone 7
+Cl 10 Oe con Kr 25D En Zone 7
+Dg 25 entre Kr 54D y 53 En Zone 7
+Cl 2 entre Kr 66A y 66B En Zone 7
+Kr 56 entre Cl 3 y 1B En Zone 7
+Kr 23 entre Cl 41 y 39 En Zone 4
+Cl 27 entre Kr 31A y 31 En Zone 8
+Cl 28 entre Tr 25 y 25C En Zone 8
+Cl 70 entre Dg 69 y Kr 26H En Zone 4
+Kr 32 entre Cl 34 y 35 En Zone 8
+Cl 27 Kr 25B y 25A En Zone 8
+Tr 30 con Cl 29 En Zone 4
+Cl 10 entre Kr 31 y Tr 10 Puente Peatona En Zone 6
+Av 4N entre Cl 5 y 6 Oeste En Zone 0
+Kr 1 entre Kr 1C y Cl 5 Oeste En Zone 0
+Cl 9 entre Kr 13 y 12 En Zone 0
+Cl 10 entre Kr 19 y 20 En Zone 7
+Cl 5 entre Kr 5 y 6 En Zone 0
+Kr 2 entre Cl 11 y 10 Oe En Zone 0
+Cl 5 entre Kr 15 y 16 En Zone 7
+Kr 14 entre Cl 3 y 2 En Zone 7
+Villacolombia B1 En Zone 4
+Kr 99 con Cl 50 En Zone 1
+Av 2BSN entre Cl 73Bis y 74 En Zone 2
+Kr 1D entre Cl 70 y 67 En Zone 3
+Kr 1D entre Cl 63 y 62 En Zone 3
+Kr 1D entre Cl 62 y 59 En Zone 3
+Kr 1D entre Cl 59 y 58 En Zone 3
+Cl 56 entre Kr 1C y 1B En Zone 3
+Cl 70 entre Kr 1A14 y 1B En Zone 3
+Cl 56 entre Kr 1D y 1C En Zone 3
+Cl 70 entre Kr 28B y 27 En Zone 4
+Kr 98 entre Cl 30 y 42 En Zone 1
+Cl 54 entre Kr 49B y  49C En Zone 5
+Cl 54 entre Kr 46D y 47 En Zone 6
+Kr 26I entre Dg 72A y 71B En Zone 4
+Terminal Andres Sanin Lugar de estaciona En Zone 4
+Kr 50 entre Cl 6 y Cl 5 En Zone 7
+Kr 34 entre Cl 9 y 8 En Zone 7
+Kr 34 entre Cl 6 y Dg 31 En Zone 7
+Kr 34 entre Cl 5A y 5B En Zone 7
+Dg 70 entre Kr 26H3 y 26H En Zone 4
+Cl 9 Oe entre Kr 22A y 18 En Zone 7
+Kr 26G entre Tr 103 y Cl 78 En Zone 4
+Kr 26G entre Cl 76 y 75 En Zone 4
+Kr 26G entre Cl 75 y 76 En Zone 4
+Kr 26 entre Dg 70A y 70 En Zone 4
+Kr 26 entre Dg 70D y D71A En Zone 4
+Dg 72C entre K26 y 26H2 En Zone 4
+Kr 98 entre Cl 25 y 28 En Zone 1
+Cl 33 entre Dg 65 y 66 En Zone 6
+Dg 66 entre Kr 33 y 29 Detras de Almacen En Zone 6
+Cl 52 entre Av 2HN y 2GN En Zone 2
+Cl 48 entre Kr 82 y 83Bis En Zone 1
+Cl 48 entre Kr 83C y 83E En Zone 1
+Cl 48 entre Kr 85 y 86 En Zone 1
+Dg 72M entre Kr 26M y 26L En Zone 4
+Dg 72C entre Kr 26K y 26J Conjunto Res S En Zone 4
+Kr 86 entre Cl 48 y 45 En Zone 1
+Kr 28D entre Cl 72W y 72Y En Zone 4
+Kr 28D entre Cl 72I y 72L3 En Zone 4
+Kr 28D entre Cl 72W y 72U En Zone 4
+Kr 28D entre Cl 72U y 72V En Zone 4
+Kr 1 entre Cl 70A y 70A Bis En Zone 3
+Kr 111 entre Cl 19 y 18 En Zone 1
+Cl 123 entre Kr 26R1 y 26T En Zone 4
+Cl 84 entre Kr 26D y Tr 103 En Zone 4
+Kr 28D entre Cl 72I y 72H En Zone 4
+Cl 21 entre Kr 1 y 2 En Zone 3
+Cl 71 entre Kr 1A5-1 y 1A4 En Zone 3
+Cl 70 entre Kr 3 y 4C En Zone 3
+Dg 72C entre Kr 26J y 26L En Zone 4
+Cl 84 entre Kr 26D y Tr 103 En Zone 4
+Dg 72C entre Kr 26I1 y 26I En Zone 4
+Av 2N entre Cl 24 y 23A En Zone 2
+Kr 28D9 entre Cl 122K y 122J En Zone 4
+Cl 79 con Kr 28 En Zone 4
+Dg 72C con Kr 26K En Zone 4
+Dg 72C entre Kr 26I y 26J En Zone 4
+Zonamerica 1 En Zone 1
+Zonamerica 2 En Zone 1
+Cl 18 entre Kr 127 y 130 En Zone 1
+Cl 18 entre Kr 148 y 152 En Zone 1
+Cl 18 entre Kr 159 y 168 En Zone 1
+Cl 18 entre Kr 159 y 154 En Zone 1
+Cl 18 entre Kr 154 y 150 En Zone 1
+Cl 18 entre Kr 168 y 170 En Zone 1
+Cl 3 entre Kr 56 y 55 En Zone 7
+Cl 26 entre Kr 13 y 12 En Zone 4
+Cl 26 entre Kr 11B y 10 En Zone 4
+Kr 8 entre Cl 21 y 20 En Zone 4
+Cl 25 entre Kr 12 y 13A En Zone 4
+Cl 25 entre Kr 11 y 11B En Zone 4
+Kr 50 entre Cl 51 y 50 En Zone 6
+Kr 46 entre Cl 40 y 41 En Zone 5
+Cl 54 entre Kr 41 y 41B En Zone 5
+Cl 73 entre Kr 26R y 26P En Zone 4
+Cl 72W entre Kr 28A y 28-4 En Zone 4
+Cl 72U entre Kr 28A y 28A1 En Zone 4
+Kr 28D entre Cl 72V y 72W En Zone 4
+Kr 27 entre Cl 72X1 y 72Y En Zone 4
+Kr 27 entre Cl 72U y 72V En Zone 4
+Stations
+T.Canaveralejo A1 En Zone 7
+T.Canaveralejo A2 En Zone 7
+Terminal Menga C1 En Zone 2
+Terminal Menga C2 En Zone 2
+Terminal Menga C3 En Zone 2
+Terminal Menga B1 En Zone 2
+Terminal Menga B2 En Zone 2
+Terminal Menga B3 En Zone 2
+Terminal Menga A1 En Zone 2
+Terminal Andres Sanin B1 En Zone 4
+Terminal Andres Sanin B3 En Zone 4
+Terminal Andres Sanin C3 En Zone 4
+Terminal Andres Sanin D2 En Zone 4
+Terminal Andres Sanin E3 En Zone 4
+Terminal Andres Sanin C5 En Zone 4
+Terminal Andres Sanin D1 En Zone 4
+Terminal Andres Sanin E1 En Zone 4
+Terminal Andres Sanin A2 En Zone 4
+Terminal Andres Sanin A3 En Zone 4
+Flora Industrial A1 En Zone 3
+Flora Industrial B1 En Zone 3
+Unidad Deportiva B2 En Zone 7
+Unidad Deportiva A3 En Zone 7
+Unidad Deportiva B3 En Zone 7
+Capri B1 En Zone 1
+Capri B2 En Zone 6
+Universidades B1 En Zone 1
+Universidades C1 En Zone 1
+Universidades D1 En Zone 1
+Universidades D3 En Zone 1
+Universidades C3 En Zone 1
+Universidades D5 En Zone 1
+Universidades C4 En Zone 1
+Universidades D2 En Zone 1
+Universidades C2 En Zone 1
+Universidades D4 En Zone 1
+Nuevo Latir B1 En Zone 4
+Nuevo Latir A1 En Zone 4
+Terminal Calipso B1 En Zone 8
+Terminal Calipso A4 En Zone 4
+Terminal Calipso B4 En Zone 4
+Terminal Calipso A3 En Zone 4
+T. Paso del Comercio C5 En Zone 3
+T. Paso del Comercio C7 En Zone 3
+T. Paso del Comercio A1 En Zone 3
+T. Paso del Comercio A2 En Zone 3
+T. Paso del Comercio B2 En Zone 3
+T. Paso del Comercio B3 En Zone 3
+T. Paso del Comercio B4 En Zone 3
+T. Paso del Comercio B6 En Zone 3
+Estacion Melendez C4 En Zone 1
+Estacion Melendez C2 En Zone 1
+Estacion Melendez C5 En Zone 1
+Estacion Melendez C1 En Zone 1
+Estacion Melendez C3 En Zone 1
+T.Canaveralejo A4 En Zone 7
+Terminal Menga C4 En Zone 2
+Terminal Menga B4 En Zone 2
+Terminal Andres Sanin B2 En Zone 4
+Terminal Andres Sanin E2 En Zone 4
+Terminal Andres Sanin A1 En Zone 4
+Unidad Deportiva B1 En Zone 7
+Capri A1 En Zone 7
+Unidad Deportiva A2 En Zone 7
+Unidad Deportiva B3 En Zone 7
+Plaza de Toros A1 En Zone 7
+Plaza de Toros B1 En Zone 7
+Pampalinda A1 En Zone 7
+Pampalinda B1 En Zone 7
+Refugio A1 En Zone 7
+Refugio B1 En Zone 7
+Caldas A1 En Zone 7
+Caldas B1 En Zone 7
+Capri A2 En Zone 1
+Melendez A1 En Zone 1
+Melendez B1 En Zone 1
+Buitrera A1 En Zone 1
+Buitrera B1 En Zone 1
+Univalle A1 En Zone 1
+Univalle B1 En Zone 1
+Universidades A1 En Zone 1
+Universidades A2 En Zone 1
+Universidades B2 En Zone 1
+Versalles A1 En Zone 2
+Versalles B1 En Zone 2
+Las Americas A1 En Zone 2
+Las Americas B1 En Zone 2
+Prados del Norte A1 En Zone 2
+Prados del Norte B1 En Zone 2
+Vipasa A1 En Zone 2
+Vipasa B1 En Zone 2
+Alamos A1 En Zone 2
+Alamos B1 En Zone 2
+Amanecer B1 En Zone 4
+Amanecer A1 En Zone 4
+Troncal Unida B1 En Zone 4
+Troncal Unida A1 En Zone 4
+Conquistadores B1 En Zone 8
+Conquistadores A1 En Zone 8
+Primitivo B1 En Zone 8
+Primitivo A1 En Zone 8
+Cien Palos B1 En Zone 8
+Terminal Calipso B2 En Zone 4
+Terminal Calipso B3 En Zone 4
+Terminal Calipso A5 En Zone 8
+Terminal Calipso A6 En Zone 8
+T. Paso del Comercio C6 En Zone 3
+T. Paso del Comercio A3 En Zone 3
+T.Canaveralejo A3 En Zone 7
+T.Canaveralejo A7 En Zone 7
+T.Canaveralejo A6 En Zone 7
+T.Canaveralejo A8 En Zone 7
+Terminal Menga A2 En Zone 2
+Terminal Menga A3 En Zone 2
+Terminal Menga A4 En Zone 2
+Terminal Andres Sanin C1 En Zone 4
+Terminal Andres Sanin C4 En Zone 4
+Terminal Andres Sanin D3 En Zone 4
+Terminal Andres Sanin E2 En Zone 4
+Terminal Andres Sanin C2 En Zone 4
+Terminal Andres Sanin D4 En Zone 4
+Terminal Andres Sanin D5 En Zone 4
+Chiminangos A2 En Zone 3
+Chiminangos B1 En Zone 3
+Chiminangos A1 En Zone 3
+Chiminangos B2 En Zone 3
+Salomia A1 En Zone 3
+Salomia B1 En Zone 3
+Popular A1 En Zone 3
+Popular B2 En Zone 3
+Manzanares B1 En Zone 3
+Fatima A1 En Zone 3
+Fatima B1 En Zone 3
+Torre de Cali A1 En Zone 0
+Torre de Cali B1 En Zone 0
+Torre de Cali B2 En Zone 0
+Piloto B1 En Zone 3
+San Nicolas B1 En Zone 3
+La Ermita A2 En Zone 0
+Centro A2 En Zone 0
+Santa Rosa A1 En Zone 0
+Fray Damian A2 En Zone 0
+Fray Damian A3 En Zone 7
+San Bosco A1 En Zone 7
+San Bosco A2 En Zone 7
+San Bosco B2 En Zone 7
+7 de Agosto A1 En Zone 4
+7 de Agosto A2 En Zone 4
+7 de Agosto B2 En Zone 4
+Chapinero A1 En Zone 4
+Chapinero B1 En Zone 4
+Atanasio Girardot A1 En Zone 4
+Floresta A1 En Zone 4
+Floresta B1 En Zone 4
+Belalcazar A1 En Zone 8
+Belalcazar B1 En Zone 8
+San Pascual B1 En Zone 7
+San Pascual A2 En Zone 7
+San Pascual B3 En Zone 8
+Sucre B1 En Zone 8
+Sucre B2
