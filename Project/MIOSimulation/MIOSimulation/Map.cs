@@ -78,8 +78,10 @@ namespace MIOSimulation
                 String elem = zonesData[i];
 
                 Polygon example = new Polygon(elem, "Zone "+i);
-                Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"+ i));
-                polygons.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone" + i));
+                GMapPolygon polygonToAdd = new GMapPolygon(example.getPolygon(), "Zone" + i);
+                polygonToAdd.Fill = new SolidBrush(Color.Transparent);
+                polygonToAdd.Stroke = new Pen(Color.Red, 1);
+                Zones.Polygons.Add(polygonToAdd);
                 pZones.Add(example);
             }
             
