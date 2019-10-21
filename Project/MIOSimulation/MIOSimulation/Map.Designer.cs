@@ -34,6 +34,7 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.zonesCheckedList = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -87,7 +88,7 @@
             this.StationStop_CB.Location = new System.Drawing.Point(101, 96);
             this.StationStop_CB.Margin = new System.Windows.Forms.Padding(2);
             this.StationStop_CB.Name = "StationStop_CB";
-            this.StationStop_CB.Size = new System.Drawing.Size(98, 21);
+            this.StationStop_CB.Size = new System.Drawing.Size(98, 28);
             this.StationStop_CB.TabIndex = 1;
             this.StationStop_CB.Text = "Estaciones y paradas";
             this.StationStop_CB.SelectedIndexChanged += new System.EventHandler(this.StationStop_CB_SelectedIndexChanged);
@@ -100,7 +101,7 @@
             this.label1.Location = new System.Drawing.Point(124, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(69, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtro";
             // 
@@ -109,6 +110,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.zonesCheckedList);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.trackBar1);
@@ -130,12 +132,30 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
+            // zonesCheckedList
+            // 
+            this.zonesCheckedList.FormattingEnabled = true;
+            this.zonesCheckedList.Items.AddRange(new object[] {
+            "Zone 0 - Centro",
+            "Zone 1 - Universidades",
+            "Zone 2 - Menga",
+            "Zone 3 - Paso del Comercio",
+            "Zone 4 - Sanín",
+            "Zone 5 - Nuevo Latír",
+            "Zone 6 - Simón Bolivar",
+            "Zone 7 - Cañaveralejo",
+            "Zone 8 - Calipso"});
+            this.zonesCheckedList.Location = new System.Drawing.Point(14, 515);
+            this.zonesCheckedList.Name = "zonesCheckedList";
+            this.zonesCheckedList.Size = new System.Drawing.Size(266, 211);
+            this.zonesCheckedList.TabIndex = 14;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 376);
+            this.label3.Location = new System.Drawing.Point(78, 374);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(157, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "Velocidad simulación";
             // 
@@ -144,7 +164,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(134, 429);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Zoom";
             // 
@@ -155,7 +175,7 @@
             this.trackBar1.Maximum = 18;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 45);
+            this.trackBar1.Size = new System.Drawing.Size(162, 69);
             this.trackBar1.TabIndex = 11;
             this.trackBar1.Value = 10;
             this.trackBar1.ValueChanged += new System.EventHandler(this.TrackBar1_ValueChanged);
@@ -231,7 +251,7 @@
             this.prueba.AutoSize = true;
             this.prueba.Location = new System.Drawing.Point(84, 202);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(109, 13);
+            this.prueba.Size = new System.Drawing.Size(163, 20);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "Informacion de la ruta";
             // 
@@ -289,5 +309,6 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox zonesCheckedList;
     }
 }

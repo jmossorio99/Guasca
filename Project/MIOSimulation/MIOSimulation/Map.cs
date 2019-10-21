@@ -30,9 +30,17 @@ namespace MIOSimulation
         private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
-        Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
+        private Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
         private Boolean filterSelected = false;
-        
+
+        private List<int> zonesChecked;
+        private List<GMapOverlay> stationsZoomedOutList = new List<GMapOverlay>();
+        private List<GMapOverlay> fullStationsList = new List<GMapOverlay>();
+        private List<GMapOverlay> stopsList = new List<GMapOverlay>();
+        private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
+        private List<GMapOverlay> zonesList = new List<GMapOverlay>();
+
+        StreamWriter sw = new StreamWriter("stopsData");
 
         public SimulacionMetroCali()
         {
@@ -42,6 +50,13 @@ namespace MIOSimulation
         private void Map_Load(object sender, EventArgs e)
         {
             //setting up the map
+            for (int i = 0; i < 9; i++) {
+                stationsZoomedOutList.Add(new GMapOverlay());
+                stopsList.Add(new GMapOverlay());
+                fullStationsList.Add(new GMapOverlay());
+                polygonsList.Add(new GMapOverlay());
+                zonesList.Add(new GMapOverlay());
+            }
             addZones();
             stationNames = readStationNames();
             addListsToHashset();
@@ -53,17 +68,12 @@ namespace MIOSimulation
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
 
-            gmap.Overlays.Add(Zones);
-
-
-            addZones();
-
-
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            zonesChecked = new List<int>();
             gmap.Overlays.Add(Zones);
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
@@ -76,12 +86,12 @@ namespace MIOSimulation
             List<int> toSee = new List<int>{0,1,2,3,4,5,6,7,8};
             foreach (var i in toSee) {
                 String elem = zonesData[i];
-
                 Polygon example = new Polygon(elem, "Zone "+i);
                 GMapPolygon polygonToAdd = new GMapPolygon(example.getPolygon(), "Zone" + i);
                 polygonToAdd.Fill = new SolidBrush(Color.Transparent);
                 polygonToAdd.Stroke = new Pen(Color.Red, 1);
-                Zones.Polygons.Add(polygonToAdd);
+                //Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"+ i));
+                (zonesList[i]).Polygons.Add(polygonToAdd);
                 pZones.Add(example);
             }
             
@@ -93,6 +103,7 @@ namespace MIOSimulation
             FileReader frStations = new FileReader("stations.txt");
             List<String> stopData = frStops.readFile();
             List<String> stationData = frStations.readFile();
+            //sw.WriteLine("Stops");
             foreach (var item in stopData)
             {
                 String[] tempSplit = item.Split(',');
@@ -108,9 +119,13 @@ namespace MIOSimulation
                     }
                 }
                 marker.ToolTipText += " En " + zone;
-
-                stops.Markers.Add(marker);
+                //sw.WriteLine(marker.ToolTipText);
+                //stops.Markers.Add(marker);
+                //writeStop(item,zone);
+                (stopsList[Convert.ToInt32(zone.Split(' ')[1])]).Markers.Add(marker);
             }
+
+            //sw.WriteLine("Stations");
             foreach (var item in stationData)
             {
                 String[] tempSplit = item.Split(',');
@@ -133,15 +148,20 @@ namespace MIOSimulation
                     }
                 }
                 marker.ToolTipText += " En " + zone;
-
+                //sw.WriteLine(marker.ToolTipText);
                 temp.Add(item);
-                fullStations.Markers.Add(marker);
-
+                //fullStations.Markers.Add(marker);
+                (fullStationsList[Convert.ToInt32(zone.Split(' ')[1])]).Markers.Add(marker);
             }
             setStationsPolygons();
 
         }
 
+        public void writeStop(String item, String zone)
+        {
+            String o = item.Replace(',', ';');
+            sw.WriteLine(o+';'+zone.Split(' ')[1]);
+        }
         private void setStationsPolygons() {
 
             foreach (var item in stationNames)
@@ -150,21 +170,35 @@ namespace MIOSimulation
                 String key = item;
                 List<String> lines = stationsTable[key];
                 List<PointLatLng> points = new List<PointLatLng>();
-
+                key = "-1";
                 Boolean addedFirst = false;
                 foreach (var line in lines)
                 {
                     String[] temp = line.Split(',');
-                    points.Add(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)));
+                    PointLatLng location = new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat));
+                    points.Add(location);
+                    String zone = "";
                     if (!addedFirst)
                     {
                         GMapMarker markerStation = new GMarkerGoogle(new PointLatLng(Double.Parse(temp[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(temp[6], CultureInfo.InvariantCulture.NumberFormat)), new Bitmap("./img/station.png"));
                         markerStation.ToolTipText = temp[3];
-                        stationsZoomedOut.Markers.Add(markerStation);
+                        foreach (var pol in pZones)
+                        {
+                            if (pol.isInside(location))
+                            {
+                                zone = pol.getName();
+                                break;
+                            }
+                        }
+                        key = (zone.Split(' ')[1]);
+                        markerStation.ToolTipText += " En " +zone;
+                        //stationsZoomedOut.Markers.Add(markerStation);
+                        stationsZoomedOutList[Convert.ToInt32(zone.Split(' ')[1])].Markers.Add(markerStation);
                         addedFirst = true;
                     }
                 }
-                paintPolygon(points, key);
+                if(!key.Equals("-1"))
+                    paintPolygon(points, key);
             }
 
         }
@@ -174,12 +208,14 @@ namespace MIOSimulation
             if (points.Count > 2)
             {
                 GMapPolygon polygon = new GMapPolygon(convexHull(points), stationName);
-                polygons.Polygons.Add(polygon);
+                //polygons.Polygons.Add(polygon);
+                ((GMapOverlay)polygonsList[Convert.ToInt32(stationName)]).Polygons.Add(polygon);
             }
             else
             {
                 GMapPolygon polygon = new GMapPolygon(points, stationName);
-                polygons.Polygons.Add(polygon);
+                //polygons.Polygons.Add(polygon);
+                ((GMapOverlay)polygonsList[Convert.ToInt32(stationName)]).Polygons.Add(polygon);
             }
 
         }
@@ -245,30 +281,101 @@ namespace MIOSimulation
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterSelected = true;
+            updateCheckdZones();
             
             if(StationStop_CB.SelectedIndex == 0)
             {
-                gmap.Overlays.Clear();
-                gmap.Overlays.Add(stops);
-                gmap.Overlays.Add(polygons);
-                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
             }
             else if(StationStop_CB.SelectedIndex == 2)
             {
                 gmap.Overlays.Clear();
-                gmap.Overlays.Add(stops);
-                gmap.Overlays.Add(Zones);
+                foreach (int a in zonesChecked)
+                {
+                    gmap.Overlays.Add(stopsList[a]);
+                    gmap.Overlays.Add(zonesList[a]);
+                }
                 gmap.Zoom = 12.5;
             }
             else
             {
-                gmap.Overlays.Clear();
-                gmap.Overlays.Add(polygons);
-                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
+            }
+
+        }
+
+        private void addStationsOverlay()
+        {
+
+            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
+            if (filterSelected)
+            {
+
+                Double zoom = gmap.Zoom;
+                if (StationStop_CB.SelectedIndex == 0)
+                {
+                    if (Math.Floor(zoom) > 16)
+                    {
+                        gmap.Overlays.Clear();
+                        foreach (int a in zonesChecked) {
+                            gmap.Overlays.Add(fullStationsList[a]);
+                            gmap.Overlays.Add(stopsList[a]);
+                            gmap.Overlays.Add(polygonsList[a]);
+                            gmap.Overlays.Add(zonesList[a]);
+                        }/*
+                        gmap.Overlays.Add(fullStations);
+                        gmap.Overlays.Add(stops);
+                        gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);*/
+                    }
+                    else
+                    {
+                        gmap.Overlays.Clear();
+                        foreach (int a in zonesChecked)
+                        {
+                            gmap.Overlays.Add(stationsZoomedOutList[a]);
+                            gmap.Overlays.Add(stopsList[a]);
+                            gmap.Overlays.Add(polygonsList[a]);
+                            gmap.Overlays.Add(zonesList[a]);
+                        }/*
+                        gmap.Overlays.Add(stationsZoomedOut);
+                        gmap.Overlays.Add(stops);
+                        gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);*/
+                    }
+                }
+                else if (StationStop_CB.SelectedIndex == 1)
+                {
+                    if (Math.Floor(zoom) > 16)
+                    {
+                        gmap.Overlays.Clear();
+                        foreach (int a in zonesChecked)
+                        {
+                            gmap.Overlays.Add(fullStationsList[a]);
+                            gmap.Overlays.Add(polygonsList[a]);
+                            gmap.Overlays.Add(zonesList[a]);
+                        }/*
+                        gmap.Overlays.Add(fullStations);
+                        gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);*/
+                    }
+                    else
+                    {
+                        gmap.Overlays.Clear();
+                        foreach (int a in zonesChecked)
+                        {
+                            gmap.Overlays.Add(stationsZoomedOutList[a]);
+                            gmap.Overlays.Add(polygonsList[a]);
+                            gmap.Overlays.Add(zonesList[a]);
+                        }/*
+                        gmap.Overlays.Add(stationsZoomedOut);
+                        gmap.Overlays.Add(polygons);
+                        gmap.Overlays.Add(Zones);*/
+                    }
+                }
+
             }
 
         }
@@ -382,52 +489,14 @@ namespace MIOSimulation
 
         }
 
-        private void addStationsOverlay() {
+        
 
-            trackBar1.Value = Convert.ToInt32(gmap.Zoom);
-            if (filterSelected)
-            {
+        private void updateCheckdZones() {
+            zonesChecked = new List<int>();
 
-                Double zoom = gmap.Zoom;
-                if (StationStop_CB.SelectedIndex == 0)
-                {
-                    if (Math.Floor(zoom) > 16)
-                    {
-                        gmap.Overlays.Clear();
-                        gmap.Overlays.Add(fullStations);
-                        gmap.Overlays.Add(stops);
-                        gmap.Overlays.Add(polygons);
-                        gmap.Overlays.Add(Zones);
-                    }
-                    else
-                    {
-                        gmap.Overlays.Clear();
-                        gmap.Overlays.Add(stationsZoomedOut);
-                        gmap.Overlays.Add(stops);
-                        gmap.Overlays.Add(polygons);
-                        gmap.Overlays.Add(Zones);
-                    }
-                }
-                else if(StationStop_CB.SelectedIndex == 1)
-                {
-                    if (Math.Floor(zoom) > 16)
-                    {
-                        gmap.Overlays.Clear();
-                        gmap.Overlays.Add(fullStations);
-                        gmap.Overlays.Add(polygons);
-                        gmap.Overlays.Add(Zones);
-                    }
-                    else
-                    {
-                        gmap.Overlays.Clear();
-                        gmap.Overlays.Add(stationsZoomedOut);
-                        gmap.Overlays.Add(polygons);
-                        gmap.Overlays.Add(Zones);
-                    }
-                }
-                
+            foreach (int s in zonesCheckedList.CheckedIndices) {
+                zonesChecked.Add(s);
             }
-
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
