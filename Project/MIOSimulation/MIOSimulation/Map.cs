@@ -285,6 +285,10 @@ namespace MIOSimulation
             
             if(StationStop_CB.SelectedIndex == 0)
             {
+                gmap.Overlays.Clear();
+                gmap.Overlays.Add(stops);
+                //gmap.Overlays.Add(polygons);
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
             }
@@ -300,6 +304,9 @@ namespace MIOSimulation
             }
             else
             {
+                gmap.Overlays.Clear();
+                //gmap.Overlays.Add(polygons);
+                gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
             }
@@ -337,7 +344,7 @@ namespace MIOSimulation
                         {
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
                             gmap.Overlays.Add(stopsList[a]);
-                            gmap.Overlays.Add(polygonsList[a]);
+                            //gmap.Overlays.Add(polygonsList[a]);
                             gmap.Overlays.Add(zonesList[a]);
                         }/*
                         gmap.Overlays.Add(stationsZoomedOut);
@@ -367,7 +374,7 @@ namespace MIOSimulation
                         foreach (int a in zonesChecked)
                         {
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
-                            gmap.Overlays.Add(polygonsList[a]);
+                            //gmap.Overlays.Add(polygonsList[a]);
                             gmap.Overlays.Add(zonesList[a]);
                         }/*
                         gmap.Overlays.Add(stationsZoomedOut);
