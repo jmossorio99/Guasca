@@ -250,7 +250,7 @@ namespace MIOSimulation
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
-                gmap.Overlays.Add(polygons);
+                //gmap.Overlays.Add(polygons);
                 gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
@@ -265,7 +265,7 @@ namespace MIOSimulation
             else
             {
                 gmap.Overlays.Clear();
-                gmap.Overlays.Add(polygons);
+                //gmap.Overlays.Add(polygons);
                 gmap.Overlays.Add(Zones);
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
@@ -404,7 +404,7 @@ namespace MIOSimulation
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(stops);
-                        gmap.Overlays.Add(polygons);
+                        //gmap.Overlays.Add(polygons);
                         gmap.Overlays.Add(Zones);
                     }
                 }
@@ -421,7 +421,7 @@ namespace MIOSimulation
                     {
                         gmap.Overlays.Clear();
                         gmap.Overlays.Add(stationsZoomedOut);
-                        gmap.Overlays.Add(polygons);
+                        //gmap.Overlays.Add(polygons);
                         gmap.Overlays.Add(Zones);
                     }
                 }
