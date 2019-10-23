@@ -40,7 +40,7 @@ namespace MIOSimulation
         private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
         private List<GMapOverlay> zonesList = new List<GMapOverlay>();
 
-        StreamWriter sw = new StreamWriter("stopsData");
+        StreamWriter sw = new StreamWriter("stationsData.txt");
 
         public SimulacionMetroCali()
         {
@@ -151,6 +151,7 @@ namespace MIOSimulation
                 //sw.WriteLine(marker.ToolTipText);
                 temp.Add(item);
                 //fullStations.Markers.Add(marker);
+                writeStop(item, zone);
                 (fullStationsList[Convert.ToInt32(zone.Split(' ')[1])]).Markers.Add(marker);
             }
             setStationsPolygons();
