@@ -274,11 +274,6 @@ namespace MIOSimulation
 
         }
 
-        private void Gmap_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterSelected = true;
