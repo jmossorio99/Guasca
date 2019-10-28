@@ -12,6 +12,21 @@ namespace MIOSimulation
         private String name;
         private PointLatLng position;
         private Zone zone;
-        
+
+
+        public Stop(String name, PointLatLng position, Zone zone)
+        {
+            this.name = name;
+            this.position = position;
+            this.zone = zone;
+        }
+
+        public PointLatLng Position { get; set; }
+
+        public String Name { get; set; }
+
+        public Zone Zone { get; set; }
     }
+
+    
 }
