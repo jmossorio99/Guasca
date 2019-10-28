@@ -514,5 +514,10 @@ namespace MIOSimulation
         {
             gmap.Zoom = trackBar1.Value;
         }
+
+        private void Gmap_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
