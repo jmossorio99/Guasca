@@ -16,6 +16,8 @@ namespace MIOSimulation
     {
 
         private List<int> zonesChecked;
+        private List<Zone> zones;
+        private List<GMapOverlay> zonesList = new List<GMapOverlay>();
 
         public MapApp()
         {
@@ -53,6 +55,66 @@ namespace MIOSimulation
         private void ZoomBar_ValueChanged(object sender, EventArgs e)
         {
             gMap.Zoom = zoomBar.Value;
+        }
+
+        private void addZones()
+        {
+
+            FileReader zonesReader = new FileReader("CoordenatesPolygons.txt");
+            List<String> zonesData = zonesReader.readFile();
+            List<int> toSee = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+            foreach (var i in toSee)
+            {
+                String elem = zonesData[i];
+                Polygon example = new Polygon(elem, "Zone " + i);
+                Zone newZone = new Zone(elem, i, example);
+                zones.Add(newZone);
+                GMapPolygon polygonToAdd = new GMapPolygon(newZone.Area.getPolygon(),"Zone" +i);
+                polygonToAdd.Fill = new SolidBrush(Color.Transparent);
+                polygonToAdd.Stroke = new Pen(Color.Red, 1);
+
+                (zonesList[i]).Polygons.Add(polygonToAdd);
+                //pZones.Add(example);
+                zones.Add(newZone);
+            }
+
+        }
+
+        private Boolean CorrectFormat(String line)
+        {
+            Boolean correct = false;
+
+            String[] firstSplit = line.Split(' ');
+            if (firstSplit.Length==2)
+            {
+
+                String[] secondSplit = firstSplit[0].Split('-');
+                String[] thirdSplit = firstSplit[1].Split(':');
+
+                if (secondSplit.Length==3 && thirdSplit.Length==3)
+                {
+
+                    try
+                    {
+
+                        int temp1 = Int32.Parse(secondSplit[0]);
+                        int temp2 = Int32.Parse(secondSplit[1]);
+                        int temp3 = Int32.Parse(secondSplit[2]);
+                        int temp4 = Int32.Parse(thirdSplit[0]);
+                        int temp5 = Int32.Parse(thirdSplit[1]);
+                        int temp6 = Int32.Parse(thirdSplit[2]);
+
+                        correct = true;
+                    }
+                    catch (Exception e)
+                    {
+                        
+                    }
+
+                }
+            }
+
+            return correct;
         }
     }
 }

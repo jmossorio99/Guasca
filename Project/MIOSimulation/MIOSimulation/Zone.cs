@@ -87,6 +87,7 @@ namespace MIOSimulation
             return zoneStations;
         }
 
-        
+        public Polygon Area { get; set; }
+
     }
 }
