@@ -10,7 +10,7 @@ namespace MIOSimulation
     class Station
     {
         private String name;
-        private Polygon shape;
+        private Polygon perimeter;
         private List<Stop> stationStops;
 
         public Station(String name)

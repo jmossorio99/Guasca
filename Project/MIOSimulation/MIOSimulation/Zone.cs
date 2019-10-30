@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GMap.NET;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,84 +11,35 @@ namespace MIOSimulation
     {
         private String name;
         private int number;
-        private Polygon area;
-        private Dictionary<String,Station> stationsDictionary;
+        private Polygon perimeter;
+        private List<Station> stations;
         private List<Stop> stopsList;
         private List<String> stationsAdded;
         
 
-        public Zone(String name,int number,Polygon area)
+        public Zone(String name, int number, String area)
         {
             this.name = name;
             this.number = number;
-            this.area = area;
+            this.perimeter = new Polygon(area, name);
             stopsList = new List<Stop>();
             stationsAdded = new List<string>();
 
         }
 
-        public void addAnStationPointToThisZone(String stationName,Stop stationStop)
-        {
+        public bool isInside(PointLatLng p) {
 
-            if (area.isInside(stationStop.Position))
-            {
+            return perimeter.isInside(p);
 
-                Station stationTemp = stationsDictionary[stationName];
-
-                if (stationTemp != null)
-                {
-                    stationTemp.addStopToStation(stationStop);
-                    stationsAdded.Add(stationName);
-                }
-                else
-                {
-                    stationTemp = new Station(stationName);
-                    stationTemp.addStopToStation(stationStop);
-                    stationsAdded.Add(stationName);
-                }
-
-            }
-            else
-            {
-                // no yet implemented
-            }          
         }
 
-        private void addStopToThisZone(Stop newStop)
-        {
-
-            if (area.isInside(newStop.Position))
-            {
-                stopsList.Add(newStop);
-            }
-            else
-            {
-                // no  yet implemented
-            }
-
-        }        
-        public List<Stop> getAllStops()
-        {
-        return stopsList;
+        public Polygon getPerimeter() {
+            return perimeter;
         }
 
-        public List<Station> getStations()
-        {
-            List<Station> zoneStations = new List<Station>();
-
-            for (int i = 0; i < stationsAdded.Count; i++)
-            {
-
-                String stationNameTemp = stationsAdded[i];
-
-               zoneStations.Add(stationsDictionary[stationNameTemp]);
-
-            }
-
-            return zoneStations;
+        public String getName() {
+            return name;
         }
-
-        public Polygon Area { get; set; }
 
     }
 }

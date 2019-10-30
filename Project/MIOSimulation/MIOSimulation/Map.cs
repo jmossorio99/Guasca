@@ -16,29 +16,26 @@ namespace MIOSimulation
     {
 
         //Overlays to store markers and routes
-        private GMapOverlay stops = new GMapOverlay("stops");
-        private GMapOverlay fullStations = new GMapOverlay();
-        private GMapOverlay stationsZoomedOut = new GMapOverlay();
         private GMapOverlay routes = new GMapOverlay("routes");
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
-        private GMapOverlay polygons = new GMapOverlay();
-        private GMapOverlay Zones = new GMapOverlay();
-        private List<Polygon> pZones = new List<Polygon>();
-        private int number=0;
+        private int number = 0;
         private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
         private Dictionary<String, List<String>> stationsTable = new Dictionary<String, List<String>>();
         private Boolean filterSelected = false;
-
         private List<int> zonesChecked;
         private List<GMapOverlay> stationsZoomedOutList = new List<GMapOverlay>();
         private List<GMapOverlay> fullStationsList = new List<GMapOverlay>();
         private List<GMapOverlay> stopsList = new List<GMapOverlay>();
         private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
-        private List<GMapOverlay> zonesList = new List<GMapOverlay>();
+        private List<GMapOverlay> zonesOverlays = new List<GMapOverlay>();
+        private List<Polygon> pZones = new List<Polygon>();
+
+        //Everything new is down here
+        private List<Zone> zones = new List<Zone>();
 
         StreamWriter sw = new StreamWriter("stationsData.txt");
 
@@ -55,7 +52,7 @@ namespace MIOSimulation
                 stopsList.Add(new GMapOverlay());
                 fullStationsList.Add(new GMapOverlay());
                 polygonsList.Add(new GMapOverlay());
-                zonesList.Add(new GMapOverlay());
+                zonesOverlays.Add(new GMapOverlay());
             }
             addZones();
             stationNames = readStationNames();
@@ -74,25 +71,24 @@ namespace MIOSimulation
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
             zonesChecked = new List<int>();
-            gmap.Overlays.Add(Zones);
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
         private void addZones()
         {
+
             FileReader frZones = new FileReader("CoordenatesPolygons.txt");
             List<String> zonesData = frZones.readFile();
-            int size = zonesData.Count;
-            List<int> toSee = new List<int>{0,1,2,3,4,5,6,7,8};
-            foreach (var i in toSee) {
-                String elem = zonesData[i];
-                Polygon example = new Polygon(elem, "Zone "+i);
-                GMapPolygon polygonToAdd = new GMapPolygon(example.getPolygon(), "Zone" + i);
-                polygonToAdd.Fill = new SolidBrush(Color.Transparent);
-                polygonToAdd.Stroke = new Pen(Color.Red, 1);
-                //Zones.Polygons.Add(new GMapPolygon(example.getPolygon(), "Zone"+ i));
-                (zonesList[i]).Polygons.Add(polygonToAdd);
-                pZones.Add(example);
+
+            for (int i = 0; i < 9; i++)
+            {
+                String zonePerimeter = zonesData[i];
+                Zone newZone = new Zone("Zona " + i, i, zonePerimeter);
+                zones.Add(newZone);
+                GMapPolygon newPolygon = new GMapPolygon(newZone.getPerimeter().getPolygon(), newZone.getName());
+                newPolygon.Fill = new SolidBrush(Color.Transparent);
+                newPolygon.Stroke = new Pen(Color.Red, 1);
+                zonesOverlays[i].Polygons.Add(newPolygon);
             }
             
         }
@@ -103,7 +99,6 @@ namespace MIOSimulation
             FileReader frStations = new FileReader("stations.txt");
             List<String> stopData = frStops.readFile();
             List<String> stationData = frStations.readFile();
-            //sw.WriteLine("Stops");
             foreach (var item in stopData)
             {
                 String[] tempSplit = item.Split(',');
@@ -119,9 +114,6 @@ namespace MIOSimulation
                     }
                 }
                 marker.ToolTipText += " En " + zone;
-                //sw.WriteLine(marker.ToolTipText);
-                //stops.Markers.Add(marker);
-                //writeStop(item,zone);
                 (stopsList[Convert.ToInt32(zone.Split(' ')[1])]).Markers.Add(marker);
             }
 
@@ -290,7 +282,7 @@ namespace MIOSimulation
                 foreach (int a in zonesChecked)
                 {
                     gmap.Overlays.Add(stopsList[a]);
-                    gmap.Overlays.Add(zonesList[a]);
+                    gmap.Overlays.Add(zonesOverlays[a]);
                 }
                 gmap.Zoom = 12.5;
             }
@@ -319,7 +311,7 @@ namespace MIOSimulation
                             gmap.Overlays.Add(fullStationsList[a]);
                             gmap.Overlays.Add(stopsList[a]);
                             gmap.Overlays.Add(polygonsList[a]);
-                            gmap.Overlays.Add(zonesList[a]);
+                            gmap.Overlays.Add(zonesOverlays[a]);
                         }/*
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(stops);
@@ -334,7 +326,7 @@ namespace MIOSimulation
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
                             gmap.Overlays.Add(stopsList[a]);
                             gmap.Overlays.Add(polygonsList[a]);
-                            gmap.Overlays.Add(zonesList[a]);
+                            gmap.Overlays.Add(zonesOverlays[a]);
                         }/*
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(stops);
@@ -351,7 +343,7 @@ namespace MIOSimulation
                         {
                             gmap.Overlays.Add(fullStationsList[a]);
                             gmap.Overlays.Add(polygonsList[a]);
-                            gmap.Overlays.Add(zonesList[a]);
+                            gmap.Overlays.Add(zonesOverlays[a]);
                         }/*
                         gmap.Overlays.Add(fullStations);
                         gmap.Overlays.Add(polygons);
@@ -364,7 +356,7 @@ namespace MIOSimulation
                         {
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
                             gmap.Overlays.Add(polygonsList[a]);
-                            gmap.Overlays.Add(zonesList[a]);
+                            gmap.Overlays.Add(zonesOverlays[a]);
                         }/*
                         gmap.Overlays.Add(stationsZoomedOut);
                         gmap.Overlays.Add(polygons);
