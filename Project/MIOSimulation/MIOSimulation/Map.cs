@@ -37,6 +37,8 @@ namespace MIOSimulation
 
         StreamWriter sw = new StreamWriter("stationsData.txt");
 
+        BusSimulationControl busSimulation;
+
         public SimulacionMetroCali()
         {
             InitializeComponent();
@@ -55,6 +57,7 @@ namespace MIOSimulation
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
+            busSimulation = new BusSimulationControl(0,0);
             
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
@@ -354,42 +357,40 @@ namespace MIOSimulation
 
         private void StartSimulation_Click(object sender, EventArgs e)
         {
-            FileReader frUbication = new FileReader("datagramList.txt");
-            dataSimulation = frUbication.readFile();
+            //FileReader frUbication = new FileReader("datagramList.txt");
+            //dataSimulation = frUbication.readFile();
+            gmap.Overlays.Clear();
+            routes.Routes.Clear();
+            busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
             timer1.Start();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if(number< dataSimulation.Count)
+
+            List<Bus> inSimulation = busSimulation.Next30();
+            int second = 1;
+            gmap.Overlays.Clear();
+            routes.Routes.Clear();
+            if (inSimulation.Count != 0)
             {
                 gmap.Overlays.Clear();
                 routes.Routes.Clear();
-                simulation.Markers.Clear();
-                String[] tempSplit = dataSimulation[number].Split(';');
-                GMapMarker marker;
-                Double lat1 = Double.Parse(tempSplit[4], CultureInfo.InvariantCulture.NumberFormat);
-                Double lng1 = Double.Parse(tempSplit[3], CultureInfo.InvariantCulture.NumberFormat);
-                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
-                points.Add(new PointLatLng(lat1, lng1));
-                if (Double.Parse(tempSplit[2]) != -1)
-                {
-                    marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                    prueba.Text = "En ruta a las " + tempSplit[0];
+                simulation.Clear();
+                foreach (Bus bus in inSimulation) {
+                    GMapMarker marker;
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
+                    points.Add(bus.ActualPosition);
+
+                    //marker.ToolTipText = "En ruta a las " + tempSplit[0];
+                    prueba.Text = "En ruta a las " + second;
+
+                    simulation.Markers.Add(marker);
                 }
-                else
-                {
-                    marker.ToolTipText = "Tiempo muerto a las " + tempSplit[0];
-                    prueba.Text= "Tiempo muerto a las " + tempSplit[0];
-                }
-                simulation.Markers.Add(marker);
+
                 gmap.Overlays.Add(simulation);
-                gmap.Position = new PointLatLng(lat1, lng1);
-                gmap.Zoom = zoom1;
-                GMapRoute pointsRoutes = new GMapRoute(points, "Ruta");
-                routes.Routes.Add(pointsRoutes);
-                gmap.Overlays.Add(routes);
-                number++;
+                second += 30;
+                inSimulation = busSimulation.Next30();
             }
             else
             {
@@ -484,3 +485,40 @@ namespace MIOSimulation
         }
     }
 }
+
+/*
+if(number< dataSimulation.Count)
+            {
+                gmap.Overlays.Clear();
+                routes.Routes.Clear();
+                simulation.Markers.Clear();
+                String[] tempSplit = dataSimulation[number].Split(';');
+                GMapMarker marker;
+                Double lat1 = Double.Parse(tempSplit[4], CultureInfo.InvariantCulture.NumberFormat);
+                Double lng1 = Double.Parse(tempSplit[3], CultureInfo.InvariantCulture.NumberFormat);
+                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
+                points.Add(new PointLatLng(lat1, lng1));
+                if (Double.Parse(tempSplit[2]) != -1)
+                {
+                    marker.ToolTipText = "En ruta a las " + tempSplit[0];
+                    prueba.Text = "En ruta a las " + tempSplit[0];
+                }
+                else
+                {
+                    marker.ToolTipText = "Tiempo muerto a las " + tempSplit[0];
+                    prueba.Text= "Tiempo muerto a las " + tempSplit[0];
+                }
+                simulation.Markers.Add(marker);
+                gmap.Overlays.Add(simulation);
+                gmap.Position = new PointLatLng(lat1, lng1);
+                gmap.Zoom = zoom1;
+                GMapRoute pointsRoutes = new GMapRoute(points, "Ruta");
+                routes.Routes.Add(pointsRoutes);
+                gmap.Overlays.Add(routes);
+                number++;
+            }
+            else
+            {
+                timer1.Stop();
+            } 
+*/

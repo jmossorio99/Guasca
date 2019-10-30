@@ -36,37 +36,47 @@ namespace MIOSimulation
         // 2019-06-20 18:00:17
         private void InitializeSimulation()
         {
-            FileReader br = new FileReader("busSimulationl.txt");
+            FileReader br = new FileReader("dataSimulation1.txt");
             List<String> data = br.readFile();
             String lastDate = "";
             int position = -1;
             foreach (String line in data)
             {
-                string[] splitData = line.Split(';');
+                string[] splitData = line.Split(',');
                 String date = splitData[0];
                 String busId = splitData[1];
-                String Lng = splitData[7];
-                String Lat = splitData[8];
-                PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat), Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat));
+                String Lng = splitData[4];
+                String Lat = splitData[5];
+                PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat)/10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat)/ 10000000);
                 BusLocation temp = new BusLocation(location, busId);
                 if (!busReference.ContainsKey(busId))
                 {
                     busReference.Add(busId, new Bus(busId, ""));
                 }
+
                 if (date.CompareTo(lastDate) == 0)
                 {
                     timeLine[position].Add(temp);
                 }
                 else
                 {
-                    if (lastDate.Equals("")) { lastDate = date; offset = createNumber(lastDate); }
-                    long start = createNumber(lastDate);
-                    long finish = createNumber(date);
-                    for (long i = start + 1; i <= finish; i++)
+                    if (lastDate.Equals(""))
                     {
+                        lastDate = date;
+                        offset = createNumber(lastDate);
                         position++;
                         timeLine.Add(new List<BusLocation>());
                     }
+                    else {
+                        long start = createNumber(lastDate);
+                        long finish = createNumber(date);
+                        for (long i = start + 1; i <= finish; i++)
+                        {
+                            position++;
+                            timeLine.Add(new List<BusLocation>());
+                        }
+                    }
+                    
                     timeLine[position].Add(temp);
                     lastDate = date;
                 }
@@ -74,7 +84,7 @@ namespace MIOSimulation
 
         }
 
-        private long createNumber(string date)
+        public long createNumber(string date)
         {
             String[] data = date.Split(' ')[1].Split(':');
 
@@ -92,6 +102,7 @@ namespace MIOSimulation
         public List<Bus> Next30()
         {
             busesInSimulation = new List<Bus>();
+            busMatch = new Dictionary<string, int>();
             int steps = 0;
             while (movingTo <= finish && steps <= 30)
             {
@@ -99,8 +110,11 @@ namespace MIOSimulation
                 {
                     if (busReference.ContainsKey(location.BusName))
                     {
-                        busReference[location.BusName].ActualPostion = location.Postion;
-                        busMatch.Add(location.BusName, 1);
+                        busReference[location.BusName].ActualPosition = location.Postion;
+                        if (!busMatch.ContainsKey(location.BusName))
+                        {
+                            busMatch.Add(location.BusName, 1);
+                        }
                     }
                 }
                 movingTo++;
@@ -121,8 +135,8 @@ namespace MIOSimulation
                 {
                     if (busReference.ContainsKey(location.BusName))
                     {
-                        busReference[location.BusName].NextPostion = location.Postion;
-                        if (busMatch.ContainsKey(location.BusName)) { busMatch.Add(location.BusName, 2); }
+                        busReference[location.BusName].NextPosition = location.Postion;
+                        if (busMatch.ContainsKey(location.BusName)) { busMatch.Remove(location.BusName); busMatch.Add(location.BusName, 2); }
                     }
                 }
                 movingTo++;

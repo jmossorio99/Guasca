@@ -17,20 +17,20 @@ namespace MIOSimulation
         String identifier;
         String name;
         private PointLatLng actualPostion;
-        private PointLatLng nextPostion;
+        private PointLatLng nextPosition;
 
         public Bus(string identifier, string name)
         {
             this.identifier = identifier;
             this.Name = name;
-            ActualPostion = new PointLatLng(0, 0);
+            ActualPosition = new PointLatLng(0, 0);
 
-            NextPostion = new PointLatLng(0, 0);
+            NextPosition = new PointLatLng(0, 0);
         }
 
         public String Identifier { get; set; }
         public String Name { get; set; }
-        public PointLatLng ActualPostion { get; set; }
-        public PointLatLng NextPostion { get; set; }
+        public PointLatLng ActualPosition { get; set; }
+        public PointLatLng NextPosition { get; set; }
     }
 }
