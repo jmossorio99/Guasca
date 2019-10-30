@@ -21,6 +21,7 @@ namespace MIOSimulation
 
         public BusSimulationControl(long start, long finish)
         {
+
             this.start = start;
             this.finish = finish;
             movingTo = -1;
@@ -76,6 +77,7 @@ namespace MIOSimulation
         private long createNumber(string date)
         {
             String[] data = date.Split(' ')[1].Split(':');
+
             long result = long.Parse(data[0]) * 3600 + long.Parse(data[1]) * 60 + long.Parse(data[2]);
             return result;
         }

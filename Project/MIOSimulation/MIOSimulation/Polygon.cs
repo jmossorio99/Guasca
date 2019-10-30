@@ -28,7 +28,7 @@ namespace MIOSimulation
             return name;
         }
 
-        public Polygon(String data,String name) {
+        public Polygon(String data, String name) {
             this.name = name;
             polygon = new List<PointLatLng>();
             String[] sData = data.Split('#');

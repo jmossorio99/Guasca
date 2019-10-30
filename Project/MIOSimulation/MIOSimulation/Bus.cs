@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GMap.NET;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace MIOSimulation
             this.identifier = identifier;
             this.Name = name;
             ActualPostion = new PointLatLng(0, 0);
+
             NextPostion = new PointLatLng(0, 0);
         }
 

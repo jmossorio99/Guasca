@@ -34,6 +34,11 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.horaFinTxt = new System.Windows.Forms.TextBox();
+            this.horaInicioTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.zonesCheckedList = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,14 +86,16 @@
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 14D;
             this.gmap.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.addStationsOverlay);
+            this.gmap.Load += new System.EventHandler(this.Gmap_Load_1);
             // 
             // StationStop_CB
             // 
+            this.StationStop_CB.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StationStop_CB.FormattingEnabled = true;
-            this.StationStop_CB.Location = new System.Drawing.Point(101, 96);
+            this.StationStop_CB.Location = new System.Drawing.Point(73, 53);
             this.StationStop_CB.Margin = new System.Windows.Forms.Padding(2);
             this.StationStop_CB.Name = "StationStop_CB";
-            this.StationStop_CB.Size = new System.Drawing.Size(98, 28);
+            this.StationStop_CB.Size = new System.Drawing.Size(148, 21);
             this.StationStop_CB.TabIndex = 1;
             this.StationStop_CB.Text = "Estaciones y paradas";
             this.StationStop_CB.SelectedIndexChanged += new System.EventHandler(this.StationStop_CB_SelectedIndexChanged);
@@ -96,12 +103,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(124, 44);
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(123, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 31);
+            this.label1.Size = new System.Drawing.Size(59, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtro";
             // 
@@ -109,7 +116,12 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.Salmon;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.horaFinTxt);
+            this.panel1.Controls.Add(this.horaInicioTxt);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.zonesCheckedList);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -132,8 +144,56 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(99, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Simulacion";
+            // 
+            // horaFinTxt
+            // 
+            this.horaFinTxt.Location = new System.Drawing.Point(171, 341);
+            this.horaFinTxt.Name = "horaFinTxt";
+            this.horaFinTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaFinTxt.TabIndex = 18;
+            // 
+            // horaInicioTxt
+            // 
+            this.horaInicioTxt.Location = new System.Drawing.Point(25, 341);
+            this.horaInicioTxt.Name = "horaInicioTxt";
+            this.horaInicioTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaInicioTxt.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(194, 321);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Hora fin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(43, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Hora inicio";
+            // 
             // zonesCheckedList
             // 
+            this.zonesCheckedList.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zonesCheckedList.FormattingEnabled = true;
             this.zonesCheckedList.Items.AddRange(new object[] {
             "Zone 0 - Centro",
@@ -145,37 +205,42 @@
             "Zone 6 - Simón Bolivar",
             "Zone 7 - Cañaveralejo",
             "Zone 8 - Calipso"});
-            this.zonesCheckedList.Location = new System.Drawing.Point(14, 515);
+            this.zonesCheckedList.Location = new System.Drawing.Point(14, 91);
             this.zonesCheckedList.Name = "zonesCheckedList";
-            this.zonesCheckedList.Size = new System.Drawing.Size(266, 211);
+            this.zonesCheckedList.Size = new System.Drawing.Size(266, 157);
             this.zonesCheckedList.TabIndex = 14;
+            this.zonesCheckedList.SelectedIndexChanged += new System.EventHandler(this.ZonesCheckedList_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 374);
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(91, 549);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.Size = new System.Drawing.Size(130, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Velocidad simulación";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 429);
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(134, 766);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(42, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Zoom";
             // 
             // trackBar1
             // 
             this.trackBar1.LargeChange = 3;
-            this.trackBar1.Location = new System.Drawing.Point(73, 452);
+            this.trackBar1.Location = new System.Drawing.Point(70, 782);
             this.trackBar1.Maximum = 18;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 69);
+            this.trackBar1.Size = new System.Drawing.Size(162, 45);
             this.trackBar1.TabIndex = 11;
             this.trackBar1.Value = 10;
             this.trackBar1.ValueChanged += new System.EventHandler(this.TrackBar1_ValueChanged);
@@ -183,7 +248,7 @@
             // zoom
             // 
             this.zoom.ForeColor = System.Drawing.Color.Black;
-            this.zoom.Location = new System.Drawing.Point(46, 452);
+            this.zoom.Location = new System.Drawing.Point(46, 782);
             this.zoom.Name = "zoom";
             this.zoom.Size = new System.Drawing.Size(18, 31);
             this.zoom.TabIndex = 10;
@@ -194,7 +259,7 @@
             // zoomplus
             // 
             this.zoomplus.ForeColor = System.Drawing.Color.Black;
-            this.zoomplus.Location = new System.Drawing.Point(241, 452);
+            this.zoomplus.Location = new System.Drawing.Point(241, 782);
             this.zoomplus.Name = "zoomplus";
             this.zoomplus.Size = new System.Drawing.Size(18, 31);
             this.zoomplus.TabIndex = 9;
@@ -205,7 +270,7 @@
             // slower
             // 
             this.slower.ForeColor = System.Drawing.Color.Black;
-            this.slower.Location = new System.Drawing.Point(46, 369);
+            this.slower.Location = new System.Drawing.Point(55, 540);
             this.slower.Name = "slower";
             this.slower.Size = new System.Drawing.Size(18, 31);
             this.slower.TabIndex = 8;
@@ -216,7 +281,7 @@
             // faster
             // 
             this.faster.ForeColor = System.Drawing.Color.Black;
-            this.faster.Location = new System.Drawing.Point(241, 369);
+            this.faster.Location = new System.Drawing.Point(231, 543);
             this.faster.Name = "faster";
             this.faster.Size = new System.Drawing.Size(18, 31);
             this.faster.TabIndex = 7;
@@ -226,8 +291,9 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(56, 285);
+            this.button2.Location = new System.Drawing.Point(63, 479);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 29);
             this.button2.TabIndex = 6;
@@ -237,8 +303,9 @@
             // 
             // goSimulation
             // 
+            this.goSimulation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goSimulation.ForeColor = System.Drawing.Color.Black;
-            this.goSimulation.Location = new System.Drawing.Point(56, 250);
+            this.goSimulation.Location = new System.Drawing.Point(64, 443);
             this.goSimulation.Name = "goSimulation";
             this.goSimulation.Size = new System.Drawing.Size(179, 29);
             this.goSimulation.TabIndex = 5;
@@ -249,16 +316,19 @@
             // prueba
             // 
             this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(84, 202);
+            this.prueba.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prueba.ForeColor = System.Drawing.Color.Black;
+            this.prueba.Location = new System.Drawing.Point(84, 415);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(163, 20);
+            this.prueba.Size = new System.Drawing.Size(137, 17);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "Informacion de la ruta";
             // 
             // startSimulation
             // 
+            this.startSimulation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startSimulation.ForeColor = System.Drawing.Color.Black;
-            this.startSimulation.Location = new System.Drawing.Point(110, 148);
+            this.startSimulation.Location = new System.Drawing.Point(104, 377);
             this.startSimulation.Name = "startSimulation";
             this.startSimulation.Size = new System.Drawing.Size(80, 29);
             this.startSimulation.TabIndex = 3;
@@ -310,5 +380,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox zonesCheckedList;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox horaFinTxt;
+        private System.Windows.Forms.TextBox horaInicioTxt;
+        private System.Windows.Forms.Label label6;
     }
 }

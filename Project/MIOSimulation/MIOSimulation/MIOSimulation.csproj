@@ -58,12 +58,6 @@
     <Compile Include="BusLocation.cs" />
     <Compile Include="BusSimulationControl.cs" />
     <Compile Include="DataProcessor.cs" />
-    <Compile Include="MapApp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MapApp.Designer.cs">
-      <DependentUpon>MapApp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Polygon.cs" />
     <Compile Include="FileReader.cs" />
     <Compile Include="Map.cs">
