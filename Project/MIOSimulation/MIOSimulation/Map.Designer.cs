@@ -34,6 +34,7 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.horaFinTxt = new System.Windows.Forms.TextBox();
             this.horaInicioTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.prueba = new System.Windows.Forms.Label();
             this.startSimulation = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -144,6 +144,17 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(99, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Simulacion";
+            // 
             // horaFinTxt
             // 
             this.horaFinTxt.Location = new System.Drawing.Point(171, 341);
@@ -198,6 +209,7 @@
             this.zonesCheckedList.Name = "zonesCheckedList";
             this.zonesCheckedList.Size = new System.Drawing.Size(266, 157);
             this.zonesCheckedList.TabIndex = 14;
+            this.zonesCheckedList.SelectedIndexChanged += new System.EventHandler(this.ZonesCheckedList_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -328,17 +340,6 @@
             // 
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(99, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 25);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Simulacion";
             // 
             // SimulacionMetroCali
             // 

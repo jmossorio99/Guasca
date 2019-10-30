@@ -12,11 +12,13 @@ namespace MIOSimulation
         private String name;
         private Polygon perimeter;
         private List<Stop> stationStops;
+        private Zone zone;
 
-        public Station(String name)
+        public Station(String name, Zone zone)
         {
 
             this.name = name;
+            this.zone = zone;
             stationStops = new List<Stop>();
 
         }
@@ -26,7 +28,17 @@ namespace MIOSimulation
             stationStops.Add(newStop);
         }
 
-        public String Name { get; set; }
+        public String getName() {
+            return name;
+        }
+
+        public Zone getZone() {
+            return zone;
+        }
+
+        public void setPerimeter(Polygon perimeter) {
+            this.perimeter = perimeter;
+        }
 
         public List<Stop> getStationStops()
         {

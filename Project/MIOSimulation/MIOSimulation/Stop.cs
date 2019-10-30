@@ -21,11 +21,18 @@ namespace MIOSimulation
             this.zone = zone;
         }
 
-        public PointLatLng Position { get; set; }
+        public String getName() {
+            return name;
+        }
 
-        public String Name { get; set; }
+        public PointLatLng getPosition() {
+            return position;
+        }
 
-        public Zone Zone { get; set; }
+        public Zone getZone() {
+            return zone;
+        }
+
     }
 
     
