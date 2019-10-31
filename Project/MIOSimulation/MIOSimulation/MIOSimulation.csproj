@@ -57,6 +57,7 @@
     <Compile Include="Bus.cs" />
     <Compile Include="BusLocation.cs" />
     <Compile Include="BusSimulationControl.cs" />
+    <Compile Include="ConvexHull.cs" />
     <Compile Include="DataProcessor.cs" />
     <Compile Include="Polygon.cs" />
     <Compile Include="FileReader.cs" />

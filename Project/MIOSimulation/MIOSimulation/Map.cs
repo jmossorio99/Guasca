@@ -20,8 +20,6 @@ namespace MIOSimulation
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
-        private int number = 0;
-        private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
         private Boolean filterSelected = false;
@@ -201,9 +199,10 @@ namespace MIOSimulation
 
         private void paintPolygon(List<PointLatLng> points, Station station) {
 
+            ConvexHull ch = new ConvexHull();
             if (points.Count > 2)
             {
-                GMapPolygon polygon = new GMapPolygon(convexHull(points), station.getName());
+                GMapPolygon polygon = new GMapPolygon(ch.getHull(points), station.getName());
                 ((GMapOverlay)polygonsList[station.getZone().getNumber()]).Polygons.Add(polygon);
             }
             else
@@ -211,51 +210,6 @@ namespace MIOSimulation
                 GMapPolygon polygon = new GMapPolygon(points, station.getName());
                 ((GMapOverlay)polygonsList[station.getZone().getNumber()]).Polygons.Add(polygon);
             }
-
-        }
-
-        private List<PointLatLng> convexHull(List<PointLatLng> points) {
-
-            List<PointLatLng> hull = new List<PointLatLng>();
-            int n = points.Count;
-
-            int l = 0;
-            for (int i = 1; i < n; i++)
-            {
-                if (points[i].Lng < points[l].Lng)
-                {
-                    l = i;
-                }
-            }
-
-            int p = l;
-            int q;
-            do
-            {
-
-                hull.Add(points[p]);
-                q = (p + 1) % n;
-                for (int i = 0; i < n; i++)
-                {
-                    if (orientation(points[p], points[i], points[q]) == 2)
-                    {
-                        q = i;
-                    }
-                }
-                p = q;
-
-            } while (p != l);
-
-            return hull;
-
-        }
-
-        private int orientation(PointLatLng p, PointLatLng q, PointLatLng r) {
-
-            //Lat = y, Lng = x
-            Double val = (q.Lat - p.Lat) * (r.Lng - q.Lng) - (q.Lng - p.Lng) * (r.Lat - q.Lat);
-            if (val == 0) return 0;
-            return (val > 0) ? 1 : 2;
 
         }
 
