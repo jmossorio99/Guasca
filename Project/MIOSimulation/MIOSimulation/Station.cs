@@ -44,5 +44,10 @@ namespace MIOSimulation
         {
             return stationStops;
         }
+
+        public Polygon getPerimeter()
+        {
+            return perimeter;
+        }
     }
 }

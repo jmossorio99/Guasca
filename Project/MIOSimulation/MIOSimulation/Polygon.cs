@@ -47,6 +47,12 @@ namespace MIOSimulation
             
         }
 
+        public Polygon(List<PointLatLng> points, String name)
+        {
+            this.name = name;
+            this.polygon = points;
+        }
+
         //Lat = y, Lng = x
         public Boolean onSegment(PointLatLng p, PointLatLng q, PointLatLng r) {
             if (q.Lat <= Math.Max(p.Lat, r.Lat) && q.Lat >= Math.Min(p.Lat, r.Lat)
@@ -55,13 +61,14 @@ namespace MIOSimulation
             return false;
         }
 
-        public int orientation(PointLatLng p, PointLatLng q, PointLatLng r)
+        private int orientation(PointLatLng p, PointLatLng q, PointLatLng r)
         {
-            double val = (q.Lat - p.Lat) * (r.Lng - q.Lng) -
-                (q.Lng - p.Lng) * (r.Lat - q.Lat);
 
+            //Lat = y, Lng = x
+            Double val = (q.Lat - p.Lat) * (r.Lng - q.Lng) - (q.Lng - p.Lng) * (r.Lat - q.Lat);
             if (val == 0) return 0;
             return (val > 0) ? 1 : 2;
+
         }
 
         public bool doIntersect(PointLatLng p1, PointLatLng q1, PointLatLng p2, PointLatLng q2) {
@@ -116,6 +123,44 @@ namespace MIOSimulation
 
             return count % 2 == 1 ? true : false;
         }
+
+        public List<PointLatLng> getHull()
+        {
+
+            List<PointLatLng> hull = new List<PointLatLng>();
+            int n = polygon.Count;
+
+            int l = 0;
+            for (int i = 1; i < n; i++)
+            {
+                if (polygon[i].Lng < polygon[l].Lng)
+                {
+                    l = i;
+                }
+            }
+
+            int p = l;
+            int q;
+            do
+            {
+
+                hull.Add(polygon[p]);
+                q = (p + 1) % n;
+                for (int i = 0; i < n; i++)
+                {
+                    if (orientation(polygon[p], polygon[i], polygon[q]) == 2)
+                    {
+                        q = i;
+                    }
+                }
+                p = q;
+
+            } while (p != l);
+
+            return hull;
+
+        }
+
     }
 
     
