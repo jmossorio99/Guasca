@@ -20,8 +20,6 @@ namespace MIOSimulation
         private GMapOverlay simulation = new GMapOverlay("routes");
         private List<String> dataSimulation = new List<string>();
         private List<PointLatLng> points = new List<PointLatLng>();
-        private int number = 0;
-        private Double zoom1 = 15;
         private readonly string stationNamesFilePath = "./stationNames.txt";
         private List<String> stationNames;
         private Boolean filterSelected = false;
@@ -160,6 +158,36 @@ namespace MIOSimulation
                 marker.ToolTipText += " En " + zoneName;
                 (fullStationsOverlays[zoneNum]).Markers.Add(marker);
             }
+
+            //Adding the perimeter polygon for each station
+            foreach (var zone in zones)
+            {
+
+                List<String> stationNamesInZone = zone.getStationsNames();
+                foreach (var key in stationNamesInZone)
+                {
+                    Station station = zone.getStation(key);
+                    List<Stop> stopsInStation = station.getStationStops();
+                    List<PointLatLng> perimeterPoints = new List<PointLatLng>();
+                    Boolean addedFirst = false;
+                    foreach (var stop in stopsInStation)
+                    {
+                        perimeterPoints.Add(stop.getPosition());
+                        if (!addedFirst)
+                        {
+
+                            GMapMarker markerStation = new GMarkerGoogle(stop.getPosition(), new Bitmap("./img/station.png"));
+                            markerStation.ToolTipText = stop.getName() + "En " + zone.getName();
+                            stationsZoomedOutList[zone.getNumber()].Markers.Add(markerStation);
+                            addedFirst = true;
+
+                        }
+                    }
+                    station.setPerimeter(new Polygon(perimeterPoints, station.getName()));
+                }
+
+            }
+            //Painting all the station polygons
             setStationsPolygons();
 
         }
@@ -178,84 +206,25 @@ namespace MIOSimulation
                 foreach (var key in stationNamesInZone)
                 {
                     Station station = zone.getStation(key);
-                    List<Stop> stopsInStation = station.getStationStops();
-                    List<PointLatLng> points = new List<PointLatLng>();
-                    Boolean addedFirst = false;
-                    foreach (var stop in stopsInStation)
-                    {
-                        points.Add(stop.getPosition());
-                        if (!addedFirst) {
-
-                            GMapMarker markerStation = new GMarkerGoogle(stop.getPosition(), new Bitmap("./img/station.png"));
-                            markerStation.ToolTipText = stop.getName() + "En " + zone.getName();
-                            stationsZoomedOutList[zone.getNumber()].Markers.Add(markerStation);
-                            addedFirst = true;
-
-                        }
-                    }
-                    paintPolygon(points, station);
+                    Polygon stationPolygon = station.getPerimeter();
+                    paintPolygon(stationPolygon, station.getName(), station.getZone().getNumber());
                 }
             }
 
         }
 
-        private void paintPolygon(List<PointLatLng> points, Station station) {
+        private void paintPolygon(Polygon stationPolygon, String stationName, int zoneNumber) {
 
-            if (points.Count > 2)
+            if (stationPolygon.getPolygon().Count > 2)
             {
-                GMapPolygon polygon = new GMapPolygon(convexHull(points), station.getName());
-                ((GMapOverlay)polygonsList[station.getZone().getNumber()]).Polygons.Add(polygon);
+                GMapPolygon polygon = new GMapPolygon(stationPolygon.getHull(), stationName);
+                ((GMapOverlay)polygonsList[zoneNumber]).Polygons.Add(polygon);
             }
             else
             {
-                GMapPolygon polygon = new GMapPolygon(points, station.getName());
-                ((GMapOverlay)polygonsList[station.getZone().getNumber()]).Polygons.Add(polygon);
+                GMapPolygon polygon = new GMapPolygon(stationPolygon.getPolygon(), stationName);
+                ((GMapOverlay)polygonsList[zoneNumber]).Polygons.Add(polygon);
             }
-
-        }
-
-        private List<PointLatLng> convexHull(List<PointLatLng> points) {
-
-            List<PointLatLng> hull = new List<PointLatLng>();
-            int n = points.Count;
-
-            int l = 0;
-            for (int i = 1; i < n; i++)
-            {
-                if (points[i].Lng < points[l].Lng)
-                {
-                    l = i;
-                }
-            }
-
-            int p = l;
-            int q;
-            do
-            {
-
-                hull.Add(points[p]);
-                q = (p + 1) % n;
-                for (int i = 0; i < n; i++)
-                {
-                    if (orientation(points[p], points[i], points[q]) == 2)
-                    {
-                        q = i;
-                    }
-                }
-                p = q;
-
-            } while (p != l);
-
-            return hull;
-
-        }
-
-        private int orientation(PointLatLng p, PointLatLng q, PointLatLng r) {
-
-            //Lat = y, Lng = x
-            Double val = (q.Lat - p.Lat) * (r.Lng - q.Lng) - (q.Lng - p.Lng) * (r.Lat - q.Lat);
-            if (val == 0) return 0;
-            return (val > 0) ? 1 : 2;
 
         }
 
@@ -322,7 +291,6 @@ namespace MIOSimulation
                         {
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
                             gmap.Overlays.Add(stopsListOverlays[a]);
-                            gmap.Overlays.Add(polygonsList[a]);
                             gmap.Overlays.Add(zonesOverlays[a]);
                         }
                     }
@@ -345,7 +313,6 @@ namespace MIOSimulation
                         foreach (int a in zonesChecked)
                         {
                             gmap.Overlays.Add(stationsZoomedOutList[a]);
-                            gmap.Overlays.Add(polygonsList[a]);
                             gmap.Overlays.Add(zonesOverlays[a]);
                         }
                     }
@@ -481,7 +448,7 @@ namespace MIOSimulation
 
         private void ZonesCheckedList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

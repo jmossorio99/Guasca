@@ -73,5 +73,10 @@ namespace MIOSimulation
             return stationNames;
         }
 
+        public Dictionary<String, Station> getStations()
+        {
+            return stationsList;
+        }
+
     }
 }
