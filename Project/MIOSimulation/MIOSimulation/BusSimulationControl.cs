@@ -45,6 +45,7 @@ namespace MIOSimulation
                 string[] splitData = line.Split(',');
                 String date = splitData[0];
                 String busId = splitData[1];
+                String stopId = splitData[2];
                 String Lng = splitData[4];
                 String Lat = splitData[5];
                 PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat)/10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat)/ 10000000);
@@ -86,6 +87,7 @@ namespace MIOSimulation
 
         public long createNumber(string date)
         {
+            String[] fecha = date.Split(' ')[1].Split(':');
             String[] data = date.Split(' ')[1].Split(':');
 
             long result = long.Parse(data[0]) * 3600 + long.Parse(data[1]) * 60 + long.Parse(data[2]);
