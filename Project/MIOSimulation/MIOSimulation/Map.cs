@@ -390,7 +390,7 @@ namespace MIOSimulation
 
                 gmap.Overlays.Add(simulation);
                 second += 30;
-                inSimulation = busSimulation.Next30();
+                //inSimulation = busSimulation.Next30();
             }
             else
             {
