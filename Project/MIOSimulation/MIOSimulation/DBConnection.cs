@@ -49,7 +49,7 @@ namespace MIOSimulation
             cmd.Parameters.Add("2", OracleDbType.Int32).Value = toStop;
             OracleDataReader dr = cmd.ExecuteReader();
             dr.Read();
-            Int32 result = System.Convert.ToInt32(dr.GetString(3));
+            Int32 result = System.Convert.ToInt32(dr.GetString(1));
             cmd.Dispose();
             dr.Dispose();
             killConnection();
