@@ -18,6 +18,7 @@ namespace MIOSimulation
         private int movingTo;
         private Dictionary<String, Bus> busReference;
         private Dictionary<String, int> busMatch;
+        private DBConnection dataConnection;
 
         public BusSimulationControl(long start, long finish)
         {
@@ -30,6 +31,7 @@ namespace MIOSimulation
             busesInSimulation = new List<Bus>();
             timeLine = new List<List<BusLocation>>();
             InitializeSimulation();
+            dataConnection = new DBConnection();
         }
 
         // Date;IdBus;IdStop;Odometer;TaskId;LineId;TripId;Lng;Lat
@@ -49,7 +51,7 @@ namespace MIOSimulation
                 String Lng = splitData[4];
                 String Lat = splitData[5];
                 PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat)/10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat)/ 10000000);
-                BusLocation temp = new BusLocation(location, busId);
+                BusLocation temp = new BusLocation(location, busId,  Int32.Parse(stopId));
                 if (!busReference.ContainsKey(busId))
                 {
                     busReference.Add(busId, new Bus(busId, ""));
@@ -112,10 +114,12 @@ namespace MIOSimulation
                 {
                     if (busReference.ContainsKey(location.BusName))
                     {
-                        busReference[location.BusName].ActualPosition = location.Postion;
                         if (!busMatch.ContainsKey(location.BusName))
                         {
-                            busMatch.Add(location.BusName, 1);
+                            busReference[location.BusName].ActualPosition = location.Postion;
+                            busReference[location.BusName].PreviousStop = location.StopId;
+                            busReference[location.BusName].TimeElapse -= movingTo;
+                            busMatch.Add(location.BusName, -1);
                         }
                     }
                 }
@@ -137,8 +141,14 @@ namespace MIOSimulation
                 {
                     if (busReference.ContainsKey(location.BusName))
                     {
-                        busReference[location.BusName].NextPosition = location.Postion;
-                        if (busMatch.ContainsKey(location.BusName)) { busMatch.Remove(location.BusName); busMatch.Add(location.BusName, 2); }
+                        Bus actualBus = busReference[location.BusName];
+                        actualBus.NextPosition = location.Postion;
+                        actualBus.ActualStop = location.StopId;
+                        if (busMatch.ContainsKey(location.BusName)) {
+                            int solution = movingTo - (int)actualBus.TimeElapse;
+                            busMatch.Remove(location.BusName);
+                            busMatch.Add(location.BusName, solution);
+                        }
                     }
                 }
                 movingTo++;
@@ -151,8 +161,17 @@ namespace MIOSimulation
         {
             foreach (var item in busMatch)
             {
-                if (item.Value == 2)
+                if (item.Value >= 0)
                 {
+                    Bus actualBus = busReference[item.Key];
+                    if (actualBus.PreviousStop != actualBus.ActualStop)
+                    {
+                        actualBus.TimeLocation = 0;
+                        actualBus.TimeLocation -= item.Value;
+                        //actualBus.TimeLocation += dataConnection.getArcTime(actualBus.PreviousStop, actualBus.ActualStop);
+                        actualBus.TimeElapse = 0;
+
+                    }
                     busesInSimulation.Add(busReference[item.Key]);
                 }
             }

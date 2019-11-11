@@ -11,14 +11,18 @@ namespace MIOSimulation
     {
         private PointLatLng postion;
         private string busName;
+        private int stopId;
 
-        public BusLocation(PointLatLng postion, string busName)
+        public BusLocation(PointLatLng postion, string busName,int stopId)
         {
             Postion = postion;
             BusName = busName;
+            StopId = stopId;
         }
 
         public PointLatLng Postion { get; set; }
         public string BusName { get; set; }
+
+        public int StopId { get; set; }
     }
 }

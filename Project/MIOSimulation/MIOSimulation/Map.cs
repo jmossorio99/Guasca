@@ -52,6 +52,7 @@ namespace MIOSimulation
                 polygonsList.Add(new GMapOverlay());
                 zonesOverlays.Add(new GMapOverlay());
             }
+            zonesChecked = new List<int>();
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
@@ -68,7 +69,7 @@ namespace MIOSimulation
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            zonesChecked = new List<int>();
+            
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
@@ -87,6 +88,7 @@ namespace MIOSimulation
                 newPolygon.Fill = new SolidBrush(Color.Transparent);
                 newPolygon.Stroke = new Pen(Color.Red, 1);
                 zonesOverlays[i].Polygons.Add(newPolygon);
+                zonesChecked.Add(i);
             }
             
         }
@@ -239,7 +241,6 @@ namespace MIOSimulation
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterSelected = true;
-            updateCheckdZones();
             
             if(StationStop_CB.SelectedIndex == 0)
             {
@@ -341,28 +342,57 @@ namespace MIOSimulation
             routes.Routes.Clear();
             if (inSimulation.Count != 0)
             {
-                gmap.Overlays.Clear();
-                routes.Routes.Clear();
-                simulation.Clear();
-                foreach (Bus bus in inSimulation) {
-                    GMapMarker marker;
-                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
-                    points.Add(bus.ActualPosition);
-
-                    //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                    prueba.Text = "En ruta a las " + second;
-
-                    simulation.Markers.Add(marker);
-                }
-
-                gmap.Overlays.Add(simulation);
+                drawBuses(inSimulation,second);
                 second += 30;
-                //inSimulation = busSimulation.Next30();
             }
             else
             {
                 timer1.Stop();
             }
+        }
+
+        private void drawBuses(List<Bus> buses,int second) {
+            List<Bus> readyToUse = specifiedBuses(buses);
+            smothTrasition(readyToUse,second);
+        }
+
+
+        private List<Bus> specifiedBuses(List<Bus> buses)
+        {
+            List<Bus> readyToUse = new List<Bus>();
+            foreach (Bus bus in buses) {
+                foreach (int a in zonesChecked)
+                {
+                    if (zones[a].isInside(bus.ActualPosition))
+                    {
+                        bus.Zone = zones[a].getName();
+                        readyToUse.Add(bus);
+                        break;
+                    }
+                }
+            }
+            return readyToUse;
+        }
+
+        private void smothTrasition(List<Bus> readyToUse,int second)
+        {
+            gmap.Overlays.Clear();
+            routes.Routes.Clear();
+            simulation.Clear();
+            foreach (Bus bus in readyToUse)
+            {
+                GMapMarker marker;
+                marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
+                points.Add(bus.ActualPosition);
+                marker.ToolTipText = "Time Losed"+bus.TimeLocation;
+
+                //marker.ToolTipText = "En ruta a las " + tempSplit[0];
+                prueba.Text = "En ruta a las " + second;
+
+                simulation.Markers.Add(marker);
+            }
+
+            gmap.Overlays.Add(simulation);
         }
 
         private void GoSimulation_Click(object sender, EventArgs e)
@@ -448,7 +478,7 @@ namespace MIOSimulation
 
         private void ZonesCheckedList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            updateCheckdZones();
         }
     }
 }
