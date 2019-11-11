@@ -9,6 +9,7 @@ using System.IO;
 using System.Drawing;
 using System.Collections;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace MIOSimulation
 {
@@ -56,6 +57,19 @@ namespace MIOSimulation
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
+
+            string url = "dataSimulation1.txt";
+            if (MessageBox.Show("Desea usar un datagram diferente?", "Datagram de simulacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    url = open.FileName;
+                    DataProcessor p = new DataProcessor();
+                    p.reading(url);
+                }
+            }
+            
             busSimulation = new BusSimulationControl(0,0);
             
             gmap.MapProvider = GoogleMapProvider.Instance;
@@ -63,7 +77,6 @@ namespace MIOSimulation
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
-
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");

@@ -9,10 +9,10 @@ namespace MIOSimulation
 {
     class DataProcessor
     {
-        public void reading()
+        public void reading(string url)
         {
-            StreamReader datagram = new StreamReader("datagramPrueba.csv");
-            StreamWriter newData = new StreamWriter("datagramReady.txt");
+            StreamReader datagram = new StreamReader(url);
+            StreamWriter newData = new StreamWriter("dataSimulation1.txt");
             newData.Flush();
             string lines = datagram.ReadLine();
             lines = datagram.ReadLine();
