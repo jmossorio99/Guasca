@@ -75,7 +75,16 @@ namespace MIOSimulation
                 String Lng = splitData[4];
                 String Lat = splitData[5];
                 PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat)/10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat)/ 10000000);
-                BusLocation temp = new BusLocation(location, busId,  Int32.Parse(stopId));
+                BusLocation temp;
+                switch (Convert.ToInt32(stopId))
+                {
+                    case -1:
+                        temp = new BusLocation(location, busId, Int32.Parse(stopId), true);
+                        break;
+                    default:
+                        temp = new BusLocation(location, busId, Int32.Parse(stopId), false);
+                        break;
+                }
                 if (!busReference.ContainsKey(busId))
                 {
                     busReference.Add(busId, new Bus(busId, ""));
@@ -146,6 +155,14 @@ namespace MIOSimulation
                             actualBus.TimeElapse = 0;
                             actualBus.TimeElapse -= movingTo;
                             busMatch.Add(location.BusName, -1);
+                            if (location.IsIddle)
+                            {
+                                busReference[location.BusName].IsIddle = true;
+                            }
+                            else
+                            {
+                                busReference[location.BusName].IsIddle = false;
+                            }
                         }
                     }
                 }

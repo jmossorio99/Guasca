@@ -40,11 +40,11 @@ namespace MIOSimulation
             con.Dispose();
         }
 
-        
+
 
         public Int32 getArcTime(Int32 fromStop, Int32 toStop)
         {
-           
+
             String sql = "SELECT ARCTIME FROM ARC WHERE ((STOP_ID_START = :1) AND (STOP_ID_END = :2))";
             OracleCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
@@ -64,10 +64,9 @@ namespace MIOSimulation
 ;
             return a;
         }
-        
+
     }
 
-    
+
 
 }
-

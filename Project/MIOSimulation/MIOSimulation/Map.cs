@@ -9,6 +9,7 @@ using System.IO;
 using System.Drawing;
 using System.Collections;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace MIOSimulation
 {
@@ -57,20 +58,32 @@ namespace MIOSimulation
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
+
+            string url = "dataSimulation1.txt";
+            if (MessageBox.Show("Desea usar un datagram diferente?", "Datagram de simulacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    url = open.FileName;
+                    DataProcessor p = new DataProcessor();
+                    p.reading(url);
+                }
+            }
+
             busSimulation = new BusSimulationControl(0,0);
-            
+
             gmap.MapProvider = GoogleMapProvider.Instance;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
-
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            
+
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
         }
 
@@ -91,7 +104,7 @@ namespace MIOSimulation
                 zonesOverlays[i].Polygons.Add(newPolygon);
                 zonesChecked.Add(i);
             }
-            
+
         }
 
         private void addAllStopsAndStations()
@@ -104,7 +117,7 @@ namespace MIOSimulation
             {
                 String[] tempStopData = item.Split(',');
                 GMapMarker marker;
-                PointLatLng location = new PointLatLng(Double.Parse(tempStopData[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempStopData[6], CultureInfo.InvariantCulture.NumberFormat)); 
+                PointLatLng location = new PointLatLng(Double.Parse(tempStopData[7], CultureInfo.InvariantCulture.NumberFormat), Double.Parse(tempStopData[6], CultureInfo.InvariantCulture.NumberFormat));
                 marker = new GMarkerGoogle(location , GMarkerGoogleType.blue_small);
                 marker.ToolTipText = tempStopData[3];
                 String zoneName = "";
@@ -154,7 +167,7 @@ namespace MIOSimulation
                             zone.addStation(stationName, newStation);
                             zone.addStopToStation(stationName, newStop);
                         }
-                        
+
                         break;
                     }
                 }
@@ -242,7 +255,7 @@ namespace MIOSimulation
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterSelected = true;
-            
+
             if(StationStop_CB.SelectedIndex == 0)
             {
                 addStationsOverlay();
@@ -326,20 +339,27 @@ namespace MIOSimulation
 
         private void StartSimulation_Click(object sender, EventArgs e)
         {
-            //FileReader frUbication = new FileReader("datagramList.txt");
-            //dataSimulation = frUbication.readFile();
-            gmap.Overlays.Clear();
-            routes.Routes.Clear();
-            busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
-            second = 0;
-            timer1.Start();
+            if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
+            {
+                //FileReader frUbication = new FileReader("datagramList.txt");
+                //dataSimulation = frUbication.readFile();
+                gmap.Overlays.Clear();
+                routes.Routes.Clear();
+                busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
+                timer1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Incorret date format, must be on the shape dd/mm/aa hh:mm:ss");
+            }
+
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
 
             List<Bus> inSimulation = busSimulation.Next30();
-            
+
             gmap.Overlays.Clear();
             routes.Routes.Clear();
             if (inSimulation.Count != 0)
@@ -384,12 +404,19 @@ namespace MIOSimulation
             foreach (Bus bus in readyToUse)
             {
                 GMapMarker marker;
-                marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
+                if (bus.IsIddle)
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/redBus.png"));
+                }
+                else
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/greenBus.png"));
+                }
                 points.Add(bus.ActualPosition);
-                marker.ToolTipText = "Time Losed "+bus.TimeLocation;
+                marker.ToolTipText = "Time Lost " + bus.TimeLocation;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                prueba.Text = "En ruta a las " + second;
+                prueba.Text = "On route at " + second;
 
                 simulation.Markers.Add(marker);
             }
@@ -482,6 +509,71 @@ namespace MIOSimulation
         {
             updateCheckdZones();
         }
+
+        private Boolean verifyFormatDate(String start,String end)
+        {
+            Boolean correct = true;
+
+            try
+            {
+
+                String[] firstSplitStart = start.Split(' ');
+                String[] firstSplitEnd = end.Split(' ');
+
+                String[] secondSplitStartDate = firstSplitStart[0].Split('-');
+                String[] secondSplitEndDate = firstSplitEnd[0].Split('-');
+
+                String[] secondSplitStartHour = firstSplitStart[1].Split(':');
+                String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
+
+                if (firstSplitStart.Length != 2 || firstSplitEnd.Length != 2 || secondSplitStartDate.Length != 3 || secondSplitStartHour.Length != 3 || secondSplitEndDate.Length != 3 || secondSplitEndHour.Length != 3)
+                {
+                    correct = false;
+                }
+                else
+                {
+                    Boolean t1 = canAllListToInt(secondSplitStartDate);
+                    Boolean t2 = canAllListToInt(secondSplitStartHour);
+                    Boolean t3 = canAllListToInt(secondSplitEndDate);
+                    Boolean t4 = canAllListToInt(secondSplitEndHour);
+
+                    if (t1 == false || t2 == false || t3 == false || t4 == false)
+                    {
+                        correct = false;
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                correct = false;
+            }
+
+            return correct;
+        }
+
+        private Boolean canAllListToInt(String[] toTest)
+        {
+            Boolean can = true;
+
+            foreach (var temp in toTest)
+            {
+                int size = temp.Length;
+
+                for (int i =0;i<size && can;i++)
+                {
+                    int charTemp =(int) temp[i];
+
+                    if (!(47<charTemp&&charTemp<58))
+                    {
+                        can = false;
+                    }
+                }
+
+            }
+
+            return can;
+        }
     }
 }
 
@@ -519,5 +611,5 @@ if(number< dataSimulation.Count)
             else
             {
                 timer1.Stop();
-            } 
+            }
 */
