@@ -29,6 +29,7 @@ namespace MIOSimulation
         private List<GMapOverlay> stopsListOverlays = new List<GMapOverlay>();
         private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
         private List<GMapOverlay> zonesOverlays = new List<GMapOverlay>();
+        private int second;
 
         //Everything new is down here
         private List<Zone> zones = new List<Zone>();
@@ -330,6 +331,7 @@ namespace MIOSimulation
             gmap.Overlays.Clear();
             routes.Routes.Clear();
             busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
+            second = 0;
             timer1.Start();
         }
 
@@ -337,7 +339,7 @@ namespace MIOSimulation
         {
 
             List<Bus> inSimulation = busSimulation.Next30();
-            int second = 1;
+            
             gmap.Overlays.Clear();
             routes.Routes.Clear();
             if (inSimulation.Count != 0)
@@ -384,7 +386,7 @@ namespace MIOSimulation
                 GMapMarker marker;
                 marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
                 points.Add(bus.ActualPosition);
-                marker.ToolTipText = "Time Losed"+bus.TimeLocation;
+                marker.ToolTipText = "Time Losed "+bus.TimeLocation;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
                 prueba.Text = "En ruta a las " + second;

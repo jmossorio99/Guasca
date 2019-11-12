@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,10 @@ namespace MIOSimulation
         private int movingTo;
         private Dictionary<String, Bus> busReference;
         private Dictionary<String, int> busMatch;
-        private DBConnection dataConnection;
+        Dictionary<String, Int32> memo;
 
         public BusSimulationControl(long start, long finish)
         {
-
             this.start = start;
             this.finish = finish;
             movingTo = -1;
@@ -30,8 +30,32 @@ namespace MIOSimulation
             busMatch = new Dictionary<string, int>();
             busesInSimulation = new List<Bus>();
             timeLine = new List<List<BusLocation>>();
+            memo = new Dictionary<string, int>();
             InitializeSimulation();
-            dataConnection = new DBConnection();
+            LoadArcs();
+        }
+
+        private void LoadArcs()
+        {
+            FileReader br = new FileReader("arcs.txt");
+            List<String> data = br.readFile();
+
+            foreach (string line in data) {
+                string[] splitData = line.Split('	');
+                String query = splitData[1] + " " + splitData[2];
+                if (!memo.ContainsKey(query)) {
+                    if (!splitData[3].Equals(""))
+                    {
+                        memo.Add(query, Int32.Parse(splitData[3]));
+                    }
+                    else {
+                        memo.Add(query, 0);
+                    }
+                    
+                }
+                
+            }
+
         }
 
         // Date;IdBus;IdStop;Odometer;TaskId;LineId;TripId;Lng;Lat
@@ -116,9 +140,11 @@ namespace MIOSimulation
                     {
                         if (!busMatch.ContainsKey(location.BusName))
                         {
-                            busReference[location.BusName].ActualPosition = location.Postion;
-                            busReference[location.BusName].PreviousStop = location.StopId;
-                            busReference[location.BusName].TimeElapse -= movingTo;
+                            Bus actualBus = busReference[location.BusName];
+                            actualBus.ActualPosition = location.Postion;
+                            actualBus.PreviousStop = location.StopId;
+                            actualBus.TimeElapse = 0;
+                            actualBus.TimeElapse -= movingTo;
                             busMatch.Add(location.BusName, -1);
                         }
                     }
@@ -145,7 +171,7 @@ namespace MIOSimulation
                         actualBus.NextPosition = location.Postion;
                         actualBus.ActualStop = location.StopId;
                         if (busMatch.ContainsKey(location.BusName)) {
-                            int solution = movingTo - (int)actualBus.TimeElapse;
+                            int solution = movingTo + (int)actualBus.TimeElapse;
                             busMatch.Remove(location.BusName);
                             busMatch.Add(location.BusName, solution);
                         }
@@ -161,18 +187,26 @@ namespace MIOSimulation
         {
             foreach (var item in busMatch)
             {
-                if (item.Value >= 0)
+                Bus actualBus = busReference[item.Key];
+
+                if (item.Value >= 0 && actualBus.ActualStop != -1 && actualBus.PreviousStop != -1)
                 {
-                    Bus actualBus = busReference[item.Key];
+                    
                     if (actualBus.PreviousStop != actualBus.ActualStop)
                     {
                         actualBus.TimeLocation = 0;
                         actualBus.TimeLocation -= item.Value;
-                        //actualBus.TimeLocation += dataConnection.getArcTime(actualBus.PreviousStop, actualBus.ActualStop);
+                        if (memo.ContainsKey(actualBus.PreviousStop + " " + actualBus.ActualStop)) {
+                            actualBus.TimeLocation += memo[actualBus.PreviousStop + " " + actualBus.ActualStop];
+                        }
+                        else {
+                            actualBus.TimeLocation = -1;
+                        }
+                        
                         actualBus.TimeElapse = 0;
-
+                        
                     }
-                    busesInSimulation.Add(busReference[item.Key]);
+                    busesInSimulation.Add(actualBus);
                 }
             }
 
