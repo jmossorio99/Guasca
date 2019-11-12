@@ -20,6 +20,7 @@ namespace MIOSimulation
         private PointLatLng nextPosition;
         private long timeLocation;
         private String zone;
+        private bool isIddle = false;
 
         public Bus(string identifier, string name)
         {
@@ -46,5 +47,6 @@ namespace MIOSimulation
 
         public long TimeElapse { get; set; }
         public string Zone { get; set; }
+        public bool IsIddle { get; set; }
     }
 }

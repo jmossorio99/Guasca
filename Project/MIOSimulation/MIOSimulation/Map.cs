@@ -403,12 +403,19 @@ namespace MIOSimulation
             foreach (Bus bus in readyToUse)
             {
                 GMapMarker marker;
-                marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
+                if (bus.IsIddle)
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/redBus.png"));
+                }
+                else
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/greenBus.png"));
+                }
                 points.Add(bus.ActualPosition);
-                marker.ToolTipText = "Time Losed"+bus.TimeLocation;
+                marker.ToolTipText = "Time Lost " + bus.TimeLocation;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                prueba.Text = "En ruta a las " + second;
+                prueba.Text = "On route at " + second;
 
                 simulation.Markers.Add(marker);
             }
