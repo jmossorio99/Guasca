@@ -338,17 +338,25 @@ namespace MIOSimulation
 
         private void StartSimulation_Click(object sender, EventArgs e)
         {
-            //FileReader frUbication = new FileReader("datagramList.txt");
-            //dataSimulation = frUbication.readFile();
-            gmap.Overlays.Clear();
-            routes.Routes.Clear();
-            busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
-            timer1.Start();
+            if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
+            {
+                //FileReader frUbication = new FileReader("datagramList.txt");
+                //dataSimulation = frUbication.readFile();
+                gmap.Overlays.Clear();
+                routes.Routes.Clear();
+                busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
+                timer1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Incorret date format, must be on the shape dd/mm/aa hh:mm:ss");
+            }
+            
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-
+         
             List<Bus> inSimulation = busSimulation.Next30();
             int second = 1;
             gmap.Overlays.Clear();
@@ -492,6 +500,71 @@ namespace MIOSimulation
         private void ZonesCheckedList_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateCheckdZones();
+        }
+
+        private Boolean verifyFormatDate(String start,String end)
+        {
+            Boolean correct = true;
+
+            try
+            {
+
+                String[] firstSplitStart = start.Split(' ');
+                String[] firstSplitEnd = end.Split(' ');
+
+                String[] secondSplitStartDate = firstSplitStart[0].Split('-');
+                String[] secondSplitEndDate = firstSplitEnd[0].Split('-');
+
+                String[] secondSplitStartHour = firstSplitStart[1].Split(':');
+                String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
+
+                if (firstSplitStart.Length != 2 || firstSplitEnd.Length != 2 || secondSplitStartDate.Length != 3 || secondSplitStartHour.Length != 3 || secondSplitEndDate.Length != 3 || secondSplitEndHour.Length != 3)
+                {
+                    correct = false;
+                }
+                else
+                {
+                    Boolean t1 = canAllListToInt(secondSplitStartDate);
+                    Boolean t2 = canAllListToInt(secondSplitStartHour);
+                    Boolean t3 = canAllListToInt(secondSplitEndDate);
+                    Boolean t4 = canAllListToInt(secondSplitEndHour);
+
+                    if (t1 == false || t2 == false || t3 == false || t4 == false)
+                    {
+                        correct = false;
+                    }
+                }
+                
+            }
+            catch (Exception e)
+            {
+                correct = false;
+            }
+
+            return correct;
+        }
+
+        private Boolean canAllListToInt(String[] toTest)
+        {
+            Boolean can = true;
+            
+            foreach (var temp in toTest)
+            {
+                int size = temp.Length;
+
+                for (int i =0;i<size && can;i++)
+                {
+                    int charTemp =(int) temp[i];
+                    
+                    if (!(47<charTemp&&charTemp<58))
+                    {
+                        can = false;
+                    }
+                }
+
+            }
+
+            return can;
         }
     }
 }
