@@ -345,12 +345,12 @@ namespace MIOSimulation
                 //dataSimulation = frUbication.readFile();
                 gmap.Overlays.Clear();
                 routes.Routes.Clear();
-                busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
+                busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
                 timer1.Start();
             }
             else
             {
-                MessageBox.Show("Incorret date format, must be on the shape dd/mm/aa hh:mm:ss");
+                MessageBox.Show("Incorret date format, must be on the shape dd-mm-aa hh:mm:ss");
             }
 
         }
