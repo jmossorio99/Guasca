@@ -31,6 +31,7 @@ namespace MIOSimulation
         private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
         private List<GMapOverlay> zonesOverlays = new List<GMapOverlay>();
         private int second;
+        private Dictionary<String, String> lines = new Dictionary<String, String>();
 
         //Everything new is down here
         private List<Zone> zones = new List<Zone>();
@@ -58,7 +59,7 @@ namespace MIOSimulation
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
-
+            addLines();
             string url = "dataSimulation1.txt";
             if (MessageBox.Show("Desea usar un datagram diferente?", "Datagram de simulacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -85,6 +86,26 @@ namespace MIOSimulation
 
 
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
+        }
+
+        private void addLines()
+        {
+            FileReader frLines = new FileReader("lines.txt");
+            List<String> linesData = frLines.readFile();
+            List<String> linesD = new List<string>();
+            foreach (String line in linesData)
+            {
+                String[] a = line.Split(',');
+                if (!lines.ContainsKey(a[1]))
+                {
+                    lines.Add(a[1], a[0]);
+                    linesD.Add(a[1]);
+                }
+            }
+            foreach (String line in lines.Keys)
+            {
+                listLines.Items.Add(line);
+            }
         }
 
         private void addZones()
@@ -385,11 +406,23 @@ namespace MIOSimulation
             foreach (Bus bus in buses) {
                 foreach (int a in zonesChecked)
                 {
-                    if (zones[a].isInside(bus.ActualPosition))
+                    if (listLines.Text.Equals("") || listLines.Text.Equals("N/A"))
                     {
-                        bus.Zone = zones[a].getName();
-                        readyToUse.Add(bus);
-                        break;
+                        if (zones[a].isInside(bus.ActualPosition))
+                        {
+                            bus.Zone = zones[a].getName();
+                            readyToUse.Add(bus);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (zones[a].isInside(bus.ActualPosition) && bus.Name== lines[listLines.Text])
+                        {
+                            bus.Zone = zones[a].getName();
+                            readyToUse.Add(bus);
+                            break;
+                        }
                     }
                 }
             }
@@ -417,6 +450,14 @@ namespace MIOSimulation
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
                 prueba.Text = "On route at " + second;
+                string rute = "Todas";
+                if (!listLines.Text.Equals(""))
+                    rute = listLines.Text;
+                marker.ToolTipText = "Time Losed" + bus.TimeLocation + "\n Linea: " +rute;
+
+                //marker.ToolTipText = "En ruta a las " + tempSplit[0];
+
+                prueba.Text = "En ruta a las " + second;
 
                 simulation.Markers.Add(marker);
             }
