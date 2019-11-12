@@ -185,8 +185,11 @@ namespace MIOSimulation
                     if (busReference.ContainsKey(location.BusName))
                     {
                         Bus actualBus = busReference[location.BusName];
-                        actualBus.NextPosition = location.Postion;
+                        if (actualBus.IsIddle) {
+                            actualBus.IsIddle = true;
+                        }
                         actualBus.ActualStop = location.StopId;
+                        actualBus.NextPosition = location.Postion;
                         if (busMatch.ContainsKey(location.BusName)) {
                             int solution = movingTo + (int)actualBus.TimeElapse;
                             busMatch.Remove(location.BusName);
@@ -206,10 +209,10 @@ namespace MIOSimulation
             {
                 Bus actualBus = busReference[item.Key];
 
-                if (item.Value >= 0 && actualBus.ActualStop != -1 && actualBus.PreviousStop != -1)
+                if (item.Value >= 0)
                 {
-                    
-                    if (actualBus.PreviousStop != actualBus.ActualStop)
+
+                    if (actualBus.PreviousStop != actualBus.ActualStop || actualBus.ActualStop == -1 || actualBus.PreviousStop == -1)
                     {
                         actualBus.TimeLocation = 0;
                         actualBus.TimeLocation -= item.Value;
