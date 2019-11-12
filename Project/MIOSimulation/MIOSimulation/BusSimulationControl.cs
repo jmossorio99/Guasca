@@ -34,7 +34,7 @@ namespace MIOSimulation
             dataConnection = new DBConnection();
         }
 
-        // Date;IdBus;IdStop;Odometer;TaskId;LineId;TripId;Lng;Lat
+        // Date;IdBus;IdStop;Odometer;Lng;Lat;TaskId;LineId;TripId
         // 2019-06-20 18:00:17
         private void InitializeSimulation()
         {
@@ -54,7 +54,7 @@ namespace MIOSimulation
                 BusLocation temp = new BusLocation(location, busId,  Int32.Parse(stopId));
                 if (!busReference.ContainsKey(busId))
                 {
-                    busReference.Add(busId, new Bus(busId, ""));
+                    busReference.Add(busId, new Bus(busId, splitData[7]));
                 }
 
                 if (date.CompareTo(lastDate) == 0)
