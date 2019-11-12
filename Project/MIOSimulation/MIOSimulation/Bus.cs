@@ -16,6 +16,7 @@ namespace MIOSimulation
     {
         String identifier;
         String name;
+        private PointLatLng previousPostion;
         private PointLatLng actualPostion;
         private PointLatLng nextPosition;
         private long timeLocation;
@@ -25,6 +26,7 @@ namespace MIOSimulation
         {
             this.identifier = identifier;
             this.Name = name;
+            PreviousPosition = new PointLatLng(0, 0);
             ActualPosition = new PointLatLng(0, 0);
             NextPosition = new PointLatLng(0, 0);
 
@@ -37,6 +39,7 @@ namespace MIOSimulation
 
         public String Identifier { get; set; }
         public String Name { get; set; }
+        public PointLatLng PreviousPosition { get; set; }
         public PointLatLng ActualPosition { get; set; }
         public PointLatLng NextPosition { get; set; }
         public int PreviousStop{ get; set; }

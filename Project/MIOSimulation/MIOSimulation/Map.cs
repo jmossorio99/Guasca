@@ -366,7 +366,7 @@ namespace MIOSimulation
 
         private void drawBuses(List<Bus> buses,int second) {
             List<Bus> readyToUse = specifiedBuses(buses);
-            smothTrasition(readyToUse,second);
+            smoothTrasition(readyToUse,second);
         }
 
 
@@ -387,25 +387,47 @@ namespace MIOSimulation
             return readyToUse;
         }
 
-        private void smothTrasition(List<Bus> readyToUse,int second)
+        private void smoothTrasition(List<Bus> readyToUse,int second)
         {
+            Double numDeltas = 100;
+            var delay = 10;
             gmap.Overlays.Clear();
             routes.Routes.Clear();
             simulation.Clear();
+            List<List<Double>> deltasLatLng = new List<List<Double>>();
+            foreach (var bus in readyToUse)
+            {
+                deltasLatLng.Add(new List<double>());
+            }
+            int counter = 0;
             foreach (Bus bus in readyToUse)
             {
                 GMapMarker marker;
-                marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
+                marker = new GMarkerGoogle(bus.PreviousPosition, new Bitmap("./img/bus.png"));
                 points.Add(bus.ActualPosition);
-                marker.ToolTipText = "Time Losed"+bus.TimeLocation;
-
+                marker.ToolTipText = "Time Lost"+bus.TimeLocation;
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                prueba.Text = "En ruta a las " + second;
-
+                prueba.Text = "On route at " + second;
                 simulation.Markers.Add(marker);
+                Double deltaLat = (bus.ActualPosition.Lat - bus.PreviousPosition.Lat) / numDeltas;
+                Double deltaLng = (bus.ActualPosition.Lng - bus.PreviousPosition.Lng) / numDeltas;
+                deltasLatLng[counter].Add(deltaLat);
+                deltasLatLng[counter].Add(deltaLng);
+                counter++;
             }
-
             gmap.Overlays.Add(simulation);
+            counter = 0;
+            while (counter < numDeltas)
+            {
+                int posCounter = 0;
+                foreach (var marker in simulation.Markers)
+                {
+                    marker.Position = new PointLatLng(marker.Position.Lat + deltasLatLng[posCounter][0], marker.Position.Lng + deltasLatLng[posCounter][1]);
+                    posCounter++;
+                }
+                counter++;
+            }
+            
         }
 
         private void GoSimulation_Click(object sender, EventArgs e)

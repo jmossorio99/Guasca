@@ -116,6 +116,7 @@ namespace MIOSimulation
                     {
                         if (!busMatch.ContainsKey(location.BusName))
                         {
+                            busReference[location.BusName].PreviousPosition = busReference[location.BusName].ActualPosition;
                             busReference[location.BusName].ActualPosition = location.Postion;
                             busReference[location.BusName].PreviousStop = location.StopId;
                             busReference[location.BusName].TimeElapse -= movingTo;
