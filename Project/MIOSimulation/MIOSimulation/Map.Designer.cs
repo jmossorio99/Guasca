@@ -34,6 +34,7 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listLines = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@
             this.prueba = new System.Windows.Forms.Label();
             this.startSimulation = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.listLines = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +121,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Salmon;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.listLines);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -149,6 +151,14 @@
             this.panel1.Size = new System.Drawing.Size(294, 863);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // listLines
+            // 
+            this.listLines.FormattingEnabled = true;
+            this.listLines.Location = new System.Drawing.Point(102, 656);
+            this.listLines.Name = "listLines";
+            this.listLines.Size = new System.Drawing.Size(121, 28);
+            this.listLines.TabIndex = 22;
             // 
             // label8
             // 
@@ -367,13 +377,16 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // listLines
+            // label9
             // 
-            this.listLines.FormattingEnabled = true;
-            this.listLines.Location = new System.Drawing.Point(102, 656);
-            this.listLines.Name = "listLines";
-            this.listLines.Size = new System.Drawing.Size(121, 28);
-            this.listLines.TabIndex = 22;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(104, 620);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 21);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Filtrar por bus";
             // 
             // SimulacionMetroCali
             // 
@@ -422,5 +435,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox listLines;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -276,8 +276,8 @@ namespace MIOSimulation
         private void StationStop_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterSelected = true;
-
-            if(StationStop_CB.SelectedIndex == 0)
+            updateCheckdZones();
+            if (StationStop_CB.SelectedIndex == 0)
             {
                 addStationsOverlay();
                 gmap.Zoom = 12.5;
@@ -366,7 +366,8 @@ namespace MIOSimulation
                 //dataSimulation = frUbication.readFile();
                 gmap.Overlays.Clear();
                 routes.Routes.Clear();
-                busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
+                //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
+                busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
                 timer1.Start();
             }
             else
@@ -380,6 +381,7 @@ namespace MIOSimulation
         {
 
             List<Bus> inSimulation = busSimulation.Next30();
+            updateCheckdZones();
 
             gmap.Overlays.Clear();
             routes.Routes.Clear();
@@ -453,7 +455,7 @@ namespace MIOSimulation
                 string rute = "Todas";
                 if (!listLines.Text.Equals(""))
                     rute = listLines.Text;
-                marker.ToolTipText = "Time Losed" + bus.TimeLocation + "\n Linea: " +rute;
+                marker.ToolTipText = "Time Lost: " + bus.TimeLocation + "\n Linea: " +rute;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
 
@@ -548,7 +550,6 @@ namespace MIOSimulation
 
         private void ZonesCheckedList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateCheckdZones();
         }
 
         private Boolean verifyFormatDate(String start,String end)
