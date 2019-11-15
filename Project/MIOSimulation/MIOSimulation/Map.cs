@@ -372,7 +372,7 @@ namespace MIOSimulation
             }
             else
             {
-                MessageBox.Show("Incorret date format, must be on the shape dd-mm-aa hh:mm:ss");
+                MessageBox.Show("Formato de fecha incorrecto, debe tener el siguiente formato dd-mm-aa hh:mm:ss");
             }
 
         }
