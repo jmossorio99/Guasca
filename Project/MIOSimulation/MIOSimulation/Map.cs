@@ -374,12 +374,12 @@ namespace MIOSimulation
                 }
                 else
                 {
-                    MessageBox.Show("Incorret date order");
+                    MessageBox.Show("Orden de fechas incorrecto, la fecha de inicio debe ser menor a la de fin");
                 }
             }
             else
             {
-                MessageBox.Show("Incorret date format, must be on the shape YY-MM-DD hh:mm:ss");
+                MessageBox.Show("Formato de fecha incorrecto, debe tener el siguiente formato dd-mm-aa hh:mm:ss");
             }
 
         }
