@@ -362,17 +362,24 @@ namespace MIOSimulation
         {
             if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
             {
-                //FileReader frUbication = new FileReader("datagramList.txt");
-                //dataSimulation = frUbication.readFile();
-                gmap.Overlays.Clear();
-                routes.Routes.Clear();
-                //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
-                busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
-                timer1.Start();
+                if (verifyDateOrder(horaInicioTxt.Text, horaFinTxt.Text))
+                {
+                    //FileReader frUbication = new FileReader("datagramList.txt");
+                    //dataSimulation = frUbication.readFile();
+                    gmap.Overlays.Clear();
+                    routes.Routes.Clear();
+                    //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
+                    busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
+                    timer1.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Incorret date order");
+                }
             }
             else
             {
-                MessageBox.Show("Incorret date format, must be on the shape dd-mm-aa hh:mm:ss");
+                MessageBox.Show("Incorret date format, must be on the shape YY-MM-DD hh:mm:ss");
             }
 
         }
@@ -616,6 +623,44 @@ namespace MIOSimulation
 
             return can;
         }
+
+        private Boolean verifyDateOrder(String startDate, String endDate)
+        {
+            Boolean correct=true;
+
+            String[] firstSplitStart = startDate.Split(' ');
+            String[] firstSplitEnd = endDate.Split(' ');
+
+            String[] secondSplitStartDate = firstSplitStart[0].Split('-');
+            String[] secondSplitEndDate = firstSplitEnd[0].Split('-');
+
+            String[] secondSplitStartHour = firstSplitStart[1].Split(':');
+            String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
+
+            int startYear = Int32.Parse(secondSplitStartDate[0]);
+            int startMonth = Int32.Parse(secondSplitStartDate[1]);
+            int startDay = Int32.Parse(secondSplitStartDate[2]);
+            int startHour = Int32.Parse(secondSplitStartHour[0]);
+            int startminute = Int32.Parse(secondSplitStartHour[1]);
+            int startSecond = Int32.Parse(secondSplitStartHour[2]);
+
+            int endYear = Int32.Parse(secondSplitEndDate[0]);
+            int endMonth = Int32.Parse(secondSplitEndDate[1]);
+            int endDay = Int32.Parse(secondSplitEndDate[2]);
+            int endHour = Int32.Parse(secondSplitEndHour[0]);
+            int endMinute = Int32.Parse(secondSplitEndHour[1]);
+            int endSecond = Int32.Parse(secondSplitEndHour[2]);
+
+            DateTime start = new DateTime(startYear,startMonth,startDay,startHour,startminute,startSecond);
+            DateTime end = new DateTime(endYear,endMonth,endDay,endHour,endMinute,endSecond);
+
+            if (start<end)
+            {
+                correct = false;
+            }
+
+            return correct;
+        }
     }
 }
 
@@ -655,3 +700,15 @@ if(number< dataSimulation.Count)
                 timer1.Stop();
             }
 */
+
+    // Bus
+    // BusLocation
+    // BusSimulationControl
+    // DataProcessor
+    // DBConnection
+    // FileReader
+    // Polygon
+    // Program
+    // Station
+    // Stop
+    // Zone
