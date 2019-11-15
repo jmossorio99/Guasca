@@ -34,6 +34,9 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listLines = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.horaFinTxt = new System.Windows.Forms.TextBox();
             this.horaInicioTxt = new System.Windows.Forms.TextBox();
@@ -52,6 +55,7 @@
             this.prueba = new System.Windows.Forms.Label();
             this.startSimulation = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +99,7 @@
             this.StationStop_CB.Location = new System.Drawing.Point(73, 53);
             this.StationStop_CB.Margin = new System.Windows.Forms.Padding(2);
             this.StationStop_CB.Name = "StationStop_CB";
-            this.StationStop_CB.Size = new System.Drawing.Size(148, 21);
+            this.StationStop_CB.Size = new System.Drawing.Size(148, 31);
             this.StationStop_CB.TabIndex = 1;
             this.StationStop_CB.Text = "Estaciones y paradas";
             this.StationStop_CB.SelectedIndexChanged += new System.EventHandler(this.StationStop_CB_SelectedIndexChanged);
@@ -108,7 +112,7 @@
             this.label1.Location = new System.Drawing.Point(123, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.Size = new System.Drawing.Size(89, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtro";
             // 
@@ -117,6 +121,10 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Salmon;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.listLines);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.horaFinTxt);
             this.panel1.Controls.Add(this.horaInicioTxt);
@@ -144,6 +152,34 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
+            // listLines
+            // 
+            this.listLines.FormattingEnabled = true;
+            this.listLines.Location = new System.Drawing.Point(102, 656);
+            this.listLines.Name = "listLines";
+            this.listLines.Size = new System.Drawing.Size(121, 28);
+            this.listLines.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(170, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "dd-mm-yy hh:mm:ss ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(26, 361);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "dd-mm-yy hh:mm:ss ";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -151,7 +187,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(99, 270);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.Size = new System.Drawing.Size(168, 40);
             this.label6.TabIndex = 19;
             this.label6.Text = "Simulacion";
             // 
@@ -159,14 +195,14 @@
             // 
             this.horaFinTxt.Location = new System.Drawing.Point(171, 341);
             this.horaFinTxt.Name = "horaFinTxt";
-            this.horaFinTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaFinTxt.Size = new System.Drawing.Size(100, 26);
             this.horaFinTxt.TabIndex = 18;
             // 
             // horaInicioTxt
             // 
-            this.horaInicioTxt.Location = new System.Drawing.Point(25, 341);
+            this.horaInicioTxt.Location = new System.Drawing.Point(27, 341);
             this.horaInicioTxt.Name = "horaInicioTxt";
-            this.horaInicioTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaInicioTxt.Size = new System.Drawing.Size(100, 26);
             this.horaInicioTxt.TabIndex = 17;
             // 
             // label5
@@ -176,7 +212,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(194, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.Size = new System.Drawing.Size(82, 28);
             this.label5.TabIndex = 16;
             this.label5.Text = "Hora fin";
             // 
@@ -187,7 +223,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(43, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(107, 28);
             this.label4.TabIndex = 15;
             this.label4.Text = "Hora inicio";
             // 
@@ -207,7 +243,7 @@
             "Zone 8 - Calipso"});
             this.zonesCheckedList.Location = new System.Drawing.Point(14, 91);
             this.zonesCheckedList.Name = "zonesCheckedList";
-            this.zonesCheckedList.Size = new System.Drawing.Size(266, 157);
+            this.zonesCheckedList.Size = new System.Drawing.Size(266, 134);
             this.zonesCheckedList.TabIndex = 14;
             this.zonesCheckedList.SelectedIndexChanged += new System.EventHandler(this.ZonesCheckedList_SelectedIndexChanged);
             // 
@@ -218,7 +254,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(91, 549);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 17);
+            this.label3.Size = new System.Drawing.Size(196, 28);
             this.label3.TabIndex = 13;
             this.label3.Text = "Velocidad simulación";
             // 
@@ -229,7 +265,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(134, 766);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.Size = new System.Drawing.Size(64, 28);
             this.label2.TabIndex = 12;
             this.label2.Text = "Zoom";
             // 
@@ -240,7 +276,7 @@
             this.trackBar1.Maximum = 18;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 45);
+            this.trackBar1.Size = new System.Drawing.Size(162, 69);
             this.trackBar1.TabIndex = 11;
             this.trackBar1.Value = 10;
             this.trackBar1.ValueChanged += new System.EventHandler(this.TrackBar1_ValueChanged);
@@ -320,7 +356,7 @@
             this.prueba.ForeColor = System.Drawing.Color.Black;
             this.prueba.Location = new System.Drawing.Point(84, 415);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(137, 17);
+            this.prueba.Size = new System.Drawing.Size(204, 28);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "Informacion de la ruta";
             // 
@@ -340,6 +376,17 @@
             // 
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(104, 620);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 21);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Filtrar por bus";
             // 
             // SimulacionMetroCali
             // 
@@ -385,5 +432,9 @@
         private System.Windows.Forms.TextBox horaFinTxt;
         private System.Windows.Forms.TextBox horaInicioTxt;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox listLines;
+        private System.Windows.Forms.Label label9;
     }
 }

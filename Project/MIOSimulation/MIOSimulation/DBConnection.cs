@@ -14,6 +14,8 @@ namespace MIOSimulation
 
         public DBConnection()
         {
+
+            initializeConnection();
         }
 
         public void initializeConnection()
@@ -38,23 +40,33 @@ namespace MIOSimulation
             con.Dispose();
         }
 
+
+
         public Int32 getArcTime(Int32 fromStop, Int32 toStop)
         {
-            initializeConnection();
-            String sql = "SELECT ARCTIME FROM ARC WHERE STOP_ID_START :=1 AND STOP_ID_END :=2";
+
+            String sql = "SELECT ARCTIME FROM ARC WHERE ((STOP_ID_START = :1) AND (STOP_ID_END = :2))";
             OracleCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = sql;
             cmd.Parameters.Add("1", OracleDbType.Int32).Value = fromStop;
             cmd.Parameters.Add("2", OracleDbType.Int32).Value = toStop;
-            OracleDataReader dr = cmd.ExecuteReader();
-            dr.Read();
-            Int32 result = System.Convert.ToInt32(dr.GetString(1));
-            cmd.Dispose();
-            dr.Dispose();
-            killConnection();
-            return result;
+            OracleDataReader reader = cmd.ExecuteReader();
+            Int32 a = 0;
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    a = reader.GetInt32(0);
+                    break;
+                }
+            }
+;
+            return a;
         }
 
     }
+
+
+
 }
