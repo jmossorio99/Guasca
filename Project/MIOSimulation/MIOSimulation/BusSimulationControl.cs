@@ -129,7 +129,7 @@ namespace MIOSimulation
             return result;
         }
 
-        public void setInterval(String s, String f)
+        public void setInterval(String s, String f) 
         {
             start = createNumber(s) - offset;
             finish = createNumber(f) - offset;
@@ -138,6 +138,7 @@ namespace MIOSimulation
 
         public List<Bus> Next30()
         {
+
             busesInSimulation = new List<Bus>();
             busMatch = new Dictionary<string, int>();
             int steps = 0;

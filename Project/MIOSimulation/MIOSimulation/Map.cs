@@ -362,15 +362,24 @@ namespace MIOSimulation
         {
             if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
             {
+
                 if (verifyDateOrder(horaInicioTxt.Text, horaFinTxt.Text))
                 {
-                    //FileReader frUbication = new FileReader("datagramList.txt");
-                    //dataSimulation = frUbication.readFile();
-                    gmap.Overlays.Clear();
-                    routes.Routes.Clear();
-                    //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
-                    busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
-                    timer1.Start();
+                    try
+                    {
+                        //FileReader frUbication = new FileReader("datagramList.txt");
+                        //dataSimulation = frUbication.readFile();
+                        gmap.Overlays.Clear();
+                        routes.Routes.Clear();
+                        //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
+                        busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
+                        timer1.Start();
+                    }
+                    catch (Exception t)
+                    {
+                        MessageBox.Show("No hay datos para este intervalo de fechas");
+                    }
+
                 }
                 else
                 {
@@ -386,21 +395,29 @@ namespace MIOSimulation
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-
-            List<Bus> inSimulation = busSimulation.Next30();
-            updateCheckdZones();
-
-            gmap.Overlays.Clear();
-            routes.Routes.Clear();
-            if (inSimulation.Count != 0)
+            try
             {
-                drawBuses(inSimulation,second);
-                second += 30;
+                List<Bus> inSimulation = busSimulation.Next30();
+                updateCheckdZones();
+
+                gmap.Overlays.Clear();
+                routes.Routes.Clear();
+                if (inSimulation.Count != 0)
+                {
+                    drawBuses(inSimulation, second);
+                    second += 30;
+                }
+                else
+                {
+                    timer1.Stop();
+                }
             }
-            else
+            catch (Exception)
             {
-                timer1.Stop();
+
+               
             }
+            
         }
 
         private void drawBuses(List<Bus> buses,int second) {
@@ -637,16 +654,16 @@ namespace MIOSimulation
             String[] secondSplitStartHour = firstSplitStart[1].Split(':');
             String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
 
-            int startYear = Int32.Parse(secondSplitStartDate[0]);
+            int startYear = Int32.Parse(secondSplitStartDate[2]);
             int startMonth = Int32.Parse(secondSplitStartDate[1]);
-            int startDay = Int32.Parse(secondSplitStartDate[2]);
+            int startDay = Int32.Parse(secondSplitStartDate[0]);
             int startHour = Int32.Parse(secondSplitStartHour[0]);
             int startminute = Int32.Parse(secondSplitStartHour[1]);
             int startSecond = Int32.Parse(secondSplitStartHour[2]);
 
-            int endYear = Int32.Parse(secondSplitEndDate[0]);
+            int endYear = Int32.Parse(secondSplitEndDate[2]);
             int endMonth = Int32.Parse(secondSplitEndDate[1]);
-            int endDay = Int32.Parse(secondSplitEndDate[2]);
+            int endDay = Int32.Parse(secondSplitEndDate[0]);
             int endHour = Int32.Parse(secondSplitEndHour[0]);
             int endMinute = Int32.Parse(secondSplitEndHour[1]);
             int endSecond = Int32.Parse(secondSplitEndHour[2]);

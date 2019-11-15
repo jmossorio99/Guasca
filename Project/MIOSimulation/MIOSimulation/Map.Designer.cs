@@ -177,9 +177,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(170, 361);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 13);
+            this.label8.Size = new System.Drawing.Size(103, 13);
             this.label8.TabIndex = 21;
-            this.label8.Text = "YY-MM-DD hh:mm:ss ";
+            this.label8.Text = "dd-mm-aa hh:mm:ss ";
             // 
             // label7
             // 
@@ -187,9 +187,9 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(26, 361);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.Size = new System.Drawing.Size(103, 13);
             this.label7.TabIndex = 20;
-            this.label7.Text = "YY-MM-DD hh:mm:ss ";
+            this.label7.Text = "dd-mm-aa hh:mm:ss ";
             // 
             // label6
             // 
