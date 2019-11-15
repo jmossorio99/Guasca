@@ -6,5 +6,6 @@ Members:
   * Fabio Andrés Mejía
   * Juan David Aguirre
   * Jose Manuel Ossorio
+  * Nelson David Quiñones
   
   # Demo video Link: https://youtu.be/MP3KDs7LH2I
