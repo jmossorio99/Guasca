@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
     <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>GMap dll\GMap.NET.Core.dll</HintPath>
@@ -54,6 +55,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bus.cs" />
+    <Compile Include="BusLocation.cs" />
+    <Compile Include="BusSimulationControl.cs" />
+    <Compile Include="DataProcessor.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Polygon.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Map.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Station.cs" />
+    <Compile Include="Stop.cs" />
+    <Compile Include="Zone.cs" />
     <EmbeddedResource Include="Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
     </EmbeddedResource>
