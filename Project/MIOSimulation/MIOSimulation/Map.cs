@@ -654,7 +654,7 @@ namespace MIOSimulation
             DateTime start = new DateTime(startYear,startMonth,startDay,startHour,startminute,startSecond);
             DateTime end = new DateTime(endYear,endMonth,endDay,endHour,endMinute,endSecond);
 
-            if (start<end)
+            if (start>end)
             {
                 correct = false;
             }
