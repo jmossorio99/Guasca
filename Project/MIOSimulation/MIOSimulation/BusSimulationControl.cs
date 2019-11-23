@@ -17,6 +17,8 @@ namespace MIOSimulation
         private long finish;
         private long offset;
         private int movingTo;
+        private string referenceYear;
+        private string referenceMonth;
         private Dictionary<String, Bus> busReference;
         private Dictionary<String, int> busMatch;
         Dictionary<String, Int32> memo;
@@ -26,6 +28,8 @@ namespace MIOSimulation
             this.start = start;
             this.finish = finish;
             movingTo = -1;
+            referenceMonth = "";
+            referenceYear = "";
             busReference = new Dictionary<string, Bus>();
             busMatch = new Dictionary<string, int>();
             busesInSimulation = new List<Bus>();
@@ -51,9 +55,9 @@ namespace MIOSimulation
                     else {
                         memo.Add(query, 0);
                     }
-                    
+
                 }
-                
+
             }
 
         }
@@ -74,7 +78,7 @@ namespace MIOSimulation
                 String stopId = splitData[2];
                 String Lng = splitData[4];
                 String Lat = splitData[5];
-                PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat)/10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat)/ 10000000);
+                PointLatLng location = new PointLatLng(Double.Parse(Lat, CultureInfo.InvariantCulture.NumberFormat) / 10000000, Double.Parse(Lng, CultureInfo.InvariantCulture.NumberFormat) / 10000000);
                 BusLocation temp;
                 switch (Convert.ToInt32(stopId))
                 {
@@ -100,6 +104,9 @@ namespace MIOSimulation
                     {
                         lastDate = date;
                         offset = createNumber(lastDate);
+                        String []values = date.Split('-');
+                        referenceMonth = values[1];
+                        referenceYear = values[0];
                         position++;
                         timeLine.Add(new List<BusLocation>());
                     }
@@ -112,7 +119,7 @@ namespace MIOSimulation
                             timeLine.Add(new List<BusLocation>());
                         }
                     }
-                    
+
                     timeLine[position].Add(temp);
                     lastDate = date;
                 }
@@ -120,13 +127,25 @@ namespace MIOSimulation
 
         }
 
+        // 2019-06-20 18:00:17
+
         public long createNumber(string date)
         {
-            String[] fecha = date.Split(' ')[1].Split(':');
+            String[] fecha = date.Split(' ')[0].Split('-');
             String[] data = date.Split(' ')[1].Split(':');
 
-            long result = long.Parse(data[0]) * 3600 + long.Parse(data[1]) * 60 + long.Parse(data[2]);
+            long result = (long.Parse(fecha[2]) * 86400) + (long.Parse(data[0]) * 3600) + (long.Parse(data[1]) * 60) + (long.Parse(data[2]));
             return result;
+        }
+
+        public string creatDate(long number) {
+            number += offset;
+            long day = (number % 2073600)/ 86400;
+            long hour = (number % 86400)/3600;
+            long minutes = (number % 3600)/60;
+            long seconds = number % 60;
+            String date = day + " " + hour+ " "+ minutes+ " "+ seconds;
+            return date;
         }
 
         public void setInterval(String s, String f) 
