@@ -22,6 +22,9 @@ namespace MIOSimulation
         private Dictionary<String, Bus> busReference;
         private Dictionary<String, int> busMatch;
         Dictionary<String, Int32> memo;
+        public int interval = 60;
+
+        public int Interval { get => interval; set => interval = value; }
 
         public BusSimulationControl(long start, long finish)
         {
@@ -161,7 +164,7 @@ namespace MIOSimulation
             busesInSimulation = new List<Bus>();
             busMatch = new Dictionary<string, int>();
             int steps = 0;
-            while (movingTo <= finish && steps <= 30)
+            while (movingTo <= finish && steps <= interval)
             {
                 foreach (BusLocation location in timeLine[movingTo])
                 {
@@ -198,7 +201,11 @@ namespace MIOSimulation
         private void checkNext30()
         {
             int steps = 0;
-            while (movingTo <= finish && steps <= 30)
+            int reference = interval;
+            if (interval < 30) {
+                reference = 61 - interval;
+            }
+            while (movingTo <= finish && steps <= reference)
             {
                 foreach (BusLocation location in timeLine[movingTo])
                 {

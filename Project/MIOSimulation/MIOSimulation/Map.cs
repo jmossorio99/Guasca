@@ -381,7 +381,14 @@ namespace MIOSimulation
                         {
                             MessageBox.Show("Seleccione las zonas a visualizar");
                         }
-                        else {
+                        int val = 0;
+                        if (!int.TryParse(timeInterval.Text, out val)) {
+                            MessageBox.Show("Formato incorrecto para el intervalo de tiempo");
+                        }
+
+                        if(zonesChecked.Count != 0 && !timeInterval.Text.Equals("")){
+                            busSimulation.Interval = val;
+                            second = 0;
                             timer1.Start();
                         }
                     }
@@ -414,7 +421,7 @@ namespace MIOSimulation
                 if (inSimulation.Count != 0)
                 {
                     drawBuses(inSimulation, second);
-                    second += 30;
+                    second += busSimulation.Interval;
                 }
                 else
                 {
@@ -682,6 +689,11 @@ namespace MIOSimulation
         }
 
         private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label10_Click_1(object sender, EventArgs e)
         {
 
         }
