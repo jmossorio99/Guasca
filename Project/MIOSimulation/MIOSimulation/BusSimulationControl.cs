@@ -44,7 +44,10 @@ namespace MIOSimulation
 
         private void LoadArcs()
         {
-            FileReader br = new FileReader("arcs.txt");
+            DBConnection con = new DBConnection();
+            con.initializeConnection();
+            con.getArcTimes(memo);
+            /*FileReader br = new FileReader("arcs.txt");
             List<String> data = br.readFile();
 
             foreach (string line in data) {
@@ -61,7 +64,7 @@ namespace MIOSimulation
 
                 }
 
-            }
+            }*/
 
         }
 
