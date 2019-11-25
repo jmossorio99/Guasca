@@ -45,7 +45,7 @@ namespace MIOSimulation
         public void getArcTimes(Dictionary<String, Int32> memo)
         {
 
-            String sql = "SELECT ARCTIME * FROM ARC";
+            String sql = "SELECT * FROM ARC";
             OracleCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = sql;

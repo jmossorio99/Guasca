@@ -182,9 +182,9 @@
             this.LabelExample.ForeColor = System.Drawing.Color.Black;
             this.LabelExample.Location = new System.Drawing.Point(49, 270);
             this.LabelExample.Name = "LabelExample";
-            this.LabelExample.Size = new System.Drawing.Size(222, 20);
+            this.LabelExample.Size = new System.Drawing.Size(226, 20);
             this.LabelExample.TabIndex = 24;
-            this.LabelExample.Text = "Ejemplo: 20-06-2019 11:00:00";
+            this.LabelExample.Text = "Ejemplo:  2019-06-20 11:16:47";
             this.LabelExample.Click += new System.EventHandler(this.Label10_Click);
             // 
             // label9
