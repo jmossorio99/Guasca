@@ -47,25 +47,6 @@ namespace MIOSimulation
             DBConnection con = new DBConnection();
             con.initializeConnection();
             con.getArcTimes(memo);
-            /*FileReader br = new FileReader("arcs.txt");
-            List<String> data = br.readFile();
-
-            foreach (string line in data) {
-                string[] splitData = line.Split('	');
-                String query = splitData[1] + " " + splitData[2];
-                if (!memo.ContainsKey(query)) {
-                    if (!splitData[3].Equals(""))
-                    {
-                        memo.Add(query, Int32.Parse(splitData[3]));
-                    }
-                    else {
-                        memo.Add(query, 0);
-                    }
-
-                }
-
-            }*/
-
         }
 
         // Date;IdBus;IdStop;Odometer;Lng;Lat;TaskId;LineId;TripId
@@ -154,11 +135,15 @@ namespace MIOSimulation
             return date;
         }
 
-        public void setInterval(String s, String f) 
+        public bool setInterval(String s, String f) 
         {
+            if (createNumber(s) < offset) {
+                return false;
+            }
             start = createNumber(s) - offset;
             finish = createNumber(f) - offset;
             movingTo = (int)start;
+            return true;
         }
 
         public List<Bus> Next30()

@@ -375,7 +375,7 @@ namespace MIOSimulation
                         gmap.Overlays.Clear();
                         routes.Routes.Clear();
                         //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
-                        busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
+                        bool rightInterval = busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
                         updateCheckdZones();
                         if (zonesChecked.Count == 0)
                         {
@@ -386,7 +386,12 @@ namespace MIOSimulation
                             MessageBox.Show("Formato incorrecto para el intervalo de tiempo");
                         }
 
-                        if(zonesChecked.Count != 0 && !timeInterval.Text.Equals("")){
+                        if (!rightInterval) {
+                            MessageBox.Show("Fecha de inicio no disponible");
+                        }
+                        
+
+                        if(zonesChecked.Count != 0 && !timeInterval.Text.Equals("") && rightInterval){
                             busSimulation.Interval = val;
                             second = 0;
                             timer1.Start();
