@@ -42,27 +42,24 @@ namespace MIOSimulation
 
 
 
-        public Int32 getArcTime(Int32 fromStop, Int32 toStop)
+        public void getArcTimes(Dictionary<String, Int32> memo)
         {
 
-            String sql = "SELECT ARCTIME FROM ARC WHERE ((STOP_ID_START = :1) AND (STOP_ID_END = :2))";
+            String sql = "SELECT * FROM ARC";
             OracleCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = sql;
-            cmd.Parameters.Add("1", OracleDbType.Int32).Value = fromStop;
-            cmd.Parameters.Add("2", OracleDbType.Int32).Value = toStop;
-            OracleDataReader reader = cmd.ExecuteReader();
-            Int32 a = 0;
-            if (reader.HasRows)
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                while (reader.Read())
+                Int32 from = dr.GetInt32(2);
+                Int32 to = dr.GetInt32(3);
+                String query = from + " " + to;
+                if (!memo.ContainsKey(query))
                 {
-                    a = reader.GetInt32(0);
-                    break;
+                    memo.Add(query, dr.GetInt32(1));
                 }
             }
-;
-            return a;
         }
 
     }

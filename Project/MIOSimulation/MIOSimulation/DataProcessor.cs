@@ -9,16 +9,16 @@ namespace MIOSimulation
 {
     class DataProcessor
     {
+
+        private List<stringDate> vector;
         public void reading(string url)
         {
-            StreamReader datagram = new StreamReader(url);
+            sort(url);
             StreamWriter newData = new StreamWriter("dataSimulation1.txt");
             newData.Flush();
-            string lines = datagram.ReadLine();
-            lines = datagram.ReadLine();
-            while (lines != null)
+            for (int i = 0; i < vector.Count; i++)
             {
-                string[] text = lines.Split(',');
+                string[] text = vector[i].Data().Split(',');
                 if ((!text[4].Equals("-1") || !text[5].Equals("-1")))
                 {
                     if ((Double.Parse(text[4]) / 10000000) < -76 && (Double.Parse(text[4]) / 10000000) > -77)
@@ -31,11 +31,60 @@ namespace MIOSimulation
                         }
                     }
                 }
-                lines = datagram.ReadLine();
             }
 
             newData.Close();
-            datagram.Close();
         }
+
+        private void sort(string url)
+        {
+            StreamReader datagram = new StreamReader(url);
+            string lines = datagram.ReadLine();
+            lines = datagram.ReadLine();
+            vector = new List<stringDate>();
+            while (lines != null)
+            {
+                //2019-06-20 11:16:47  yyyy-MM-dd hh:mm:ss
+                string a = lines.Split(',')[0];
+                DateTime date = DateTime.Parse(a);
+                vector.Add(new stringDate(date, lines));
+                lines = datagram.ReadLine();
+            }
+            quicksort(0, vector.Count - 1);
+            // MergeSort(vector);
+        }
+
+        public void quicksort(int izq, int der)
+        {
+            int i, j;
+            stringDate pivote, aux;
+            i = izq;
+            j = der;
+            pivote = vector[(izq + der) / 2];
+            do
+            {
+                while (vector[i].compareTo(pivote) < 0 && i < der)
+                {
+                    i++;
+                }
+                while (vector[j].compareTo(pivote) > 0 && j > izq)
+                {
+                    j--;
+                }
+                if (i <= j)
+                {
+                    aux = vector[i];
+                    vector[i] = vector[j];
+                    vector[j] = aux;
+                    i++;
+                    j--;
+                }
+            } while (i <= j);
+            if (izq < j)
+                quicksort(izq, j);
+            if (i < der)
+                quicksort(i, der);
+        }
+
     }
 }

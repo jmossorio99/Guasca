@@ -32,6 +32,7 @@ namespace MIOSimulation
         private List<GMapOverlay> zonesOverlays = new List<GMapOverlay>();
         private int second;
         private Dictionary<String, String> lines = new Dictionary<String, String>();
+        private Dictionary<String, String> reverseLines = new Dictionary<String, String>();
 
         //Everything new is down here
         private List<Zone> zones = new List<Zone>();
@@ -99,6 +100,7 @@ namespace MIOSimulation
                 if (!lines.ContainsKey(a[1]))
                 {
                     lines.Add(a[1], a[0]);
+                    reverseLines.Add(a[0], a[1]);
                     linesD.Add(a[1]);
                 }
             }
@@ -357,9 +359,10 @@ namespace MIOSimulation
             }
 
         }
-
+        int error = 0;
         private void StartSimulation_Click(object sender, EventArgs e)
         {
+            
             if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
             {
 
@@ -372,13 +375,33 @@ namespace MIOSimulation
                         gmap.Overlays.Clear();
                         routes.Routes.Clear();
                         //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
-                        busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
-                        timer1.Start();
+                        bool rightInterval = busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
+                        updateCheckdZones();
+                        if (zonesChecked.Count == 0)
+                        {
+                            MessageBox.Show("Seleccione las zonas a visualizar");
+                        }
+                        int val = 0;
+                        if (!int.TryParse(timeInterval.Text, out val)) {
+                            MessageBox.Show("Formato incorrecto para el intervalo de tiempo");
+                        }
+
+                        if (!rightInterval) {
+                            MessageBox.Show("Fecha de inicio no disponible");
+                        }
+                        
+
+                        if(zonesChecked.Count != 0 && !timeInterval.Text.Equals("") && rightInterval){
+                            busSimulation.Interval = val;
+                            second = 0;
+                            timer1.Start();
+                        }
                     }
                     catch (Exception t)
                     {
-                        MessageBox.Show("No hay datos para este intervalo de fechas");
+                        
                     }
+
 
                 }
                 else
@@ -395,29 +418,21 @@ namespace MIOSimulation
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
+            
                 List<Bus> inSimulation = busSimulation.Next30();
-                updateCheckdZones();
 
                 gmap.Overlays.Clear();
                 routes.Routes.Clear();
                 if (inSimulation.Count != 0)
                 {
                     drawBuses(inSimulation, second);
-                    second += 30;
+                    second += busSimulation.Interval;
                 }
                 else
                 {
                     timer1.Stop();
                 }
-            }
-            catch (Exception)
-            {
-
-               
-            }
-            
+                       
         }
 
         private void drawBuses(List<Bus> buses,int second) {
@@ -443,7 +458,7 @@ namespace MIOSimulation
                     }
                     else
                     {
-                        if (zones[a].isInside(bus.ActualPosition) && bus.Name== lines[listLines.Text])
+                        if (zones[a].isInside(bus.ActualPosition) && bus.Name == lines[listLines.Text])
                         {
                             bus.Zone = zones[a].getName();
                             readyToUse.Add(bus);
@@ -475,15 +490,14 @@ namespace MIOSimulation
                 marker.ToolTipText = "Time Lost " + bus.TimeLocation;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                prueba.Text = "On route at " + second;
-                string rute = "Todas";
-                if (!listLines.Text.Equals(""))
-                    rute = listLines.Text;
-                marker.ToolTipText = "Time Lost: " + bus.TimeLocation + "\n Linea: " +rute;
+                prueba.Text = "En la ruta a las: " + busSimulation.creatDate(second);
+                string rute = "Fuera de servicio";
+                if(reverseLines.ContainsKey(bus.Name))
+                    rute = reverseLines[bus.Name];
+                marker.ToolTipText = "Tiempo perdido: " + bus.TimeLocation + "\n Linea: " +rute;
 
                 //marker.ToolTipText = "En ruta a las " + tempSplit[0];
 
-                prueba.Text = "En ruta a las " + second;
 
                 simulation.Markers.Add(marker);
             }
@@ -654,16 +668,16 @@ namespace MIOSimulation
             String[] secondSplitStartHour = firstSplitStart[1].Split(':');
             String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
 
-            int startYear = Int32.Parse(secondSplitStartDate[2]);
+            int startYear = Int32.Parse(secondSplitStartDate[0]);
             int startMonth = Int32.Parse(secondSplitStartDate[1]);
-            int startDay = Int32.Parse(secondSplitStartDate[0]);
+            int startDay = Int32.Parse(secondSplitStartDate[2]);
             int startHour = Int32.Parse(secondSplitStartHour[0]);
             int startminute = Int32.Parse(secondSplitStartHour[1]);
             int startSecond = Int32.Parse(secondSplitStartHour[2]);
 
-            int endYear = Int32.Parse(secondSplitEndDate[2]);
+            int endYear = Int32.Parse(secondSplitEndDate[0]);
             int endMonth = Int32.Parse(secondSplitEndDate[1]);
-            int endDay = Int32.Parse(secondSplitEndDate[0]);
+            int endDay = Int32.Parse(secondSplitEndDate[2]);
             int endHour = Int32.Parse(secondSplitEndHour[0]);
             int endMinute = Int32.Parse(secondSplitEndHour[1]);
             int endSecond = Int32.Parse(secondSplitEndHour[2]);
@@ -678,45 +692,19 @@ namespace MIOSimulation
 
             return correct;
         }
+
+        private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
-/*
-if(number< dataSimulation.Count)
-            {
-                gmap.Overlays.Clear();
-                routes.Routes.Clear();
-                simulation.Markers.Clear();
-                String[] tempSplit = dataSimulation[number].Split(';');
-                GMapMarker marker;
-                Double lat1 = Double.Parse(tempSplit[4], CultureInfo.InvariantCulture.NumberFormat);
-                Double lng1 = Double.Parse(tempSplit[3], CultureInfo.InvariantCulture.NumberFormat);
-                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
-                points.Add(new PointLatLng(lat1, lng1));
-                if (Double.Parse(tempSplit[2]) != -1)
-                {
-                    marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                    prueba.Text = "En ruta a las " + tempSplit[0];
-                }
-                else
-                {
-                    marker.ToolTipText = "Tiempo muerto a las " + tempSplit[0];
-                    prueba.Text= "Tiempo muerto a las " + tempSplit[0];
-                }
-                simulation.Markers.Add(marker);
-                gmap.Overlays.Add(simulation);
-                gmap.Position = new PointLatLng(lat1, lng1);
-                gmap.Zoom = zoom1;
-                GMapRoute pointsRoutes = new GMapRoute(points, "Ruta");
-                routes.Routes.Add(pointsRoutes);
-                gmap.Overlays.Add(routes);
-                number++;
-            }
-            else
-            {
-                timer1.Stop();
-            }
-*/
 
     // Bus
     // BusLocation
