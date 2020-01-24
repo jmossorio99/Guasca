@@ -34,6 +34,13 @@
             this.StationStop_CB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.timeInterval = new System.Windows.Forms.TextBox();
+            this.LabelExample = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.listLines = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.horaFinTxt = new System.Windows.Forms.TextBox();
             this.horaInicioTxt = new System.Windows.Forms.TextBox();
@@ -82,7 +89,7 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(1376, 863);
+            this.gmap.Size = new System.Drawing.Size(1535, 860);
             this.gmap.TabIndex = 0;
             this.gmap.Zoom = 14D;
             this.gmap.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.addStationsOverlay);
@@ -95,7 +102,7 @@
             this.StationStop_CB.Location = new System.Drawing.Point(73, 53);
             this.StationStop_CB.Margin = new System.Windows.Forms.Padding(2);
             this.StationStop_CB.Name = "StationStop_CB";
-            this.StationStop_CB.Size = new System.Drawing.Size(148, 21);
+            this.StationStop_CB.Size = new System.Drawing.Size(148, 31);
             this.StationStop_CB.TabIndex = 1;
             this.StationStop_CB.Text = "Estaciones y paradas";
             this.StationStop_CB.SelectedIndexChanged += new System.EventHandler(this.StationStop_CB_SelectedIndexChanged);
@@ -108,7 +115,7 @@
             this.label1.Location = new System.Drawing.Point(123, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.Size = new System.Drawing.Size(89, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtro";
             // 
@@ -117,6 +124,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Salmon;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.timeInterval);
+            this.panel1.Controls.Add(this.LabelExample);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.listLines);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.horaFinTxt);
             this.panel1.Controls.Add(this.horaInicioTxt);
@@ -137,36 +151,104 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.StationStop_CB);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Location = new System.Drawing.Point(1382, -2);
+            this.panel1.Location = new System.Drawing.Point(1523, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 863);
+            this.panel1.Size = new System.Drawing.Size(312, 860);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(3, 574);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(259, 40);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Tiempo de escala de simulacion en \r\n                        segundos";
+            this.label10.Click += new System.EventHandler(this.Label10_Click_1);
+            // 
+            // timeInterval
+            // 
+            this.timeInterval.Location = new System.Drawing.Point(214, 588);
+            this.timeInterval.Name = "timeInterval";
+            this.timeInterval.Size = new System.Drawing.Size(41, 26);
+            this.timeInterval.TabIndex = 25;
+            // 
+            // LabelExample
+            // 
+            this.LabelExample.AutoSize = true;
+            this.LabelExample.ForeColor = System.Drawing.Color.Black;
+            this.LabelExample.Location = new System.Drawing.Point(49, 270);
+            this.LabelExample.Name = "LabelExample";
+            this.LabelExample.Size = new System.Drawing.Size(226, 20);
+            this.LabelExample.TabIndex = 24;
+            this.LabelExample.Text = "Ejemplo:  2019-06-20 11:16:47";
+            this.LabelExample.Click += new System.EventHandler(this.Label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(19, 638);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 21);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Filtrar por bus";
+            // 
+            // listLines
+            // 
+            this.listLines.FormattingEnabled = true;
+            this.listLines.Location = new System.Drawing.Point(151, 636);
+            this.listLines.Name = "listLines";
+            this.listLines.Size = new System.Drawing.Size(121, 28);
+            this.listLines.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(168, 344);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "dd-mm-aa hh:mm:ss ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(24, 344);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "dd-mm-aa hh:mm:ss ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(99, 270);
+            this.label6.Location = new System.Drawing.Point(66, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 25);
+            this.label6.Size = new System.Drawing.Size(168, 40);
             this.label6.TabIndex = 19;
             this.label6.Text = "Simulacion";
             // 
             // horaFinTxt
             // 
-            this.horaFinTxt.Location = new System.Drawing.Point(171, 341);
+            this.horaFinTxt.Location = new System.Drawing.Point(169, 324);
             this.horaFinTxt.Name = "horaFinTxt";
-            this.horaFinTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaFinTxt.Size = new System.Drawing.Size(100, 26);
             this.horaFinTxt.TabIndex = 18;
             // 
             // horaInicioTxt
             // 
-            this.horaInicioTxt.Location = new System.Drawing.Point(25, 341);
+            this.horaInicioTxt.Location = new System.Drawing.Point(25, 324);
             this.horaInicioTxt.Name = "horaInicioTxt";
-            this.horaInicioTxt.Size = new System.Drawing.Size(100, 20);
+            this.horaInicioTxt.Size = new System.Drawing.Size(100, 26);
             this.horaInicioTxt.TabIndex = 17;
             // 
             // label5
@@ -174,9 +256,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(194, 321);
+            this.label5.Location = new System.Drawing.Point(192, 304);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.Size = new System.Drawing.Size(82, 28);
             this.label5.TabIndex = 16;
             this.label5.Text = "Hora fin";
             // 
@@ -185,9 +267,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(43, 321);
+            this.label4.Location = new System.Drawing.Point(41, 304);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(107, 28);
             this.label4.TabIndex = 15;
             this.label4.Text = "Hora inicio";
             // 
@@ -207,7 +289,7 @@
             "Zone 8 - Calipso"});
             this.zonesCheckedList.Location = new System.Drawing.Point(14, 91);
             this.zonesCheckedList.Name = "zonesCheckedList";
-            this.zonesCheckedList.Size = new System.Drawing.Size(266, 157);
+            this.zonesCheckedList.Size = new System.Drawing.Size(266, 108);
             this.zonesCheckedList.TabIndex = 14;
             this.zonesCheckedList.SelectedIndexChanged += new System.EventHandler(this.ZonesCheckedList_SelectedIndexChanged);
             // 
@@ -216,9 +298,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(91, 549);
+            this.label3.Location = new System.Drawing.Point(52, 529);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 17);
+            this.label3.Size = new System.Drawing.Size(196, 28);
             this.label3.TabIndex = 13;
             this.label3.Text = "Velocidad simulación";
             // 
@@ -227,20 +309,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(134, 766);
+            this.label2.Location = new System.Drawing.Point(130, 704);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.Size = new System.Drawing.Size(64, 28);
             this.label2.TabIndex = 12;
             this.label2.Text = "Zoom";
             // 
             // trackBar1
             // 
             this.trackBar1.LargeChange = 3;
-            this.trackBar1.Location = new System.Drawing.Point(70, 782);
+            this.trackBar1.Location = new System.Drawing.Point(66, 720);
             this.trackBar1.Maximum = 18;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(162, 45);
+            this.trackBar1.Size = new System.Drawing.Size(162, 69);
             this.trackBar1.TabIndex = 11;
             this.trackBar1.Value = 10;
             this.trackBar1.ValueChanged += new System.EventHandler(this.TrackBar1_ValueChanged);
@@ -248,7 +330,7 @@
             // zoom
             // 
             this.zoom.ForeColor = System.Drawing.Color.Black;
-            this.zoom.Location = new System.Drawing.Point(46, 782);
+            this.zoom.Location = new System.Drawing.Point(42, 720);
             this.zoom.Name = "zoom";
             this.zoom.Size = new System.Drawing.Size(18, 31);
             this.zoom.TabIndex = 10;
@@ -259,7 +341,7 @@
             // zoomplus
             // 
             this.zoomplus.ForeColor = System.Drawing.Color.Black;
-            this.zoomplus.Location = new System.Drawing.Point(241, 782);
+            this.zoomplus.Location = new System.Drawing.Point(237, 720);
             this.zoomplus.Name = "zoomplus";
             this.zoomplus.Size = new System.Drawing.Size(18, 31);
             this.zoomplus.TabIndex = 9;
@@ -270,7 +352,7 @@
             // slower
             // 
             this.slower.ForeColor = System.Drawing.Color.Black;
-            this.slower.Location = new System.Drawing.Point(55, 540);
+            this.slower.Location = new System.Drawing.Point(28, 526);
             this.slower.Name = "slower";
             this.slower.Size = new System.Drawing.Size(18, 31);
             this.slower.TabIndex = 8;
@@ -281,7 +363,7 @@
             // faster
             // 
             this.faster.ForeColor = System.Drawing.Color.Black;
-            this.faster.Location = new System.Drawing.Point(231, 543);
+            this.faster.Location = new System.Drawing.Point(251, 526);
             this.faster.Name = "faster";
             this.faster.Size = new System.Drawing.Size(18, 31);
             this.faster.TabIndex = 7;
@@ -318,9 +400,9 @@
             this.prueba.AutoSize = true;
             this.prueba.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prueba.ForeColor = System.Drawing.Color.Black;
-            this.prueba.Location = new System.Drawing.Point(84, 415);
+            this.prueba.Location = new System.Drawing.Point(26, 392);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(137, 17);
+            this.prueba.Size = new System.Drawing.Size(204, 28);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "Informacion de la ruta";
             // 
@@ -328,7 +410,7 @@
             // 
             this.startSimulation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startSimulation.ForeColor = System.Drawing.Color.Black;
-            this.startSimulation.Location = new System.Drawing.Point(104, 377);
+            this.startSimulation.Location = new System.Drawing.Point(102, 360);
             this.startSimulation.Name = "startSimulation";
             this.startSimulation.Size = new System.Drawing.Size(80, 29);
             this.startSimulation.TabIndex = 3;
@@ -345,7 +427,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1674, 860);
+            this.ClientSize = new System.Drawing.Size(1833, 857);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gmap);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -385,5 +467,12 @@
         private System.Windows.Forms.TextBox horaFinTxt;
         private System.Windows.Forms.TextBox horaInicioTxt;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox listLines;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LabelExample;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox timeInterval;
     }
 }

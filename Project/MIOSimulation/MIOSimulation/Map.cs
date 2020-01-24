@@ -9,6 +9,7 @@ using System.IO;
 using System.Drawing;
 using System.Collections;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace MIOSimulation
 {
@@ -29,6 +30,9 @@ namespace MIOSimulation
         private List<GMapOverlay> stopsListOverlays = new List<GMapOverlay>();
         private List<GMapOverlay> polygonsList = new List<GMapOverlay>();
         private List<GMapOverlay> zonesOverlays = new List<GMapOverlay>();
+        private int second;
+        private Dictionary<String, String> lines = new Dictionary<String, String>();
+        private Dictionary<String, String> reverseLines = new Dictionary<String, String>();
 
         //Everything new is down here
         private List<Zone> zones = new List<Zone>();
@@ -52,9 +56,23 @@ namespace MIOSimulation
                 polygonsList.Add(new GMapOverlay());
                 zonesOverlays.Add(new GMapOverlay());
             }
+            zonesChecked = new List<int>();
             addZones();
             stationNames = readStationNames();
             addAllStopsAndStations();
+            addLines();
+            string url = "dataSimulation1.txt";
+            if (MessageBox.Show("Desea usar un datagram diferente?", "Datagram de simulacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    url = open.FileName;
+                    DataProcessor p = new DataProcessor();
+                    p.reading(url);
+                }
+            }
+
             busSimulation = new BusSimulationControl(0,0);
 
             gmap.MapProvider = GoogleMapProvider.Instance;
@@ -62,14 +80,34 @@ namespace MIOSimulation
             gmap.Position = new PointLatLng(3.436440, -76.515270);
             gmap.ShowCenter = false;
             gmap.Zoom = 13;
-
             StationStop_CB.Items.Add("Estaciones y paradas");
             StationStop_CB.Items.Add("Estaciones");
             StationStop_CB.Items.Add("Paradas");
             StationStop_CB.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            zonesChecked = new List<int>();
+
             trackBar1.Value = Convert.ToInt32(gmap.Zoom);
+        }
+
+        private void addLines()
+        {
+            FileReader frLines = new FileReader("lines.txt");
+            List<String> linesData = frLines.readFile();
+            List<String> linesD = new List<string>();
+            foreach (String line in linesData)
+            {
+                String[] a = line.Split(',');
+                if (!lines.ContainsKey(a[1]))
+                {
+                    lines.Add(a[1], a[0]);
+                    reverseLines.Add(a[0], a[1]);
+                    linesD.Add(a[1]);
+                }
+            }
+            foreach (String line in lines.Keys)
+            {
+                listLines.Items.Add(line);
+            }
         }
 
         private void addZones()
@@ -87,6 +125,7 @@ namespace MIOSimulation
                 newPolygon.Fill = new SolidBrush(Color.Transparent);
                 newPolygon.Stroke = new Pen(Color.Red, 1);
                 zonesOverlays[i].Polygons.Add(newPolygon);
+                zonesChecked.Add(i);
             }
 
         }
@@ -240,8 +279,7 @@ namespace MIOSimulation
         {
             filterSelected = true;
             updateCheckdZones();
-
-            if(StationStop_CB.SelectedIndex == 0)
+            if (StationStop_CB.SelectedIndex == 0)
             {
                 gmap.Overlays.Clear();
                 gmap.Overlays.Add(stops);
@@ -328,48 +366,150 @@ namespace MIOSimulation
             }
 
         }
-
+        int error = 0;
         private void StartSimulation_Click(object sender, EventArgs e)
         {
-            //FileReader frUbication = new FileReader("datagramList.txt");
-            //dataSimulation = frUbication.readFile();
-            gmap.Overlays.Clear();
-            routes.Routes.Clear();
-            busSimulation.setInterval("20/06/2019 11:16:47", "20/06/2019 11:36:49");
-            timer1.Start();
+
+            if (verifyFormatDate(horaInicioTxt.Text, horaFinTxt.Text))
+            {
+
+                if (verifyDateOrder(horaInicioTxt.Text, horaFinTxt.Text))
+                {
+                    try
+                    {
+                        //FileReader frUbication = new FileReader("datagramList.txt");
+                        //dataSimulation = frUbication.readFile();
+                        gmap.Overlays.Clear();
+                        routes.Routes.Clear();
+                        //busSimulation.setInterval("20-06-2019 11:16:47", "20-06-2019 11:46:49");
+                        bool rightInterval = busSimulation.setInterval(horaInicioTxt.Text, horaFinTxt.Text);
+                        updateCheckdZones();
+                        if (zonesChecked.Count == 0)
+                        {
+                            MessageBox.Show("Seleccione las zonas a visualizar");
+                        }
+                        int val = 0;
+                        if (!int.TryParse(timeInterval.Text, out val)) {
+                            MessageBox.Show("Formato incorrecto para el intervalo de tiempo");
+                        }
+
+                        if (!rightInterval) {
+                            MessageBox.Show("Fecha de inicio no disponible");
+                        }
+
+
+                        if(zonesChecked.Count != 0 && !timeInterval.Text.Equals("") && rightInterval){
+                            busSimulation.Interval = val;
+                            second = 0;
+                            timer1.Start();
+                        }
+                    }
+                    catch (Exception t)
+                    {
+
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Orden de fechas incorrecto, la fecha de inicio debe ser menor a la de fin");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Formato de fecha incorrecto, debe tener el siguiente formato dd-mm-aa hh:mm:ss");
+            }
+
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
 
-            List<Bus> inSimulation = busSimulation.Next30();
-            int second = 1;
-            gmap.Overlays.Clear();
-            routes.Routes.Clear();
-            if (inSimulation.Count != 0)
-            {
+                List<Bus> inSimulation = busSimulation.Next30();
+
                 gmap.Overlays.Clear();
                 routes.Routes.Clear();
-                simulation.Clear();
-                foreach (Bus bus in inSimulation) {
-                    GMapMarker marker;
-                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/bus.png"));
-                    points.Add(bus.ActualPosition);
-
-                    //marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                    prueba.Text = "En ruta a las " + second;
-
-                    simulation.Markers.Add(marker);
+                if (inSimulation.Count != 0)
+                {
+                    drawBuses(inSimulation, second);
+                    second += busSimulation.Interval;
+                }
+                else
+                {
+                    timer1.Stop();
                 }
 
-                gmap.Overlays.Add(simulation);
-                second += 30;
-                //inSimulation = busSimulation.Next30();
+        }
+
+        private void drawBuses(List<Bus> buses,int second) {
+            List<Bus> readyToUse = specifiedBuses(buses);
+            smothTrasition(readyToUse,second);
+        }
+
+
+        private List<Bus> specifiedBuses(List<Bus> buses)
+        {
+            List<Bus> readyToUse = new List<Bus>();
+            foreach (Bus bus in buses) {
+                foreach (int a in zonesChecked)
+                {
+                    if (listLines.Text.Equals("") || listLines.Text.Equals("N/A"))
+                    {
+                        if (zones[a].isInside(bus.ActualPosition))
+                        {
+                            bus.Zone = zones[a].getName();
+                            readyToUse.Add(bus);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (zones[a].isInside(bus.ActualPosition) && bus.Name == lines[listLines.Text])
+                        {
+                            bus.Zone = zones[a].getName();
+                            readyToUse.Add(bus);
+                            break;
+                        }
+                    }
+                }
             }
-            else
+            return readyToUse;
+        }
+
+        private void smothTrasition(List<Bus> readyToUse,int second)
+        {
+            gmap.Overlays.Clear();
+            routes.Routes.Clear();
+            simulation.Clear();
+            foreach (Bus bus in readyToUse)
             {
-                timer1.Stop();
+                GMapMarker marker;
+                if (bus.IsIddle)
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/redBus.png"));
+                }
+                else
+                {
+                    marker = new GMarkerGoogle(bus.ActualPosition, new Bitmap("./img/greenBus.png"));
+                }
+                points.Add(bus.ActualPosition);
+                marker.ToolTipText = "Time Lost " + bus.TimeLocation;
+
+                //marker.ToolTipText = "En ruta a las " + tempSplit[0];
+                prueba.Text = "En la ruta a las: " + busSimulation.creatDate(second);
+                string rute = "Fuera de servicio";
+                if(reverseLines.ContainsKey(bus.Name))
+                    rute = reverseLines[bus.Name];
+                marker.ToolTipText = "Tiempo perdido: " + bus.TimeLocation + "\n Linea: " +rute;
+
+                //marker.ToolTipText = "En ruta a las " + tempSplit[0];
+
+
+                simulation.Markers.Add(marker);
             }
+
+            gmap.Overlays.Add(simulation);
         }
 
         private void GoSimulation_Click(object sender, EventArgs e)
@@ -455,44 +595,132 @@ namespace MIOSimulation
 
         private void ZonesCheckedList_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private Boolean verifyFormatDate(String start,String end)
+        {
+            Boolean correct = true;
+
+            try
+            {
+
+                String[] firstSplitStart = start.Split(' ');
+                String[] firstSplitEnd = end.Split(' ');
+
+                String[] secondSplitStartDate = firstSplitStart[0].Split('-');
+                String[] secondSplitEndDate = firstSplitEnd[0].Split('-');
+
+                String[] secondSplitStartHour = firstSplitStart[1].Split(':');
+                String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
+
+                if (firstSplitStart.Length != 2 || firstSplitEnd.Length != 2 || secondSplitStartDate.Length != 3 || secondSplitStartHour.Length != 3 || secondSplitEndDate.Length != 3 || secondSplitEndHour.Length != 3)
+                {
+                    correct = false;
+                }
+                else
+                {
+                    Boolean t1 = canAllListToInt(secondSplitStartDate);
+                    Boolean t2 = canAllListToInt(secondSplitStartHour);
+                    Boolean t3 = canAllListToInt(secondSplitEndDate);
+                    Boolean t4 = canAllListToInt(secondSplitEndHour);
+
+                    if (t1 == false || t2 == false || t3 == false || t4 == false)
+                    {
+                        correct = false;
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                correct = false;
+            }
+
+            return correct;
+        }
+
+        private Boolean canAllListToInt(String[] toTest)
+        {
+            Boolean can = true;
+
+            foreach (var temp in toTest)
+            {
+                int size = temp.Length;
+
+                for (int i =0;i<size && can;i++)
+                {
+                    int charTemp =(int) temp[i];
+
+                    if (!(47<charTemp&&charTemp<58))
+                    {
+                        can = false;
+                    }
+                }
+
+            }
+
+            return can;
+        }
+
+        private Boolean verifyDateOrder(String startDate, String endDate)
+        {
+            Boolean correct=true;
+
+            String[] firstSplitStart = startDate.Split(' ');
+            String[] firstSplitEnd = endDate.Split(' ');
+
+            String[] secondSplitStartDate = firstSplitStart[0].Split('-');
+            String[] secondSplitEndDate = firstSplitEnd[0].Split('-');
+
+            String[] secondSplitStartHour = firstSplitStart[1].Split(':');
+            String[] secondSplitEndHour = firstSplitEnd[1].Split(':');
+
+            int startYear = Int32.Parse(secondSplitStartDate[0]);
+            int startMonth = Int32.Parse(secondSplitStartDate[1]);
+            int startDay = Int32.Parse(secondSplitStartDate[2]);
+            int startHour = Int32.Parse(secondSplitStartHour[0]);
+            int startminute = Int32.Parse(secondSplitStartHour[1]);
+            int startSecond = Int32.Parse(secondSplitStartHour[2]);
+
+            int endYear = Int32.Parse(secondSplitEndDate[0]);
+            int endMonth = Int32.Parse(secondSplitEndDate[1]);
+            int endDay = Int32.Parse(secondSplitEndDate[2]);
+            int endHour = Int32.Parse(secondSplitEndHour[0]);
+            int endMinute = Int32.Parse(secondSplitEndHour[1]);
+            int endSecond = Int32.Parse(secondSplitEndHour[2]);
+
+            DateTime start = new DateTime(startYear,startMonth,startDay,startHour,startminute,startSecond);
+            DateTime end = new DateTime(endYear,endMonth,endDay,endHour,endMinute,endSecond);
+
+            if (start>end)
+            {
+                correct = false;
+            }
+
+            return correct;
+        }
+
+        private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label10_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
 }
 
-/*
-if(number< dataSimulation.Count)
-            {
-                gmap.Overlays.Clear();
-                routes.Routes.Clear();
-                simulation.Markers.Clear();
-                String[] tempSplit = dataSimulation[number].Split(';');
-                GMapMarker marker;
-                Double lat1 = Double.Parse(tempSplit[4], CultureInfo.InvariantCulture.NumberFormat);
-                Double lng1 = Double.Parse(tempSplit[3], CultureInfo.InvariantCulture.NumberFormat);
-                marker = new GMarkerGoogle(new PointLatLng(lat1, lng1), new Bitmap("./img/bus.png"));
-                points.Add(new PointLatLng(lat1, lng1));
-                if (Double.Parse(tempSplit[2]) != -1)
-                {
-                    marker.ToolTipText = "En ruta a las " + tempSplit[0];
-                    prueba.Text = "En ruta a las " + tempSplit[0];
-                }
-                else
-                {
-                    marker.ToolTipText = "Tiempo muerto a las " + tempSplit[0];
-                    prueba.Text= "Tiempo muerto a las " + tempSplit[0];
-                }
-                simulation.Markers.Add(marker);
-                gmap.Overlays.Add(simulation);
-                gmap.Position = new PointLatLng(lat1, lng1);
-                gmap.Zoom = zoom1;
-                GMapRoute pointsRoutes = new GMapRoute(points, "Ruta");
-                routes.Routes.Add(pointsRoutes);
-                gmap.Overlays.Add(routes);
-                number++;
-            }
-            else
-            {
-                timer1.Stop();
-            }
-*/
+
+    // Bus
+    // BusLocation
+    // BusSimulationControl
+    // DataProcessor
+    // DBConnection
+    // FileReader
+    // Polygon
+    // Program
+    // Station
+    // Stop
+    // Zone
